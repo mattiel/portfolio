@@ -42,7 +42,7 @@ const Modal = ({
         leave="transition ease-in-out duration-200 transform"
         leaveFrom="translate-y-0"
         leaveTo="-translate-y-full"
-        className="flex flex-col bg-white shadow-md rounded-2xl w-full lg:max-w-screen-xl"
+        className="flex flex-col lg:max-w-screen-xl"
         onClick={e => e.stopPropagation()}
       >
         { isSkeleton 
@@ -52,7 +52,7 @@ const Modal = ({
             </>
           )
           : (
-            <>
+            <div className="bg-white shadow-md rounded-2xl">
               <div className="flex justify-between items-center w-full p-4 container">
                 <div className="">{title}</div>
                 <a href="#" onClick={handleClose}>X</a>
@@ -60,7 +60,7 @@ const Modal = ({
               <div className="flex-1 px-4 pb-4">
                 {children}
               </div>
-            </>
+            </div>
           )
             
         }

@@ -4,7 +4,7 @@ const Hotkeys = ({ keys, isFocused }) => {
       {
         keys.map((key, idx) => {
           return (
-            <div 
+            <kbd 
               key={idx}
               className={
                 `w-4 h-4 flex justify-center items-center text-[0.6875rem] rounded-[.25rem] text-gray-400 bg-gray-100 
@@ -12,7 +12,7 @@ const Hotkeys = ({ keys, isFocused }) => {
               }
             >
               {key}
-            </div>
+            </kbd>
           )
         })
       }
