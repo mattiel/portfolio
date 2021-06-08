@@ -19,16 +19,16 @@ const Tomato = () => {
           className="bg-gray-900 transform skew-y-12 overflow-hidden"
           // style={{backgroundImage: "url(/tomato/globe.png)"}}
         >
-          <div className="transform -skew-y-12">
+          <div className="transform -skew-y-12 h-[40rem] flex justify-center">
             <Container>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-3 py-40 my-20 place-items-center overflow-hidden">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-3 place-items-center overflow-hidden h-full">
                 <div className="">
                   <img 
                     src="/tomato/globe.png"
                     className="absolute left-0 sm:-left-1/2 -bottom-1/2 lg:-bottom-full transform rotate-45"
                   />
                 </div>
-                <div className="">
+                <div className="mb-auto md:mb-0">
                   <h3 className="text-white text-3xl font-bold leading-normal mb-2">
                     Connecting All POS Installation Agencies in South Korea
                   </h3>

@@ -11,7 +11,7 @@ const Hero = () => {
             // style={{backgroundImage: "url('/tomato/waves.svg')", backgroundSize: "100% auto"}}
           >
             <Container>
-              <section className="flex pt-20 pb-12">
+              <section className="flex pt-20 pb-12 z-10">
                 <img src="/tomato/logo.svg" width="104"/>
               </section>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
