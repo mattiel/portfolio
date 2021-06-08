@@ -7,23 +7,21 @@ const Hero = () => {
       <Container>
         <FullBleed>
           <div 
-            className="bg-no-repeat bg-bottom h-screen max-h-[52rem]"
+            className="bg-no-repeat bg-bottom h-screen max-h-[52rem] overflow-hidden"
             // style={{backgroundImage: "url('/tomato/waves.svg')", backgroundSize: "100% auto"}}
           >
             <Container>
-              <seciton className="flex py-12">
-                <img src="/tomato/logo.svg"/>
-              </seciton>
+              <section className="flex pt-20 pb-12">
+                <img src="/tomato/logo.svg" width="104"/>
+              </section>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div className="mb-4">
-                  <h3 className="font-bold text-gray-900 text-4xl mb-4 leading-tight">
-                    A Cloud ERP and CRM for Small to Mid-Sized Supermarkets In Korea
-                  </h3>
+                <div className="mb-4 flex flex-col justify-center">
+                  <h2 className="font-bold text-gray-900 text-4xl mb-4 leading-tight">
+                    A Cloud-Powered ERP and CRM for Supermarkets In South Korea
+                  </h2>
                   <p className="font-medium text-gray-700 text-xl">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                    Repudiandae incidunt aut deleniti tempore consequuntur culpa quod, 
-                    iure nesciunt suscipit ratione architecto odit. Ut ea corporis quo. 
-                    Molestias ex blanditiis at.
+                    A powerful suite to replace old-school management system for non-corporate supermarkets at affordable and reasonable prices.
+                    
                   </p>
                 </div>
                 <div className="h-auto md:h-[30rem]">

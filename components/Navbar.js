@@ -4,13 +4,34 @@ import Logo from '@/components/Logo'
 import Modal from '@/components/Modal'
 import Command from '@/components/Command'
 import Link from 'next/link'
+import Container from '@/components/Container'
+
+const CommandIcon = (props) => {
+  return (
+    <svg
+      width={20}
+      height={20}
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      {...props}
+    >
+      <path
+        fillRule="evenodd"
+        clipRule="evenodd"
+        d="M2 6a4 4 0 004 4h2v4H6a4 4 0 104 4v-2h4v2a4 4 0 104-4h-2v-4h2a4 4 0 10-4-4v2h-4V6a4 4 0 10-8 0zm14 12a2 2 0 102-2h-2v2zm4-12a2 2 0 01-2 2h-2V6a2 2 0 114 0zM8 6a2 2 0 10-2 2h2V6zM4 18a2 2 0 012-2h2v2a2 2 0 11-4 0zm10-4v-4h-4v4h4z"
+        fill="currentColor"
+      />
+    </svg>
+  )
+}
 
 const Navbar = () => {
   const [isCommandOpen, setIsCommandOpen] = useState(false)
 
   return (
     <nav className="w-full top-0 left-0 absolute z-10">
-      <div className="container mx-auto xl:max-w-screen-xl px-4">
+      <Container>
         <div className="flex justify-between items-center text-gray-900 h-16">
           <Link href="/">
             <Logo/>
@@ -23,7 +44,7 @@ const Navbar = () => {
               className="text-lg cursor-pointer"
               onClick={() => setIsCommandOpen(true)}
             >
-              ⌘
+              <CommandIcon />
             </li>
             <Modal
                 onClose={() => setIsCommandOpen(false)}
@@ -34,7 +55,7 @@ const Navbar = () => {
             </Modal>
           </ul>
         </div>
-      </div>
+      </Container>
     </nav>
   );
 };

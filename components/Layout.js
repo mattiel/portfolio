@@ -2,7 +2,7 @@ import Navbar from '@/components/Navbar'
 
 const Layout = ({ children }) => {
   return (
-    <section className="container mx-auto xl:max-w-screen-xl px-4">
+    <section className="container mx-auto lg:max-w-screen-lg px-6">
       <Navbar />
       {children}
     </section>
