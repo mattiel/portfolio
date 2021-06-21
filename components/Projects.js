@@ -20,7 +20,7 @@ const Projects = ({ manifest }) => {
                     style={{
                       backgroundImage: `url('${value.thumbnail}')`,
                       backgroundSize: `${idx === 0 ? '80%' : '100%'}`,
-                      backgroundPosition: `${idx === 0 ? 'bottom -15vw center' : 'bottom'}`,
+                      backgroundPosition: `${idx === 0 ? 'bottom -8vw center' : 'bottom'}`,
                     }}
                   >
                     <div className={`flex flex-col space-y-2 xl:max-w-[50%] self-end ${idx === 0 && 'self-start'}`}>

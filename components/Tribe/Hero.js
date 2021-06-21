@@ -16,17 +16,16 @@ const Hero = () => {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div className="mb-4 flex flex-col justify-center">
                   <h2 className="font-bold text-gray-800 text-4xl mb-4 leading-tight">
-                    A Cloud-Powered ERP and CRM for
-                    <strong className="bg-clip-text font-bold text-transparent bg-gradient-to-br from-green-400 to-green-500"> Supermarkets </strong>
-                    In South Korea
+                    Adaptive Jewelry for self-expression for the
+                    <strong className="bg-clip-text font-bold text-transparent bg-gradient-to-br from-red-400 to-pink-500"> Generation-Z </strong>
                   </h2>
                   <p className="font-medium text-gray-700 text-xl">
-                    A powerful suite to replace old-school management system for non-corporate supermarkets at affordable and reasonable prices.
-                    
+                    Forming the future of "Tribes".
+                    With community being the underlying theme, the ecosystem focuses on how people create tribes and how this might be enhanced by tech in the future.  
                   </p>
                 </div>
-                <div className="h-auto md:h-[30rem] md:ml-4">
-                  <img src="/tomato-thumbnail.png" className="md:absolute shadow-md"/>
+                <div className="h-auto md:h-[30rem] grid place-items-center md:ml-4">
+                  <img src="/tribe-thumbnail.png"/>
                 </div>
               </div>
             </Container>
