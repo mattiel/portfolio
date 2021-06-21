@@ -218,7 +218,7 @@ const Tomato = () => {
           </div>
       </section>
 
-      <section class="py-32">
+      <section className="py-32">
         <div className="flex-1 mb-6">
           <h4 className="font-semibold text-green-400 mb-2 text-lg">Outreach</h4>
           <h3 className="text-gray-800 text-4xl font-bold leading-snug mb-4">

@@ -16,7 +16,7 @@ const Hero = () => {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div className="mb-4 flex flex-col justify-center">
                   <h2 className="font-bold text-gray-800 text-4xl mb-4 leading-tight">
-                    Adaptive Jewelry for self-expression for the
+                    Adaptive Jewelry for Self-expression for
                     <strong className="bg-clip-text font-bold text-transparent bg-gradient-to-br from-red-400 to-pink-500"> Generation-Z </strong>
                   </h2>
                   <p className="font-medium text-gray-700 text-xl">
