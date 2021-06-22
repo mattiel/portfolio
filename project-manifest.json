@@ -4,27 +4,31 @@
     "subtitle": "Hyper-Connected Retail Platform",
     "description": "A cloud-powered CRM and ERP for small to mid-sized supermarkets in South Korea",
     "color": "#1EE46E",
-    "thumbnail": "tomato-thumbnail.png"
+    "thumbnail": "tomato-thumbnail.png",
+    "hidden": false
   },
   {
     "title": "Birdfire",
     "subtitle": "Photograph-Based Travel App",
     "description": "A cloud-powered CRM and ERP for small to mid-sized supermarkets in South Korea",
     "color": "#0066FF",
-    "thumbnail": "birdfire-thumbnail.png"
+    "thumbnail": "birdfire-thumbnail.png",
+    "hidden": true
   },
   {
     "title": "Stay",
     "subtitle": "Enhanced Hotel Guest Experience",
     "description": "Providing full, modernized hotel services and commodity for guests without a hassle.",
     "color": "#1369FF",
-    "thumbnail": "stay-thumbnail.png"
+    "thumbnail": "stay-thumbnail.png",
+    "hidden": false
   },
   {
     "title": "Tribe",
     "subtitle": "Adaptive Jewelry For Self-Expression",
-    "description": "A cloud-powered CRM and ERP for small to mid-sized supermarkets in South Korea",
-    "color": "#FA0844",
-    "thumbnail": "tribe-thumbnail.png"
+    "description": "Adaptive Jewelry For Self-Expression",
+    "color": "#064E3B",
+    "thumbnail": "tribe-thumbnail.png",
+    "hidden": false
   }
 ]

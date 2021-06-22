@@ -25,7 +25,7 @@ const Hero = () => {
                   </p>
                 </div>
                 <div className="h-auto md:h-[30rem] grid place-items-center md:ml-4">
-                  <img src="/tribe-thumbnail.png"/>
+                  <img src="/tribe/beacon-1.webp" className="rounded-full"/>
                 </div>
               </div>
             </Container>

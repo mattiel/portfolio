@@ -3,9 +3,11 @@ import Hero from '@/components/Tribe/Hero'
 import Layout from '@/components/Layout'
 import FullBleed from '@/components/FullBleed'
 import Container from '@/components/Container'
-import Image from 'next/image'
+import { useRef, useState, useEffect } from 'react'
+import { Transition } from '@headlessui/react'
 
 const Tomato = () => {
+
   return (
     <Layout>
       {/* <TOC /> */}
@@ -50,9 +52,13 @@ const Tomato = () => {
         >
           <div className="transform -skew-y-6 h-[40rem] flex justify-center">
             <Container>
-              <div className="flex flex-col-reverse md:flex-row gap-3 place-items-center overflow-hidden h-full">
-                <div className="flex-1">
-
+              <div className="flex flex-col-reverse md:flex-row gap-3 place-items-center h-full">
+                <div className="flex-1 grid place-items-center relative rotate-loop -bottom-1/4 md:bottom-0">
+                    <div className="absolute left border-4 border-pink-500 w-64 h-64 rounded-3xl"></div>
+                    <div className="absolute left border-4 border-blue-500 w-64 h-64 rounded-3xl rotate-[18deg]"></div>
+                    <div className="absolute left border-4 border-yellow-500 w-64 h-64 rounded-3xl rotate-[36deg]"></div>
+                    <div className="absolute left border-4 border-green-500 w-64 h-64 rounded-3xl rotate-[48deg]"></div>
+                    <div className="absolute left border-4 border-red-500 w-64 h-64 rounded-3xl rotate-[66deg]"></div>
                 </div>
                 <div className="flex-1 mt-32 md:mt-0">
                   <h4 className="font-semibold text-green-500 mb-2 text-lg">Why</h4>
