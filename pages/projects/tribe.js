@@ -1,5 +1,8 @@
 import TOC from '@/components/TOC'
 import Hero from '@/components/Tribe/Hero'
+import Insights from '@/components/Tribe/Insights'
+import Opportunity from '@/components/Tribe/Opportunity'
+
 import Layout from '@/components/Layout'
 import FullBleed from '@/components/FullBleed'
 import Container from '@/components/Container'
@@ -77,38 +80,8 @@ const Tomato = () => {
         </section>
       </FullBleed>
 
-      <section className="flex flex-col items-center py-32">
-        <h2 className="font-bold text-2xl text-gray-800 mb-8">Opportunities</h2>
-        <img src="/tribe/opportunity.png" className="mb-8 rounded-2xl"/>
-        <div className="grid md:grid-cols-3 gap-4 grid-cols-1">
-          <div className="block">
-            <p className="font-semibold text-xl text-gray-800 border-l-2 border-green-500 pl-4 mb-4">1st</p>
-            <div className="pl-[1.125rem]">
-              <p className="text-gray-700 mb-4">
-                <strong>First Movers Advantage:</strong> Introducing at first of it’s kind product will give HP a significant advantage over the rest of the market.
-              </p>
-            </div>
-          </div>
-
-          <div className="block">
-            <p className="font-semibold text-xl text-gray-800 border-l-2 border-green-500 pl-4 mb-4">25.9%</p>
-            <div className="pl-[1.125rem]">
-              <p className="text-gray-700 mb-4">
-                <strong>Market Size:</strong> Possible users who may use the products.
-              </p>
-            </div>
-          </div>
-
-          <div className="block">
-            <p className="font-semibold text-xl text-gray-800 border-l-2 border-green-500 pl-4 mb-4">$44B</p>
-            <div className="pl-[1.125rem]">
-              <p className="text-gray-700 mb-4">
-              <strong>Purchasing Power:</strong> Today the Generation-Z's have an average spending money of $16.9/week.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+      <Insights/>
+      <Opportunity/>
 
       <FullBleed className="my-32">
         <Container>
@@ -141,9 +114,8 @@ const Tomato = () => {
                 A jewelry in disguise
               </h3>
               <p className="text-gray-600">
-                Beacon collects interactions then connects to smart devices to show daily recaps and highlights of the day. 
-                Our proposed app presents a summary of the user’s interactions that can be reviewed at the end of the day, 
-                silencing the stream of constant notifications throughout the day.
+                Halo displays important notifications and exchanges contact information during 
+                handshakes with haptic feedback for confirmation.
               </p>
             </div>
             <div className="flex items-center p-8">
@@ -155,22 +127,19 @@ const Tomato = () => {
 
 
       <section class="my-32">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8 items-center">
+        <div className="grid grid-cols-1 gap-8 mb-8 items-center">
           <div className="flex-1">
             <h4 className="font-semibold text-green-500 mb-2 text-lg">Interactions</h4>
             <h3 className="text-gray-800 text-4xl font-bold leading-snug mb-4">
               Natural Contact Exchange
             </h3>
+            <img src="/tribe/handshake.jpg" className="max-h-[32rem] w-full object-cover mb-8"/>
             <p className="text-gray-700 text-lg mb-4">
               Through natural human interactions such as handshakes and fist bumps, contacts can exchange information seamlessly. 
             </p>
           </div>
-          <div class="flex">
-            <img src="/tribe/handshake.png" className="flex-1 object-cover rounded-2xl"/>
-          </div>
-        </div>
-        
-        <div className="grid grid-cols-3 gap-2 py-4">
+        </div> 
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-2">
           <div className="block">
             <p className="font-semibold text-gray-800 border-l-2 border-green-500 pl-4 mb-2">Detection</p>
             <div className="pl-[1.125rem]">
@@ -202,44 +171,56 @@ const Tomato = () => {
       </section>
 
       <section className="my-32">
-        <div className="grid grid-cols-1 gap-6">
-          <div className="block">
-            <h4 className="font-semibold text-green-500 mb-2 text-lg">Solutions</h4>
-            <h3 className="text-gray-800 text-4xl font-bold leading-snug mb-4">
-              Finding the sweetspot
-            </h3>
-            <p className="text-gray-700 text-lg">
-              While users need improved product, they need familiar user interfaces and experience to avoid usability problems.
-            </p>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="flex">
+            <div class="flex justify-center h-full items-center relative">
+              <div className="flex items-center justify-center flex-0 h-full mr-16 absolute -left-12">
+                <div className="absolute w-1 bg-green-600 rounded-full rounded-b-none h-full items-center justify-center"></div>
+                <div className="absolute bg-white w-6 h-6 border-4 border-green-600 rounded-full mb-12"></div>
+              </div>
+              <div className="block">
+                <h4 className="font-semibold text-green-500 mb-2 text-lg">Connect</h4>
+                <h3 className="text-gray-800 text-4xl font-bold leading-snug mb-4">
+                  Daily recap and timestamps
+                </h3>
+                <p className="text-gray-700 text-lg mb-4">
+                  A summary of interactions, the people you meet and the verbal commitments you make are saved on a timeline. 
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="flex justify-center py-8">
+            <img src="/tribe/recap-2.png" className="rounded-2xl h-full"/>
           </div>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 py-8">
-            <div className="block">
-              <p className="font-semibold text-xl text-gray-800 border-l-2 border-green-500 pl-4 mb-4">Familiar interface</p>
-              <div className="pl-[1.125rem]">
-                {/* <strong className="text-2xl text-green-600 font-bold mb-4 leading-loose">40+</strong> */}
-                <p className="text-gray-700 mb-4">
-                  Due to high average age demographics, the interface needed to be familiar enough so that the users
-                  are able to get a grasp of how to use the product without getting lost. Also, accessible interfaces
-                  for individuals with vision problems also needed to be considered.
-                </p>
-              </div>
-            </div>
+        <div className="grid grid-cols-2 gap-6">
+          <div className="flex">
+            <div class="flex justify-center h-full items-center">
+              {/* <div className="flex items-center justify-center flex-0 relative h-full mr-16">
+                <div className="absolute w-1 bg-green-600 rounded-full rounded-t-none h-full items-center justify-center"></div>
+                <div className="absolute bg-white w-6 h-6 border-4 border-green-600 rounded-full mb-20"></div>
+              </div> */}
 
-            <div className="block">
-              <p className="font-semibold text-xl text-gray-800 border-l-2 border-green-500 pl-4 mb-4">Desktop experience</p>
-              <div className="pl-[1.125rem]">
-                <p className="text-gray-700 mb-4">
-                  Users have 
+              <div className="block">
+                <h4 className="font-semibold text-green-500 mb-2 text-lg">Represent</h4>
+                <h3 className="text-gray-800 text-4xl font-bold leading-snug mb-4">
+                  Connected
+                </h3>
+                <p className="text-gray-700 text-lg mb-4">
+                  A summary of interactions, the people you meet and the verbal commitments you make are saved on a timeline. 
                 </p>
               </div>
             </div>
           </div>
+          <div className="flex justify-center py-8">
+            <img src="/tribe/recap.png" className="rounded-2xl max-h-[26rem]"/>
+          </div>
+        </div>
       </section>
 
-      <section class="py-32">
+      <section className="my-32">
         <div className="flex-1 mb-6">
-          <h4 className="font-semibold text-green-400 mb-2 text-lg">Outreach</h4>
+          <h4 className="font-semibold text-green-500 mb-2 text-lg">Outreach</h4>
           <h3 className="text-gray-800 text-4xl font-bold leading-snug mb-4">
             Managing customers without a problem
           </h3>

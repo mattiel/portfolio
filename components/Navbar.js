@@ -30,7 +30,7 @@ const Navbar = () => {
   const [isCommandOpen, setIsCommandOpen] = useState(false)
 
   return (
-    <nav className="w-full top-0 left-0 absolute z-10">
+    <nav className="w-full top-0 left-0 fixed z-10 bg-white">
       <Container>
         <div className="flex justify-between items-center text-gray-900 h-16">
           <Link href="/">

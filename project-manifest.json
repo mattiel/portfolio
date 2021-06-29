@@ -26,9 +26,17 @@
   {
     "title": "Tribe",
     "subtitle": "Adaptive Jewelry For Self-Expression",
-    "description": "Adaptive Jewelry For Self-Expression",
+    "description": "Adaptive jewelry for self-expression",
     "color": "#064E3B",
     "thumbnail": "tribe-thumbnail.png",
+    "hidden": false
+  },
+  {
+    "title": "Achieve",
+    "subtitle": "",
+    "description": "An inspiration and encouragement platform for low-income individuals",
+    "color": "#064E3B",
+    "thumbnail": "achieve-thumbnail.png",
     "hidden": false
   }
 ]
