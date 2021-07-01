@@ -87,8 +87,9 @@ const Achieve = () => {
         <figcaption class="text-gray-500 italic text-sm mb-4 w-full text-center">What we learned from quantatative research</figcaption>
 
         <p className="text-gray-700">
-          By analyzing income and education data about Americans with current low income, it was due to low education level and it was hard for them to step up from
-          their current economical status because they won't have enough money to get educated.
+          We analyzed unemployment rates and earnings by educational attainment and found out that the higher degree a person has
+          it's likely for them to have higher median weekly earnings. We assumed that a lot of the people were stuck with lower
+          income because they don't have a degree.
         </p>
       </section>
 
@@ -121,7 +122,7 @@ const Achieve = () => {
 
       <section className="flex flex-col my-32">
         <h2 className="font-bold text-2xl text-gray-800 mb-8">Qualitative Research</h2>
-        <img src="/achieve/behavior-continuum.jpg" alt="Behavior analysis of interviewees" className="mb-2 max-h-[32rem] w-full object-cover"/>
+        <img src="/achieve/behavior-continuum.jpg" alt="Behavior analysis of interviewees struggling with low income" className="mb-2 max-h-[32rem] w-full object-cover"/>
         <figcaption class="text-gray-500 italic text-sm mb-4 w-full text-center">We mapped out interviewee's behaviors and grouped similarities</figcaption>
 
         <p className="text-gray-700 mb-12">
@@ -132,7 +133,7 @@ const Achieve = () => {
       </section>
 
       <section className="flex flex-col my-32">
-        <h2 className="font-bold text-2xl text-gray-800 mb-8">Insights gathered from behavior analysis</h2>
+        <h4 className="font-semibold text-indigo-700 mb-6 text-lg">Insights from behavior analysis</h4>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-2">
           <div className="block">
             <div className="space-x-2 flex mb-4">
@@ -187,9 +188,40 @@ const Achieve = () => {
       </section>
 
       <section className="flex flex-col my-32">
+        <h4 className="font-semibold text-indigo-700 mb-2 text-lg">Insights from Interviewing Employers</h4>
+        <quote className="text-gray-900 font-bold text-3xl md:text-4xl md:leading-normal mb-6">
+          "It will be better for us to hire people who has a good reputation and is willing to work on this job. 
+          Also, it is time consuming for us to train new employees with budget and time limitation."<br/>
+          <div className="text-gray-400 text-lg text-right font-medium">David, an owner of shoe company</div>
+        </quote>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
+          <div className="block">
+            <p className="font-semibold text-gray-800 border-l-2 border-indigo-700 pl-4 mb-2">Pain points</p>
+            <div className="pl-[1.125rem]">
+              <ul className="text-gray-700 mb-4 list-disc leading-loose">
+                <li>Employees tend to leave mid-training</li>
+                <li>Limited employee training time and budget</li>
+                <li>Lack of alignment between applicant skills and job requirements</li>
+              </ul>
+            </div>
+          </div>
+          <div className="block">
+            <p className="font-semibold text-gray-800 border-l-2 border-indigo-700 pl-4 mb-2">Goals</p>
+            <div className="pl-[1.125rem]">
+              <ul className="text-gray-700 mb-4 list-disc leading-loose">
+                <li>To recruit employees with passion or pre-existing experience of the job</li>
+                <li>To recruit employees willing to get trained prior to start working</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="flex flex-col my-32">
         <h4 className="font-semibold text-indigo-700 mb-2 text-lg">Our Pivot</h4>
         <quote className="text-gray-900 font-bold text-3xl md:text-4xl md:leading-normal mb-6">
           “Good education background means more chance to get a job at better place and better position but it doesn’t mean a lot of money.”<br/>
+          <div className="text-gray-400 text-lg text-right font-medium">Michael, a worker at pet adoption center</div>
         </quote>
         <p className="text-gray-700 mb-12">
           Our target audience had goals to have higher income, but aren't sure how to achieve that goal. They are open to learn new skills,
@@ -249,6 +281,16 @@ const Achieve = () => {
             </div>
           </div>
         </div>
+      </section>
+
+      <section className="flex flex-col my-32">
+        <h2 className="font-bold text-2xl text-gray-800 mb-8">Testing and Refinements</h2>
+        <img src="/achieve/testing.jpg" alt="User testing and feedback" className="mb-2 max-h-[32rem] w-full object-cover"/>
+        <figcaption class="text-gray-500 italic text-sm mb-4 w-full text-center">Photos of our team testing possible users</figcaption>
+
+        <p className="text-gray-700">
+          
+        </p>
       </section>
 
       {/* <FullBleed>
