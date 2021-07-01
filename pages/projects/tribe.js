@@ -189,18 +189,17 @@ const Tomato = () => {
               </div>
             </div>
           </div>
-          <div className="flex justify-center py-8">
-            <img src="/tribe/recap-2.png" className="rounded-2xl h-full"/>
+          <div className="py-8">
+            <img src="/tribe/recap-2.png" className="w-full flex-0"/>
           </div>
         </div>
         <div className="grid grid-cols-2 gap-6">
           <div className="flex">
-            <div class="flex justify-center h-full items-center">
-              {/* <div className="flex items-center justify-center flex-0 relative h-full mr-16">
-                <div className="absolute w-1 bg-green-600 rounded-full rounded-t-none h-full items-center justify-center"></div>
-                <div className="absolute bg-white w-6 h-6 border-4 border-green-600 rounded-full mb-20"></div>
-              </div> */}
-
+            <div class="flex justify-center h-full items-center relative">
+              <div className="flex items-center justify-center flex-0 h-full mr-16 absolute -left-12">
+                <div className="absolute w-1 bg-green-600 rounded-full rounded-b-none h-full items-center justify-center"></div>
+                <div className="absolute bg-white w-6 h-6 border-4 border-green-600 rounded-full mb-12"></div>
+              </div>
               <div className="block">
                 <h4 className="font-semibold text-green-500 mb-2 text-lg">Represent</h4>
                 <h3 className="text-gray-800 text-4xl font-bold leading-snug mb-4">
@@ -212,8 +211,8 @@ const Tomato = () => {
               </div>
             </div>
           </div>
-          <div className="flex justify-center py-8">
-            <img src="/tribe/recap.png" className="rounded-2xl max-h-[26rem]"/>
+          <div className="py-8">
+            <img src="/tribe/badges.png" className="w-full"/>
           </div>
         </div>
       </section>
