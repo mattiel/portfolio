@@ -216,21 +216,6 @@ const Tomato = () => {
           </div>
         </div>
       </section>
-
-      <section className="my-32">
-        <div className="flex-1 mb-6">
-          <h4 className="font-semibold text-green-500 mb-2 text-lg">Outreach</h4>
-          <h3 className="text-gray-800 text-4xl font-bold leading-snug mb-4">
-            Managing customers without a problem
-          </h3>
-          <p className="text-gray-600">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-            Saepe quo ab sequi illo aut vero eaque, assumenda laboriosam et iusto sunt, 
-            necessitatibus maxime! Nemo, eius! Quod molestiae culpa eveniet natus!
-          </p>
-        </div>
-        <img src="/tomato/slip.png"/>
-      </section>
     </Layout>
   )
 }
