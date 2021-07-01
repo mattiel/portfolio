@@ -38,38 +38,38 @@ const Tomato = () => {
         </Container>
       </FullBleed>
 
-      <FullBleed>
-        <section 
-          className="bg-gray-900 transform skew-y-6 overflow-hidden"
-          // style={{backgroundImage: "url(/tomato/globe.png)"}}
-        >
-          <div className="transform -skew-y-6 h-[40rem] flex justify-center">
-            <Container>
-              <div className="flex flex-col-reverse md:flex-row gap-3 place-items-center overflow-hidden h-full">
-                <div className="flex-1">
-                  <img 
-                    src="/tomato/globe.png"
-                    className="absolute left-0 md:-left-2/3 -bottom-1/2 transform rotate-45"
-                  />
+        {/* <FullBleed>
+          <section 
+            className="bg-gray-900 transform skew-y-6 overflow-hidden"
+            // style={{backgroundImage: "url(/tomato/globe.png)"}}
+          >
+            <div className="transform -skew-y-6 h-[40rem] flex justify-center">
+              <Container>
+                <div className="flex flex-col-reverse md:flex-row gap-3 place-items-center overflow-hidden h-full">
+                  <div className="flex-1">
+                    <img 
+                      src="/tomato/globe.png"
+                      className="absolute left-0 md:-left-2/3 -bottom-1/2 transform rotate-45"
+                    />
+                  </div>
+                  <div className="flex-1 mt-32 md:mt-0">
+                    <h4 className="font-semibold text-green-400 mb-2 text-lg">Outreach</h4>
+                    <h3 className="text-white text-4xl font-bold leading-snug mb-4">
+                      Connecting all POS installation agencies
+                    </h3>
+                    <p className="text-gray-200">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+                      Saepe quo ab sequi illo aut vero eaque, assumenda laboriosam et iusto sunt, 
+                      necessitatibus maxime! Nemo, eius! Quod molestiae culpa eveniet natus!
+                    </p>
+                  </div>
                 </div>
-                <div className="flex-1 mt-32 md:mt-0">
-                  <h4 className="font-semibold text-green-400 mb-2 text-lg">Outreach</h4>
-                  <h3 className="text-white text-4xl font-bold leading-snug mb-4">
-                    Connecting all POS installation agencies
-                  </h3>
-                  <p className="text-gray-200">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-                    Saepe quo ab sequi illo aut vero eaque, assumenda laboriosam et iusto sunt, 
-                    necessitatibus maxime! Nemo, eius! Quod molestiae culpa eveniet natus!
-                  </p>
-                </div>
-              </div>
-            </Container>
-          </div>
-        </section>
-      </FullBleed>
+              </Container>
+            </div>
+          </section>
+        </FullBleed> */}
 
-      <section className="flex flex-col items-center py-32">
+      {/* <section className="flex flex-col items-center py-32">
         <h2 className="font-bold text-2xl text-gray-800 mb-4">Key Features</h2>
         <div className="grid md:grid-cols-4 gap-4 grid-cols-1">
           <div className="flex flex-col items-start">
@@ -116,9 +116,9 @@ const Tomato = () => {
             </p>
           </div>
         </div>
-      </section>
+      </section> */}
 
-      <FullBleed>
+      {/* <FullBleed>
         <Container>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 py-32 relative h-screen max-h-[50rem]">
             <div className="flex flex-col justify-center">
@@ -138,7 +138,7 @@ const Tomato = () => {
             </div>
           </div>
         </Container>
-      </FullBleed>
+      </FullBleed> */}
 
 
       <section class="my-32">
@@ -185,71 +185,76 @@ const Tomato = () => {
       <section className="my-32">
         <div className="grid grid-cols-1 gap-6">
           <div className="block">
-            <h4 className="font-semibold text-green-500 mb-2 text-lg">Solutions</h4>
+            <h4 className="font-semibold text-green-500 mb-2 text-lg">Solution</h4>
             <h3 className="text-gray-800 text-4xl font-bold leading-snug mb-4">
               Finding the sweetspot
             </h3>
+            <img src="/tomato/transition.jpg" className="max-h-[32rem] w-full object-cover mb-8"/>
             <p className="text-gray-700 text-lg">
               While users need improved product, they need familiar user interfaces and experience to avoid usability problems.
             </p>
           </div>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 py-8">
-            <div className="block">
-              <p className="font-semibold text-xl text-gray-800 border-l-2 border-green-500 pl-4 mb-4">Familiar interface</p>
-              <div className="pl-[1.125rem]">
-                {/* <strong className="text-2xl text-green-600 font-bold mb-4 leading-loose">40+</strong> */}
-                <p className="text-gray-700 mb-4">
-                  Due to high average age demographics, the interface needed to be familiar enough so that the users
-                  are able to get a grasp of how to use the product without getting lost. Also, accessible interfaces
-                  for individuals with vision problems also needed to be considered.
-                </p>
-              </div>
-            </div>
-
-            <div className="block">
-              <p className="font-semibold text-xl text-gray-800 border-l-2 border-green-500 pl-4 mb-4">Desktop experience</p>
-              <div className="pl-[1.125rem]">
-                <p className="text-gray-700 mb-4">
-                  Users have 
-                </p>
-              </div>
+          <div className="block">
+            <p className="font-semibold text-xl text-gray-800 border-l-2 border-green-500 pl-4 mb-4">Familiar interface</p>
+            <div className="pl-[1.125rem]">
+              {/* <strong className="text-2xl text-green-600 font-bold mb-4 leading-loose">40+</strong> */}
+              <p className="text-gray-700 mb-4">
+                Due to high average age demographics, the interface needed to be familiar enough so that the users
+                are able to get a grasp of how to use the product without getting lost. Also, accessible interfaces
+                for individuals with vision problems also needed to be considered.
+              </p>
             </div>
           </div>
+
+          <div className="block">
+            <p className="font-semibold text-xl text-gray-800 border-l-2 border-green-500 pl-4 mb-4">Hiearchy Refinement</p>
+            <div className="pl-[1.125rem]">
+              <p className="text-gray-700 mb-4">
+                Our users have given us constant feed back and we've analyzed their flows using important tasks such as registering purchase orders into the system.
+              </p>
+            </div>
+          </div>
+        </div>
       </section>
 
-      <section className="py-32">
-        <div className="flex-1 mb-6">
-          <h4 className="font-semibold text-green-400 mb-2 text-lg">Outreach</h4>
-          <h3 className="text-gray-800 text-4xl font-bold leading-snug mb-4">
-            Managing customers without a problem
-          </h3>
-          <p className="text-gray-600">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-            Saepe quo ab sequi illo aut vero eaque, assumenda laboriosam et iusto sunt, 
-            necessitatibus maxime! Nemo, eius! Quod molestiae culpa eveniet natus!
-          </p>
+      <section className="my-32">
+        <div className="grid grid-cols-1 gap-6">
+          <div className="block">
+            <h4 className="font-semibold text-green-500 mb-2 text-lg">Developer Hand-off</h4>
+            <h3 className="text-gray-800 text-4xl font-bold leading-snug mb-4">
+              Creating guidelines
+            </h3>
+            <img src="/tomato/style-guide.jpg" className="max-h-[32rem] w-full object-cover mb-2"/>
+             <figcaption class="text-gray-500 italic text-sm mb-4 w-full text-center">
+              Experience and UI guideline for developers
+            </figcaption>
+
+            <img src="/tomato/implementation-guide.jpg" className="max-h-[32rem] w-full object-cover mb-2"/>
+            <figcaption class="text-gray-500 italic text-sm mb-4 w-full text-center">
+              Implementation and HTML/CSS structure guideline for developers
+            </figcaption>
+          </div>
         </div>
-        <img src="/tomato/slip.png"/>
       </section>
-      
-      <div className="grid gap-3 pt-4">
-        <section className="h-[80vh] rounded-2xl p-6 bg-blue-50">
-          <h2 id="intro">INTRODUCTION</h2>
-        </section>
-        <section className="h-[80vh] rounded-2xl p-6 bg-blue-50">
-          <h2 id="problem">PROBLEM</h2>
-        </section>
-        <section className="h-[80vh] rounded-2xl p-6 bg-blue-50">
-          <h2 id="process">PROCESS</h2>
-        </section>
-        <section className="h-[80vh] rounded-2xl p-6 bg-blue-50">
-          <h2 id="solutions">SOLUTIONS</h2>
-        </section>
-        <section className="h-[80vh] rounded-2xl p-6 bg-blue-50">
-          <h2 id="final-outcome">FINAL OUTCOME</h2>
-        </section>
-      </div>
+
+      <section className="my-32">
+        <div className="grid grid-cols-1 gap-6">
+          <div className="block">
+            <h4 className="font-semibold text-green-500 mb-2 text-lg">Icons</h4>
+            <h3 className="text-gray-800 text-4xl font-bold leading-snug mb-4">
+              Secondary imagery for accessibility
+            </h3>
+            <img src="/tomato/icons.jpg" className="max-h-[32rem] w-full object-cover mb-2"/>
+             <figcaption class="text-gray-500 italic text-sm mb-4 w-full text-center">
+              Icons I've created for the project.
+            </figcaption>
+          </div>
+        </div>
+      </section>
+
+     
     </Layout>
   )
 }
