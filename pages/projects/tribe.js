@@ -6,6 +6,10 @@ import Opportunity from '@/components/Tribe/Opportunity'
 import Layout from '@/components/Layout'
 import FullBleed from '@/components/FullBleed'
 import Container from '@/components/Container'
+
+import Zoom from 'react-medium-image-zoom'
+import 'react-medium-image-zoom/dist/styles.css'
+
 import { useRef, useState, useEffect } from 'react'
 import { Transition } from '@headlessui/react'
 
@@ -38,7 +42,7 @@ const Tomato = () => {
             </div>
             <div className="">
               <h3 className="text-gray-800 font-semibold text-lg mb-1">Date</h3>
-              <p className="text-gray-700">April 13, 2020 - Present</p>
+              <p className="text-gray-700">Spring 2017</p>
             </div>
             <div className="">
               <h3 className="text-gray-800 font-semibold text-lg mb-1">Company</h3>
@@ -125,6 +129,28 @@ const Tomato = () => {
         </Container>
       </FullBleed>
 
+      <section class="my-32">
+        <div className="grid grid-cols-1 gap-8 mb-8 items-center">
+          <div className="flex-1">
+            <h4 className="font-semibold text-green-500 mb-2 text-lg">Flows</h4>
+            <h3 className="text-gray-800 text-4xl font-bold leading-snug mb-4">
+              System flows and interactions
+            </h3>
+            <div className="grid grid-cols-1 gap-8 mb-8">
+              <Zoom>
+                <img src="/tribe/systemflow.jpg" className="max-h-[32rem] w-full object-cover"/>
+              </Zoom>
+              <Zoom>
+                <img src="/tribe/wireframeflow.jpg" className="max-h-[32rem] w-full object-cover"/>
+              </Zoom>
+            </div>
+            <p className="text-gray-700 text-lg mb-4">
+              Through natural human interactions such as handshakes and fist bumps, contacts can exchange information seamlessly. 
+            </p>
+          </div>
+        </div> 
+      </section>
+
 
       <section class="my-32">
         <div className="grid grid-cols-1 gap-8 mb-8 items-center">
@@ -190,10 +216,12 @@ const Tomato = () => {
             </div>
           </div>
           <div className="py-8">
-            <img src="/tribe/recap-2.png" className="w-full flex-0"/>
+            <Zoom>
+              <img src="/tribe/recap-2.png" className="w-full flex-0"/>
+            </Zoom>
           </div>
         </div>
-        <div className="grid grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div className="flex">
             <div class="flex justify-center h-full items-center relative">
               <div className="flex items-center justify-center flex-0 h-full mr-16 absolute -left-12">
@@ -211,8 +239,11 @@ const Tomato = () => {
               </div>
             </div>
           </div>
+
           <div className="py-8">
-            <img src="/tribe/badges.png" className="w-full"/>
+            <Zoom>
+              <img src="/tribe/badges.png" className="w-full"/>
+            </Zoom>
           </div>
         </div>
       </section>

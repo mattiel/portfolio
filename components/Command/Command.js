@@ -13,7 +13,14 @@ const Command = () => {
       />
       <Section label="Menu" />
       <Option 
-        label="Option"
+        label="About"
+      />
+      <Option 
+        label="Projects"
+      />
+       <Option 
+        label="Blog"
+        disabled
       />
     </div>
   );

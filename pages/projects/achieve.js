@@ -82,7 +82,7 @@ const Achieve = () => {
       </FullBleed>
 
       <section className="flex flex-col my-32">
-        <h2 className="font-bold text-2xl text-gray-800 mb-8">Preliminary Research</h2>
+        <h2 className="font-bold text-4xl text-gray-800 mb-8">Preliminary Research</h2>
         <img src="/achieve/qualitative-data-1.jpg" alt="Quantitative research summary" className="mb-2 max-h-[32rem] w-full object-cover"/>
         <figcaption class="text-gray-500 italic text-sm mb-4 w-full text-center">What we learned from quantatative research</figcaption>
 
@@ -121,7 +121,7 @@ const Achieve = () => {
       </section>
 
       <section className="flex flex-col my-32">
-        <h2 className="font-bold text-2xl text-gray-800 mb-8">Qualitative Research</h2>
+        <h2 className="font-bold text-4xl text-gray-800 mb-8">Qualitative Research</h2>
         <img src="/achieve/behavior-continuum.jpg" alt="Behavior analysis of interviewees struggling with low income" className="mb-2 max-h-[32rem] w-full object-cover"/>
         <figcaption class="text-gray-500 italic text-sm mb-4 w-full text-center">We mapped out interviewee's behaviors and grouped similarities</figcaption>
 
@@ -190,7 +190,7 @@ const Achieve = () => {
       <section className="flex flex-col my-32">
         <h4 className="font-semibold text-indigo-700 mb-2 text-lg">Insights from Interviewing Employers</h4>
         <quote className="text-gray-900 font-bold text-3xl md:text-4xl md:leading-normal mb-6">
-          "It will be better for us to hire people who has a good reputation and is willing to work on this job. 
+          "It will be better for us to hire people with good reputation and is willing to work on this job. 
           Also, it is time consuming for us to train new employees with budget and time limitation."<br/>
           <div className="text-gray-400 text-lg text-right font-medium">David, an owner of shoe company</div>
         </quote>
@@ -249,7 +249,7 @@ const Achieve = () => {
       </section>
 
       <section className="flex flex-col my-32">
-        <h2 className="font-bold text-2xl text-gray-800 mb-8">Proposed solution</h2>
+        <h2 className="font-bold text-4xl text-gray-800 mb-8">Proposed solution</h2>
         <h3 className="bg-clip-text font-bold text-transparent bg-gradient-to-br from-indigo-600 to-indigo-700 text-3xl md:text-4xl md:leading-normal mb-12">
           Teach technical skills that don't require a college degree or apprenticeships.
         </h3>

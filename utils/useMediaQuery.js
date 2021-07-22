@@ -1,23 +1,23 @@
 import { useState, useEffect } from 'react';
 
-export function useMediaQuery(query) {
-  const [matches, setMatches] = useState(false);
+// export function useMediaQuery(query) {
+//   const [matches, setMatches] = useState(false);
 
-  useEffect(() => {
-    const media = window.matchMedia(query);
-    if (media.matches !== matches) {
-      setMatches(media.matches);
-    }
-    const listener = () => {
-      setMatches(media.matches);
-    };
+//   useEffect(() => {
+//     const media = window.matchMedia(query);
+//     if (media.matches !== matches) {
+//       setMatches(media.matches);
+//     }
+//     const listener = () => {
+//       setMatches(media.matches);
+//     };
 
-    media.onchange(() => {
-      return 
-    })
-    media.addListener(listener);
-    return () => media.removeListener(listener);
-  }, [matches, query]);
+//     media.onchange(() => {
+//       return 
+//     })
+//     media.addListener(listener);
+//     return () => media.removeListener(listener);
+//   }, [matches, query]);
 
-  return matches;
-}
+//   return matches;
+// }

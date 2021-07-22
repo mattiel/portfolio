@@ -30,13 +30,16 @@ const Navbar = () => {
   const [isCommandOpen, setIsCommandOpen] = useState(false)
 
   return (
+    // dark:bg-gray-900 text-gray-900 dark:text-gray-300
     <nav className="w-full top-0 left-0 fixed z-10 bg-white">
       <Container>
-        <div className="flex justify-between items-center text-gray-900 h-16">
+      {/* dark:hover:text-white */}
+        <div className="flex justify-between items-center h-16">
           <Link href="/">
             <Logo/>
           </Link>
-          <ul className="uppercase space-x-4 flex text-xs font-semibold text-gray-500 items-center">
+          {/* dark:text-gray-300 */}
+          <ul className="uppercase space-x-4 flex text-xs font-semibold text-gray-500  items-center">
             {/* <li>About</li>
             <li>Projects</li>
             <li>Contact</li> */}

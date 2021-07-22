@@ -11,10 +11,13 @@ const Modal = ({
   const [isBrowser, setIsBrowser] = useState(false)
 
   useEffect(() => {
-    setIsBrowser(true)
-    show 
-      ? document.body.style.overflow = 'hidden'
-      : document.body.style.overflow = 'unset';
+    setIsBrowser(true);
+    document.body.style.overflow = 'hidden';
+    document.body.scroll = 'no'
+    return() => {
+      document.body.style.overflow = 'unset'
+      document.body.scroll = 'yes'
+    }
   }, [])
 
   const handleClose = e => {

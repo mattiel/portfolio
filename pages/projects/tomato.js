@@ -5,6 +5,9 @@ import FullBleed from '@/components/FullBleed'
 import Container from '@/components/Container'
 import Image from 'next/image'
 
+import Zoom from 'react-medium-image-zoom'
+import 'react-medium-image-zoom/dist/styles.css'
+
 const Tomato = () => {
   return (
     <Layout>
@@ -147,6 +150,7 @@ const Tomato = () => {
           Migrating users from existing products
         </h3>
         <p className="text-gray-700 text-lg">
+          One of the biggest challenges I have faced working on this project was designing the experience for our target users.
           It was important for us to come up with solutions in order for store managers and workers to be able to use the product without
           much training. Most of the users are afraid to leave their comfort zone and learn how to use new software.
         </p>
@@ -189,9 +193,18 @@ const Tomato = () => {
             <h3 className="text-gray-800 text-4xl font-bold leading-snug mb-4">
               Finding the sweetspot
             </h3>
-            <img src="/tomato/transition.jpg" className="max-h-[32rem] w-full object-cover mb-8"/>
+            <figure class="mb-2">
+              <Zoom>
+                <img src="/tomato/transition.jpg" className="max-h-[32rem] w-full object-cover"/>
+              </Zoom>
+            </figure>
+            <figcaption class="text-gray-500 italic text-sm mb-4 w-full text-center">
+              Comparison of existing ERP's Purchase slip registration
+            </figcaption>
             <p className="text-gray-700 text-lg">
               While users need improved product, they need familiar user interfaces and experience to avoid usability problems.
+              Analyzing competitor's products and identifying their weak points, we came up with a solution that is easy to use and
+              provides a good user experience.
             </p>
           </div>
         </div>
@@ -226,16 +239,31 @@ const Tomato = () => {
             <h3 className="text-gray-800 text-4xl font-bold leading-snug mb-4">
               Creating guidelines
             </h3>
-            <img src="/tomato/style-guide.jpg" className="max-h-[32rem] w-full object-cover mb-2"/>
+            <figure class="mb-2">
+              <Zoom>
+                <img src="/tomato/style-guide.jpg" className="max-h-[32rem] w-full object-cover"/>
+              </Zoom>
+            </figure>
              <figcaption class="text-gray-500 italic text-sm mb-4 w-full text-center">
               Experience and UI guideline for developers
             </figcaption>
 
-            <img src="/tomato/implementation-guide.jpg" className="max-h-[32rem] w-full object-cover mb-2"/>
+            <figure class="mb-2">
+              <Zoom>
+                <img src="/tomato/implementation-guide.jpg" className="max-h-[32rem] w-full object-cover"/>
+              </Zoom>
+            </figure>
             <figcaption class="text-gray-500 italic text-sm mb-4 w-full text-center">
               Implementation and HTML/CSS structure guideline for developers
             </figcaption>
           </div>
+          <p className="text-gray-700 text-lg">
+            In South Korea, web developers are used to having another position called "publishers" who create HTML and CSS for them. 
+            Basically, <strong>web developers in Korea are only used to manipulation of HTML and a few CSS classes,</strong> but don't actually understand the mechanics of CSS.
+            As a UX engineer, I was responsible for implementing HTML and CSS layouts and interactions with Javascript and JQuery.
+            In order to improve my communication with the other developers, I was able to get an approval from the director
+            to create the UI and implementation guidelines.
+          </p>
         </div>
       </section>
 
@@ -246,14 +274,44 @@ const Tomato = () => {
             <h3 className="text-gray-800 text-4xl font-bold leading-snug mb-4">
               Secondary imagery for accessibility
             </h3>
-            <img src="/tomato/icons.jpg" className="max-h-[32rem] w-full object-cover mb-2"/>
+            <figure class="mb-2">
+              <Zoom>
+                <img src="/tomato/icons.jpg" className="max-h-[32rem] w-full object-cover"/>
+              </Zoom>
+            </figure>
              <figcaption class="text-gray-500 italic text-sm mb-4 w-full text-center">
               Icons I've created for the project.
             </figcaption>
           </div>
         </div>
       </section>
-
+      
+      <div className="py-24">
+        <div className="border border-gray-200 bg-gray-50 rounded-xl p-12 grid grid-cols-1 md:grid-cols-2 place-items-center">
+          <div className="grid gap-2">
+            <h3 class="text-4xl font-bold text-gray-900 mb-2">
+              Let's talk
+            </h3>
+            <p class="text-gray-700 text-lg">
+              I'm happy to discuss more about this project or future opportunities. Feel free to reach out to me.
+            </p>
+          </div>
+          <a 
+            class="inline-flex items-center text-gray-700 text-xl border-b-4 border-gray-700 
+                  hover:text-purple-600 hover:border-purple-600 transition-all place-self-end" 
+            href="mailto: hello@mattiel.dev">
+            hello@mattiel.dev
+            <svg 
+              className="w-5 h-5 ml-1" 
+              fill="none" stroke="currentColor" 
+              viewBox="0 0 24 24" 
+              xmlns="http://www.w3.org/2000/svg">
+              <path strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            </svg>
+          </a>
+        </div>
+        
+      </div>
      
     </Layout>
   )

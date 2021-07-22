@@ -8,10 +8,9 @@ const Projects = ({ manifest }) => {
           Object.entries(manifest).map(([key, value], idx) => {
             if(value.hidden === false) {
               return (
-                <Link href={`/projects/${value.title.toLowerCase()}`} >
+                <Link href={`/projects/${value.title.toLowerCase()}`} key={idx}>
                   <div 
                     className={`${idx === 0 ? 'col-span-full' : ''} cursor-pointer overflow-hidden flex flex-col`}
-                    key={idx}
                   >
                     <figure 
                       className="w-full mb-4 overflow-hidden"
