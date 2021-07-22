@@ -10,7 +10,7 @@ const Projects = ({ manifest }) => {
               return (
                 <Link href={`/projects/${value.title.toLowerCase()}`} key={idx}>
                   <div 
-                    className={`${idx === 0 ? 'col-span-full' : ''} cursor-pointer overflow-hidden flex flex-col`}
+                    className="cursor-pointer overflow-hidden flex flex-col"
                   >
                     <figure 
                       className="w-full mb-4 overflow-hidden"
@@ -18,14 +18,11 @@ const Projects = ({ manifest }) => {
                     > 
                       <div 
                         className={`
-                          ${idx === 0 ? 'lg:h-[36rem]' : ''}
-                        bg-gray-100 bg-opacity-95 w-full px-6 py-8 bg-no-repeat transition duration-300 hover:scale-105
-                          lg:h-[30rem] h-96 items-start
+                        bg-gray-100 bg-opacity-95 w-full px-6 py-8 bg-no-repeat transition duration-300 hover:scale-105 bg-full-cover
+                          lg:h-[30rem] h-96 items-start bg-cover bg-center
                         `}
                         style={{
-                          backgroundImage: `url('${value.thumbnail}')`,
-                          backgroundSize: `${idx === 0 ? '80%' : 'cover'}`,
-                          backgroundPosition: `${idx === 0 ? 'bottom' : 'bottom'}`,
+                          backgroundImage: `url('${value.thumbnail}')`
                         }}
                       >
                       </div>

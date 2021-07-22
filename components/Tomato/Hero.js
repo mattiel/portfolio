@@ -26,7 +26,7 @@ const Hero = () => {
                   </p>
                 </div>
                 <div className="h-auto md:h-[30rem] md:ml-4">
-                  <img src="/tomato-thumbnail.png" className="md:absolute shadow-md"/>
+                  <img src="/tomato/tomato-dashboard.png" className="md:absolute shadow-md"/>
                 </div>
               </div>
             </Container>
