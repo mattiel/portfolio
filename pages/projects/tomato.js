@@ -3,7 +3,7 @@ import Hero from '@/components/Tomato/Hero'
 import Layout from '@/components/Layout'
 import FullBleed from '@/components/FullBleed'
 import Container from '@/components/Container'
-import Image from 'next/image'
+import Contact from '@/components/Contact'
 
 import Zoom from 'react-medium-image-zoom'
 import 'react-medium-image-zoom/dist/styles.css'
@@ -259,9 +259,13 @@ const Tomato = () => {
           </div>
           <p className="text-gray-700 text-lg">
             In South Korea, web developers are used to having another position called "publishers" who create HTML and CSS for them. 
-            Basically, <strong>web developers in Korea are only used to manipulation of HTML and a few CSS classes,</strong> but don't actually understand the mechanics of CSS.
+            Basically, <strong>many web developers in Korea are used to manipulation of HTML and a few CSS classes, </strong> 
+            but don't actually understand the mechanics of CSS.
+          </p>
+          <p className="text-gray-700 text-lg">
             As a UX engineer, I was responsible for implementing HTML and CSS layouts and interactions with Javascript and JQuery.
-            In order to improve my communication with the other developers, I was able to get an approval from the director
+            When I created generic layouts for the developers to copy and paste, the developers struggled on implementing designs that deviated from the original layout.
+            In order to improve my communication with the other developers and to provide guidelines, I was able to get an approval from the director
             to create the UI and implementation guidelines.
           </p>
         </div>
@@ -272,7 +276,7 @@ const Tomato = () => {
           <div className="block">
             <h4 className="font-semibold text-green-500 mb-2 text-lg">Icons</h4>
             <h3 className="text-gray-800 text-4xl font-bold leading-snug mb-4">
-              Secondary imagery for accessibility
+              Symbols for guidance
             </h3>
             <figure class="mb-2">
               <Zoom>
@@ -284,35 +288,33 @@ const Tomato = () => {
             </figcaption>
           </div>
         </div>
-      </section>
-      
-      <div className="py-24">
-        <div className="border border-gray-200 bg-gray-50 rounded-xl p-12 grid grid-cols-1 md:grid-cols-2 place-items-center">
-          <div className="grid gap-2">
-            <h3 class="text-4xl font-bold text-gray-900 mb-2">
-              Let's talk
-            </h3>
-            <p class="text-gray-700 text-lg">
-              I'm happy to discuss more about this project or future opportunities. Feel free to reach out to me.
-            </p>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 py-8">
+          <div className="block">
+            <p className="font-semibold text-xl text-gray-800 border-l-2 border-green-500 pl-4 mb-4">High contrast icons</p>
+            <div className="pl-[1.125rem]">
+              {/* <strong className="text-2xl text-green-600 font-bold mb-4 leading-loose">40+</strong> */}
+              <p className="text-gray-700 mb-4">
+                High contrast and distinguishable primary menu icons were used to provide a visual hierarchy for the menu. With previous generations,
+                users were not able to distinguish the menu items because of how icons were styled same way across the websites.
+              </p>
+            </div>
           </div>
-          <a 
-            class="inline-flex items-center text-gray-700 text-xl border-b-4 border-gray-700 
-                  hover:text-purple-600 hover:border-purple-600 transition-all place-self-end" 
-            href="mailto: hello@mattiel.dev">
-            hello@mattiel.dev
-            <svg 
-              className="w-5 h-5 ml-1" 
-              fill="none" stroke="currentColor" 
-              viewBox="0 0 24 24" 
-              xmlns="http://www.w3.org/2000/svg">
-              <path strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-            </svg>
-          </a>
+
+          <div className="block">
+            <p className="font-semibold text-xl text-gray-800 border-l-2 border-green-500 pl-4 mb-4">Important for CTAs</p>
+            <div className="pl-[1.125rem]">
+              <p className="text-gray-700 mb-4">
+                Icons were created for call to actions to help users identify which elements are there for actions.
+                These icons were primarily used in conjunction with buttons because important CTAs are usually buttons and our users
+                needed clear affordances for such actions.
+              </p>
+            </div>
+          </div>
         </div>
-        
-      </div>
-     
+      </section>
+
+      <Contact />
     </Layout>
   )
 }

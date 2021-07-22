@@ -8,7 +8,7 @@ const Footer = () => {
     <FullBleed className="bg-gray-50 mt-16">
       <Container>
         <div className="py-16 text-gray-800">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 ml-12">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             <Logo />
             <div className="leading-relaxed text-lg -mt-1">
               <ul>
