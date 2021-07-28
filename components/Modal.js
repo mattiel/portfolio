@@ -35,7 +35,7 @@ const Modal = ({
       leave="transition-opacity ease-linear duration-200"
       leaveFrom="opacity-100"
       leaveTo="opacity-0"
-      className="fixed top-0 left-0 w-full h-full grid place-items-center bg-black bg-opacity-50 p-4"
+      className="fixed top-0 left-0 w-full h-full grid place-items-center bg-black bg-opacity-50 p-4 z-50"
       onClick={() => onClose()}
     >
       <Transition.Child
@@ -65,9 +65,8 @@ const Modal = ({
               </div>
             </div>
           )
-            
         }
-        </Transition.Child>
+      </Transition.Child>
     </Transition>
   )
 

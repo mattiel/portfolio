@@ -17,11 +17,6 @@ const Footer = () => {
                     <a>Github</a>
                   </Link>
                 </li>
-                <li>
-                  <Link href="https://github.com/mattiel">
-                    <a>Github</a>
-                  </Link>
-                </li>
               </ul>
             </div>
             <a className="">

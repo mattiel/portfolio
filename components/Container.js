@@ -1,4 +1,4 @@
-const Container = ({ children, className }) => {
+const Container = ({ children, className, hideGuideline }) => {
   return (
     <section className={`container max-w-screen-lg mx-auto relative px-5 ${className ? className : ''}`}>
       { children }
