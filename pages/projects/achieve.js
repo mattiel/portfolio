@@ -21,6 +21,7 @@ const Achieve = () => {
             <div className="">
               <h3 className="text-gray-800 font-semibold text-lg mb-1">Project Team</h3>
               <p className="text-gray-700">
+                Mattie Lee<br/>
                 Stacey Jang<br/>
                 Akshay Agrawal<br/>
                 Joyce Chiu
@@ -53,27 +54,27 @@ const Achieve = () => {
         <Container>
           <h4 className="font-semibold text-indigo-500 mb-2 text-lg">Our challange</h4>
           <h3 className="text-white text-4xl font-bold leading-snug mb-4">
-            How can we use an OTT(Over-the-Top) platform to solve problems for low-income Americans?
+            How can we use an media platform to solve problems for low-income Americans?
           </h3>
           <p className="text-gray-300 mb-9 text-lg">
-            This was a team project for Interaction Design 3 (UX research) class and we focused on user research and
-            developed our ideas through user research and testing.
+            This was a team project for Interaction Design 3 (UX research) class and we were looking to find out how the media platform 
+            can be used by low-income Americans through research and testing.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
-            <div className="block">
+            <div className="block pr-4">
               <p className="font-semibold text-white border-l-2 border-indigo-600 pl-4 mb-2">Why</p>
               <div className="pl-[1.125rem]">
                 <p className="text-gray-300 mb-4">
-                  We wanted to know what kind of struggles the low-income individuals are facing and find solutions for them.
+                  We wanted to know what kind of struggles the low-income individuals are facing and find suitable educational media platform for them.
                 </p>
               </div>
             </div>
 
-            <div className="block">
+            <div className="block pr-4">
               <p className="font-semibold text-white border-l-2 border-indigo-600 pl-4 mb-2">Target Audience</p>
               <div className="pl-[1.125rem]">
                 <p className="text-gray-300 mb-4">
-                  Americans whose income are minimum wage or even less.
+                  American citizens who earn minimum wage or below.
                 </p>
               </div>
             </div>
@@ -97,10 +98,10 @@ const Achieve = () => {
       <section className="flex flex-col my-32">
         <h4 className="font-semibold text-indigo-700 mb-2 text-lg">Our First Assumption</h4>
         <quote className="text-gray-900 font-bold text-3xl md:text-4xl md:leading-normal mb-8">
-          "Americans with low income are stuck with minimum wage because they didn't get higher education"
+          "Americans with low income are stuck with minimum wage because they cant't get higher education"
         </quote>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
-          <div className="block">
+          <div className="block pr-4">
             <p className="font-semibold text-gray-800 border-l-2 border-indigo-700 pl-4 mb-2">Problem</p>
             <div className="pl-[1.125rem]">
               <p className="text-gray-700 mb-4">
@@ -109,11 +110,11 @@ const Achieve = () => {
             </div>
           </div>
 
-          <div className="block">
+          <div className="block pr-4">
             <p className="font-semibold text-gray-800 border-l-2 border-indigo-700 pl-4 mb-2">Possible Solutions</p>
             <div className="pl-[1.125rem]">
               <p className="text-gray-700 mb-4">
-                We thought of brining OTT platform for degree earning and networking with current professionals in their area of interest.
+                We thought of brining educational media platform like Youtube for degree earning and networking with current professionals in their area of interest.
               </p>
             </div>
           </div>
@@ -135,7 +136,7 @@ const Achieve = () => {
       <section className="flex flex-col my-32">
         <h4 className="font-semibold text-indigo-700 mb-6 text-lg">Insights from behavior analysis</h4>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-2">
-          <div className="block">
+          <div className="block pr-4">
             <div className="space-x-2 flex mb-4">
               <div className="w-8 h-8 font-medium bg-indigo-100 text-indigo-900 grid place-items-center">Mi</div>
               <div className="w-8 h-8 font-medium bg-indigo-100 text-indigo-900 grid place-items-center">So</div>
@@ -143,15 +144,15 @@ const Achieve = () => {
             <p className="font-semibold text-gray-800 border-l-2 border-indigo-700 pl-4 mb-2">Michael, Sophie</p>
             <div className="pl-[1.125rem]">
               <ul className="text-gray-700 mb-4 list-disc leading-loose">
-                <li>Don’t think higher education level is important to get more money</li>
+                <li>Doesn't think higher education level is important to get more money</li>
                 <li>Very  open to learn new skills</li>
-                <li>Do a lot of side jobs and even work on weekends; no free time</li>
+                <li>Does a lot of side jobs and even work on weekends; no free time</li>
                 <li>Worried about future because current job is unstable</li>
               </ul>
             </div>
           </div>
 
-          <div className="block">
+          <div className="block pr-4">
             <div className="space-x-2 flex mb-4">
               <div className="w-8 h-8 font-medium bg-indigo-100 text-indigo-900 grid place-items-center">Ke</div>
               <div className="w-8 h-8 font-medium bg-indigo-100 text-indigo-900 grid place-items-center">To</div>
@@ -159,14 +160,14 @@ const Achieve = () => {
             <p className="font-semibold text-gray-800 border-l-2 border-indigo-700 pl-4 mb-2">Kelly, Tom</p>
             <div className="pl-[1.125rem]">
             <ul className="text-gray-700 mb-4 list-disc leading-loose">
-                <li>Don’t think higher education level is what they need for better job</li>
+                <li>Doesn't think higher education level is what they need for better job</li>
                 <li>Doesn't have busy schedule</li>
                 <li>Not satisfied with their current job</li>
                 <li>Given up looking for jobs</li>
               </ul>
             </div>
           </div>
-          <div className="block">
+          <div className="block pr-4">
             <div className="space-x-2 flex mb-4">
               <div className="w-8 h-8 font-medium bg-indigo-100 text-indigo-900 grid place-items-center">Ar</div>
               <div className="w-8 h-8 font-medium bg-indigo-100 text-indigo-900 grid place-items-center">Br</div>
@@ -195,7 +196,7 @@ const Achieve = () => {
           <div className="text-gray-400 text-lg text-right font-medium">David, an owner of shoe company</div>
         </quote>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
-          <div className="block">
+          <div className="block pr-4">
             <p className="font-semibold text-gray-800 border-l-2 border-indigo-700 pl-4 mb-2">Pain points</p>
             <div className="pl-[1.125rem]">
               <ul className="text-gray-700 mb-4 list-disc leading-loose">
@@ -205,7 +206,7 @@ const Achieve = () => {
               </ul>
             </div>
           </div>
-          <div className="block">
+          <div className="block pr-4">
             <p className="font-semibold text-gray-800 border-l-2 border-indigo-700 pl-4 mb-2">Goals</p>
             <div className="pl-[1.125rem]">
               <ul className="text-gray-700 mb-4 list-disc leading-loose">
@@ -224,20 +225,20 @@ const Achieve = () => {
           <div className="text-gray-400 text-lg text-right font-medium">Michael, a worker at pet adoption center</div>
         </quote>
         <p className="text-gray-700 mb-12">
-          Our target audience had goals to have higher income, but aren't sure how to achieve that goal. They are open to learn new skills,
-          however doesn't want to pay for college education because it would put them into debt.
+          Our target audience had goals to earn a higher income, but aren't sure how to achieve that goal. They are open to learn new skills,
+          however don't want to pay for college education because it would put them into debt.
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
-          <div className="block">
+          <div className="block pr-4">
             <p className="font-semibold text-gray-800 border-l-2 border-indigo-700 pl-4 mb-2">Real problem</p>
             <div className="pl-[1.125rem]">
               <p className="text-gray-700 mb-4">
-                Many Americans with low income are troubled from advancing from current economical status because they are unsure of what to do.
+                Many Americans with low income can't advance from current economical status because they are unsure of what to do.
               </p>
             </div>
           </div>
 
-          <div className="block">
+          <div className="block pr-4">
             <p className="font-semibold text-gray-800 border-l-2 border-indigo-700 pl-4 mb-2">Our mission</p>
             <div className="pl-[1.125rem]">
               <p className="text-gray-700 mb-4">
@@ -254,7 +255,7 @@ const Achieve = () => {
           Teach technical skills that don't require a college degree or apprenticeships.
         </h3>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-2">
-          <div className="block">
+          <div className="block pr-4">
             <p className="font-semibold text-gray-800 border-l-2 border-indigo-700 pl-4 mb-2">No financial obligation</p>
             <div className="pl-[1.125rem]">
               <p className="text-gray-700 mb-4">
@@ -263,7 +264,7 @@ const Achieve = () => {
             </div>
           </div>
 
-          <div className="block">
+          <div className="block pr-4">
             <p className="font-semibold text-gray-800 border-l-2 border-indigo-700 pl-4 mb-2">Subcontract with companies</p>
             <div className="pl-[1.125rem]">
               <p className="text-gray-700 mb-4">
@@ -272,7 +273,7 @@ const Achieve = () => {
             </div>
           </div>
 
-          <div className="block">
+          <div className="block pr-4">
             <p className="font-semibold text-gray-800 border-l-2 border-indigo-700 pl-4 mb-2">Flexible time management</p>
             <div className="pl-[1.125rem]">
               <p className="text-gray-700 mb-4">
