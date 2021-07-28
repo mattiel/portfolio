@@ -24,6 +24,7 @@ const Option = ({ label, glyph, path, hotkeys, isFocused, disabled, link}) => {
         `}
       >
         <div className="space-y-2">
+          
           <span className={`
             leading-6 
             ${isFocused && 'font-semibold text-gray-700'}
