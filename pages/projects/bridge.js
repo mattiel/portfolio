@@ -473,6 +473,36 @@ const bridge = () => {
         </div>
       </section>
 
+      <section className="my-48">
+        <h3 className="text-gray-800 text-4xl font-bold leading-snug mb-4">
+          Next Steps
+        </h3>
+        <p className="text-gray-700 text-xl mb-8">
+          There are still many things that can be done to make Bridge better. 
+          There should be ways for other developers to join in and ship extensions for the Bridge users.
+          Exploring ways of authentication process without a confirmation email, or even without a password seems like a good start. 
+        </p>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
+          <div className="block pr-4">
+            <p className="font-semibold text-gray-800 border-l-2 border-blue-500 pl-4 mb-2">Extensibility</p>
+            <div className="pl-[1.125rem]">
+              Provide Software Development Kits (SDKs) to allow developers to build and ship extensions to Bridge.
+              This will provide broader range of tools for data on the server. There are infinite possibilities.
+            </div>
+          </div>
+
+          <div className="block pr-4">
+            <p className="font-semibold text-gray-800 border-l-2 border-blue-500 pl-4 mb-2">Credentials</p>
+            <div className="pl-[1.125rem]">
+              <p className="text-gray-700 mb-4">
+                Logins are still very old school - users need to use a password to log in. Bridge will provide a way to store credentials in a secure way, and find a way to
+                perhaps authenticate users without a password by having unique passwords for each unique users and have the authentication process seamlessly done on the router, without having to enter a login screen.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <Contact />
     </Layout>
   );
