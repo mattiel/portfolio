@@ -4,6 +4,8 @@ import Layout from '@/components/Layout'
 import FullBleed from '@/components/FullBleed'
 import Container from '@/components/Container'
 import Contact from '@/components/Contact'
+import Scroller from '@/components/Scroller'
+import Card from '@/components/Card'
 
 import Zoom from 'react-medium-image-zoom'
 import 'react-medium-image-zoom/dist/styles.css'
@@ -13,8 +15,65 @@ const Tomato = () => {
     <Layout>
       {/* <TOC /> */}
       <Hero />
+      <Scroller>
+        <Card>
+          <div className="flex flex-col">
+            <div className="text-purple-600 mb-12">
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path 
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" 
+                />
+              </svg>
+            </div>
+            <div className="">
+              <h3 className="text-gray-800 font-semibold text-lg mb-1">Project Team</h3>
+              <p className="text-gray-700">Systems Design</p>
+            </div>
+          </div>
+        </Card>
+        <Card>
+          <div className="flex flex-col">
+            <div className="text-purple-600 mb-12">
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>
+            </div>
+            <div className="">
+              <h3 className="text-gray-800 font-semibold text-lg mb-1">My role</h3>
+              <ul className="text-gray-700">
+                <li>UI/UX Design</li>
+                <li>Design Guidelines</li>
+                <li>Front-End Development</li>
+              </ul>
+            </div>
+          </div>
+        </Card>
+        <Card>
+          <div className="flex flex-col">
+            <div className="text-purple-600 mb-12">
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+              </svg>
+            </div>
+            <div className="">
+              <h3 className="text-gray-800 font-semibold text-lg mb-1">Company</h3>
+              <p className="text-gray-700">Retail and Insight <br/> Seoul, South Korea</p>
+            </div>
+          </div>
+        </Card>
+      </Scroller>
 
       <FullBleed className="py-32 bg-gray-50">
+        <div 
+          className="container max-w-screen-lg mx-auto absolute top-0 left-0 h-full border-l border-r border-dashed border-gray-500 border-opacity-10 pointer-events-none flex justify-evenly items-start"
+          style={{zIndex: -1, width: 'calc(100% - 2.5rem + 1px)'}}
+        >
+          <div className="h-full border-l border-dashed border-gray-500 border-opacity-10 hidden md:block" style={{width: '1px'}}></div>
+          <div className="h-full border-l border-dashed border-gray-500 border-opacity-10 hidden md:block" style={{width: '1px'}}></div>
+        </div>
         <Container>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             <div className="">
@@ -41,110 +100,7 @@ const Tomato = () => {
         </Container>
       </FullBleed>
 
-        {/* <FullBleed>
-          <section 
-            className="bg-gray-900 transform skew-y-6 overflow-hidden"
-            // style={{backgroundImage: "url(/tomato/globe.png)"}}
-          >
-            <div className="transform -skew-y-6 h-[40rem] flex justify-center">
-              <Container>
-                <div className="flex flex-col-reverse md:flex-row gap-3 place-items-center overflow-hidden h-full">
-                  <div className="flex-1">
-                    <img 
-                      src="/tomato/globe.png"
-                      className="absolute left-0 md:-left-2/3 -bottom-1/2 transform rotate-45"
-                    />
-                  </div>
-                  <div className="flex-1 mt-32 md:mt-0">
-                    <h4 className="font-semibold text-green-400 mb-2 text-lg">Outreach</h4>
-                    <h3 className="text-white text-4xl font-bold leading-snug mb-4">
-                      Connecting all POS installation agencies
-                    </h3>
-                    <p className="text-gray-200">
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-                      Saepe quo ab sequi illo aut vero eaque, assumenda laboriosam et iusto sunt, 
-                      necessitatibus maxime! Nemo, eius! Quod molestiae culpa eveniet natus!
-                    </p>
-                  </div>
-                </div>
-              </Container>
-            </div>
-          </section>
-        </FullBleed> */}
-
-      {/* <section className="flex flex-col items-center py-32">
-        <h2 className="font-bold text-2xl text-gray-800 mb-4">Key Features</h2>
-        <div className="grid md:grid-cols-4 gap-4 grid-cols-1">
-          <div className="flex flex-col items-start">
-            <img className="w-8 h-8 mb-4" src="/tomato/glyphs/duo/customers.svg"></img>
-            <span className="font-semibold mb-2">Customer Management</span>
-            <p className="font-medium text-sm text-gray-700">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-              Blandit tellus vivamus convallis dolor, commodo at mi. 
-              Amet felis eget tellus id et bibendum dignissim malesuada. 
-              Nunc massa pretium ultrices feugiat scelerisque ac interdum.
-            </p>
-          </div>
-
-          <div className="flex flex-col items-start">
-            <img className="w-8 h-8 mb-4" src="/tomato/glyphs/duo/inventory.svg"></img>
-            <span className="font-semibold mb-2">Product & Inventory </span>
-            <p className="font-medium text-sm text-gray-700">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-              Blandit tellus vivamus convallis dolor, commodo at mi. 
-              Amet felis eget tellus id et bibendum dignissim malesuada. 
-              Nunc massa pretium ultrices feugiat scelerisque ac interdum.
-            </p>
-          </div>
-
-          <div className="flex flex-col items-start">
-            <img className="w-8 h-8 mb-4" src="/tomato/glyphs/duo/market.svg"></img>
-            <span className="font-semibold mb-2">Store Management</span>
-            <p className="font-medium text-sm text-gray-700">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-              Blandit tellus vivamus convallis dolor, commodo at mi. 
-              Amet felis eget tellus id et bibendum dignissim malesuada. 
-              Nunc massa pretium ultrices feugiat scelerisque ac interdum.
-            </p>
-          </div>
-
-          <div className="flex flex-col items-start">
-            <img className="w-8 h-8 mb-4" src="/tomato/glyphs/duo/calculator.svg"></img>
-            <span className="font-semibold mb-2">Sales</span>
-            <p className="font-medium text-sm text-gray-700">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-              Blandit tellus vivamus convallis dolor, commodo at mi. 
-              Amet felis eget tellus id et bibendum dignissim malesuada. 
-              Nunc massa pretium ultrices feugiat scelerisque ac interdum.
-            </p>
-          </div>
-        </div>
-      </section> */}
-
-      {/* <FullBleed>
-        <Container>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 py-32 relative h-screen max-h-[50rem]">
-            <div className="flex flex-col justify-center">
-              <h4 className="font-semibold text-green-500 mb-2 text-lg">Customer Management</h4>
-              <h3 className="text-gray-800 text-4xl font-bold leading-snug mb-4">
-                Managing customers without a problem
-              </h3>
-              <p className="text-gray-600">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-                Saepe quo ab sequi illo aut vero eaque, assumenda laboriosam et iusto sunt, 
-                necessitatibus maxime! Nemo, eius! Quod molestiae culpa eveniet natus!
-              </p>
-            </div>
-            <div className="h-auto md:h-[30rem] md:ml-4">
-              <img src="/tomato/membership.png"  className="absolute shadow-md"/>
-              <img src="/tomato/membership-modal.png"  className="absolute shadow-2xl w-3/4 md:-right-1/2 md:top-1/3 bottom-0 right-0"/>
-            </div>
-          </div>
-        </Container>
-      </FullBleed> */}
-
-
-      <section class="my-32">
+      <section className="my-32">
         <h4 className="font-semibold text-green-500 mb-2 text-lg">Problem</h4>
         <h3 className="text-gray-800 text-4xl font-bold leading-snug mb-4">
           Migrating users from existing products

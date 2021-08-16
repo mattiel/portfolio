@@ -1,0 +1,25 @@
+{
+  "menu": [
+    {
+      "name": "About",
+      "disabled": false,
+      "icon": "about", 
+      "link": "about",
+      "hotkeys": [
+        ""
+      ]
+    },
+    {
+      "name": "Projects",
+      "disabled": false,
+      "icon": "projects", 
+      "link": "projects",
+      "hotkeys": [
+        "p"
+      ]
+    },
+    {
+      
+    }
+  ]
+}

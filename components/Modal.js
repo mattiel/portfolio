@@ -12,13 +12,12 @@ const Modal = ({
 
   useEffect(() => {
     setIsBrowser(true);
-    document.body.style.overflow = 'hidden';
-    document.body.scroll = 'no'
+    show && document.body.classList.add('disable-body-scroll')
+    !show && document.body.classList.remove('disable-body-scroll')
     return() => {
-      document.body.style.overflow = 'unset'
-      document.body.scroll = 'yes'
+      document.body.classList.remove('disable-body-scroll')
     }
-  }, [])
+  }, [show])
 
   const handleClose = e => {
     e.preventDefault()

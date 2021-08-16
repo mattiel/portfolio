@@ -1,5 +1,13 @@
 [
   {
+    "title": "Bridge",
+    "subtitle": "A Privacy Centered Home Server",
+    "description": "The most powerful, Wi-Fi Router and Network Attached Storage (NAS) for personal data storage and management",
+    "color": "#2563EB",
+    "thumbnail": "bridge-thumbnail.png",
+    "hidden": false
+  },
+  {
     "title": "Tomato",
     "subtitle": "Hyper-Connected Retail Platform",
     "description": "A cloud-powered CRM and ERP for small to mid-sized supermarkets in South Korea",

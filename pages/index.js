@@ -1,6 +1,8 @@
 import Layout from '@/components/Layout'
 import Hero from '@/components/Hero'
 import Projects from '@/components/Projects'
+import Scroller from '@/components/Scroller'
+import FullBleed from '@/components/FullBleed'
 
 import manifest from '../project-manifest'
 

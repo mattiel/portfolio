@@ -13,13 +13,11 @@ import 'react-medium-image-zoom/dist/styles.css'
 import { useRef, useState, useEffect } from 'react'
 import { Transition } from '@headlessui/react'
 
-const Tomato = () => {
-
+const tribe = () => {
   return (
     <Layout>
       {/* <TOC /> */}
       <Hero />
-
       <FullBleed className="py-32 bg-gray-50">
         <Container>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
@@ -129,7 +127,7 @@ const Tomato = () => {
         </Container>
       </FullBleed>
 
-      <section class="my-32">
+      <section className="my-32">
         <div className="grid grid-cols-1 gap-8 mb-8 items-center">
           <div className="flex-1">
             <h4 className="font-semibold text-green-500 mb-2 text-lg">Flows</h4>
@@ -152,7 +150,7 @@ const Tomato = () => {
       </section>
 
 
-      <section class="my-32">
+      <section className="my-32">
         <div className="grid grid-cols-1 gap-8 mb-8 items-center">
           <div className="flex-1">
             <h4 className="font-semibold text-green-500 mb-2 text-lg">Interactions</h4>
@@ -199,7 +197,7 @@ const Tomato = () => {
       <section className="my-32">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div className="flex">
-            <div class="flex justify-center h-full items-center relative">
+            <div className="flex justify-center h-full items-center relative">
               <div className="flex items-center justify-center flex-0 h-full mr-16 absolute -left-12">
                 <div className="absolute w-1 bg-green-600 rounded-full rounded-b-none h-full items-center justify-center"></div>
                 <div className="absolute bg-white w-6 h-6 border-4 border-green-600 rounded-full mb-12"></div>
@@ -223,7 +221,7 @@ const Tomato = () => {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div className="flex">
-            <div class="flex justify-center h-full items-center relative">
+            <div className="flex justify-center h-full items-center relative">
               <div className="flex items-center justify-center flex-0 h-full mr-16 absolute -left-12">
                 <div className="absolute w-1 bg-green-600 rounded-full rounded-b-none h-full items-center justify-center"></div>
                 <div className="absolute bg-white w-6 h-6 border-4 border-green-600 rounded-full mb-12"></div>
@@ -251,4 +249,4 @@ const Tomato = () => {
   )
 }
 
-export default Tomato
+export default tribe

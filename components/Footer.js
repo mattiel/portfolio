@@ -7,7 +7,7 @@ const Footer = () => {
   return (
     <FullBleed className="bg-gray-50 mt-16">
       <Container>
-        <div className="py-16 text-gray-800">
+        <footer className="py-16 text-gray-800">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             <Logo />
             <div className="leading-relaxed text-lg -mt-1">
@@ -23,8 +23,7 @@ const Footer = () => {
               hello@mattiel.dev
             </a>
           </div>
-         
-        </div>
+        </footer>
       </Container>
     </FullBleed>
   );

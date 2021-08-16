@@ -2,13 +2,44 @@
 @tailwind components;
 @tailwind utilities;
 
+/* @layer utilities {
+  .scroll-snap-none {
+    --tw-scroll-snap-direction: none;
+  }
+  .scroll-snap-x {
+    --tw-scroll-snap-direction: x;
+  }
+  .scroll-snap-y {
+    --tw-scroll-snap-direction: y;
+  }
+
+  .scroll-snap-mandatory {
+    --tw-scroll-snap-mandatory: mandatory;
+  }
+
+  .scroll-snap {
+    scroll-snap-type: var(--tw-scroll-snap-direction) var(--tw-scroll-snap-mandatory);
+  }
+} */
+html {
+  height: 100%
+}
+
+body {
+  min-height: 100%;
+}
+
 html,
 body {
   padding: 0;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  overflow-x: hidden;
+  overflow-y: auto
+}
+
+#__next {
+  position: relative;
 }
 
 a {
@@ -33,4 +64,51 @@ a {
 .rotate-loop {
   animation: rotate-loop 24s linear infinite;
   transform-origin: center center;
+}
+
+.scroller {
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  @apply w-full relative whitespace-nowrap overflow-x-scroll py-4
+}
+
+.scroller::-webkit-scrollbar {
+  -webkit-appearance: none;
+  display: none;
+  width: 0;
+  height: 0
+}
+
+.scroller-item {
+  display: inline-block;
+  scroll-snap-type: x mandatory;
+  scroll-snap-align: start;
+  height: 100%
+}
+
+.scroller-item > * {
+  @apply mr-6 transform translate-x-4
+}
+
+/* @screen sm {
+  .scroller-item > * {
+    transform: translateX(calc((100vw - 640px) / 2 + 1rem))
+  }
+}
+
+@screen md {
+  .scroller-item > * {
+    transform: translateX(calc((100vw - 768px) / 2 + 1rem))
+  }
+} */
+
+@screen lg {
+  .scroller-item > * {
+    transform: translateX(calc((100vw - 1024px) / 2 + 1rem))
+  }
+}
+
+.disable-body-scroll {
+  max-height: 100%;
+  overflow: hidden
 }
