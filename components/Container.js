@@ -1,6 +1,10 @@
 const Container = ({ children, className, hideGuideline }) => {
   return (
-    <section className={`container max-w-screen-lg mx-auto relative px-5 ${className ? className : ''}`}>
+    <section 
+      className={`
+        container mx-auto px-5 relative max-w-screen-xl
+        ${className ? className : ''}
+      `}>
       { children }
     </section>
   );

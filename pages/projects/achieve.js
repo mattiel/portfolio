@@ -85,7 +85,7 @@ const Achieve = () => {
       <section className="flex flex-col my-32">
         <h2 className="font-bold text-4xl text-gray-800 mb-8">Preliminary Research</h2>
         <img src="/achieve/qualitative-data-1.jpg" alt="Quantitative research summary" className="mb-2 max-h-[32rem] w-full object-cover"/>
-        <figcaption class="text-gray-500 italic text-sm mb-4 w-full text-center">What we learned from quantatative research</figcaption>
+        <figcaption className="text-gray-500 italic text-sm mb-4 w-full text-center">What we learned from quantatative research</figcaption>
 
         <p className="text-gray-700">
           We analyzed unemployment rates and earnings by educational attainment and found out that the higher degree a person has
@@ -124,7 +124,7 @@ const Achieve = () => {
       <section className="flex flex-col my-32">
         <h2 className="font-bold text-4xl text-gray-800 mb-8">Qualitative Research</h2>
         <img src="/achieve/behavior-continuum.jpg" alt="Behavior analysis of interviewees struggling with low income" className="mb-2 max-h-[32rem] w-full object-cover"/>
-        <figcaption class="text-gray-500 italic text-sm mb-4 w-full text-center">We mapped out interviewee's behaviors and grouped similarities</figcaption>
+        <figcaption className="text-gray-500 italic text-sm mb-4 w-full text-center">We mapped out interviewee's behaviors and grouped similarities</figcaption>
 
         <p className="text-gray-700 mb-12">
           We interviewed 8 individuals with low income and mapped out their common behaviors to find similarities. 
@@ -287,7 +287,7 @@ const Achieve = () => {
       <section className="flex flex-col my-32">
         <h2 className="font-bold text-2xl text-gray-800 mb-8">Testing and Refinements</h2>
         <img src="/achieve/testing.jpg" alt="User testing and feedback" className="mb-2 max-h-[32rem] w-full object-cover"/>
-        <figcaption class="text-gray-500 italic text-sm mb-4 w-full text-center">Photos of our team testing possible users</figcaption>
+        <figcaption className="text-gray-500 italic text-sm mb-4 w-full text-center">Photos of our team testing possible users</figcaption>
 
         <p className="text-gray-700">
           

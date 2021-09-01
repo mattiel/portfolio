@@ -97,7 +97,7 @@ const stay = () => {
           <img src="/stay/preset-2.jpg" alt="presets" className="mb-2 max-h-[27rem] w-full object-cover"/>
           <img src="/stay/preset-3.jpg" alt="presets" className="mb-2 max-h-[27rem] w-full object-cover"/>
         </div>
-        <figcaption class="text-gray-500 italic text-sm mb-4 w-full text-center">Presets available in every controls</figcaption>
+        <figcaption className="text-gray-500 italic text-sm mb-4 w-full text-center">Presets available in every controls</figcaption>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-2">
           <div className="block">
@@ -130,7 +130,7 @@ const stay = () => {
       <section className="flex flex-col my-32">
         <h2 className="font-bold text-2xl text-gray-800 mb-8">Services for convenience</h2>
         <img src="/stay/services.jpg" alt="presets" className="mb-2 max-h-[32rem] w-full object-cover"/>
-        <figcaption class="text-gray-500 italic text-sm mb-4 w-full text-center">Hotel guests are able to chat or order from a tab</figcaption>
+        <figcaption className="text-gray-500 italic text-sm mb-4 w-full text-center">Hotel guests are able to chat or order from a tab</figcaption>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
           <div className="block">

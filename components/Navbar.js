@@ -3,7 +3,6 @@ import React, { useState } from 'react'
 import Logo from '@/components/Logo'
 import Modal from '@/components/Modal'
 import Command from '@/components/Command'
-import Link from 'next/link'
 import Container from '@/components/Container'
 
 const CommandIcon = (props) => {
@@ -31,15 +30,13 @@ const Navbar = () => {
 
   return (
     // dark:bg-gray-900 text-gray-900 dark:text-gray-300
-    <nav className="w-full top-0 left-0 fixed z-10 bg-white">
+    <nav className="w-full top-0 left-0 fixed z-30 bg-white">
       <Container>
       {/* dark:hover:text-white */}
-        <div className="flex justify-between items-center h-16">
-          <Link href="/">
-            <Logo/>
-          </Link>
+        <div className="flex justify-between items-center h-14">
+          <Logo/>
           {/* dark:text-gray-300 */}
-          <ul className="uppercase space-x-4 flex text-xs font-semibold text-gray-500  items-center">
+          <ul className="uppercase space-x-4 flex text-xs font-semibold text-gray-500 items-center">
             {/* <li>About</li>
             <li>Projects</li>
             <li>Contact</li> */}
@@ -50,9 +47,9 @@ const Navbar = () => {
               <CommandIcon />
             </li>
             <Modal
-                onClose={() => setIsCommandOpen(false)}
-                show={isCommandOpen}
-                isSkeleton
+              onClose={() => setIsCommandOpen(false)}
+              show={isCommandOpen}
+              isSkeleton
             >
               <Command/>
             </Modal>

@@ -1,6 +1,6 @@
 const Hotkeys = ({ keys, isFocused }) => {
   return (
-    <div class="flex space-x-1">
+    <div className="flex space-x-1">
       {
         keys.map((key, idx) => {
           return (

@@ -1,39 +1,110 @@
 import React from 'react';
-import Mockup from '@/components/Mockup'
 import Layout from '@/components/Layout'
 import Scroller from '@/components/Scroller'
-import Card from '@/components/Card'
+import Card from '@/components/Card'                                                                                                                              
 import Contact from '@/components/Contact'
+import Container from '@/components/Container'
 import Hero from '@/components/Bridge/Hero'
+import TOC from '@/components/TOC'
+import Phone from '@/components/Phone'
+
 
 import Link from 'next/link'
-
-import FullBleed from '@/components/FullBleed'
-import Container from '@/components/Container'
-
 import Zoom from 'react-medium-image-zoom'
 import 'react-medium-image-zoom/dist/styles.css'
-import { urlObjectKeys } from 'next/dist/next-server/lib/utils';
+
+import { useState } from 'react'
+
+const VisualWrapper = ({ children, bgUrl, right, justify }) => {
+  const getJustify = () => {
+    if(justify === 'start' || justify === 'end')
+      return justify
+    return 'center'
+  }
+
+  const alignment = getJustify()
+
+  return (
+    <div className="inline-block relative order-1 h-[24rem] md:h-[38rem] min-w-0">
+      <div 
+        className={`
+          inline-block h-[22rem] w-full max-w-screen-lg rounded-2xl overflow-hidden bg-cover bg-top-left p-8 ${right ? `absolute right-0` : ''}
+          md:h-[38rem] md:right-8
+          lg:w-[60vw]
+        `}
+        style={{backgroundImage: `url(${bgUrl})`}}
+      >
+        <div className={`inline-flex space-x-4 w-full relative h-full items-start justify-center lg:justify-${alignment}`}>
+          { children }
+        </div>
+      </div>
+    </div>
+  )
+}
 
 const bridge = () => {
   return (
     <Layout>
-      <Hero/>
+      <Hero />
+      <TOC />
+      <section className="flex flex-col py-32" data-toc-title="Why" id="section-1">
+        <h4 className="font-semibold text-blue-500 mb-2 text-lg">Why</h4>
+        <p className="text-gray-900 font-bold text-3xl md:text-4xl mb-6">
+          <q className="leading-snug">
+            Majority of Americans feel as if they have little control over data collected about them by companies and the government
+          </q>
+          <br/>
+          <a 
+            className="text-gray-500 text-lg text-right font-medium underline"
+            href="https://www.pewresearch.org/internet/2019/11/15/americans-and-privacy-concerned-confused-and-feeling-lack-of-control-over-their-personal-information/"
+          >
+            Pew Research Center
+          </a>
+        </p>
+        <p className="text-gray-700 text-xl mb-12">
+          Companies collect and use users' data. Since everything is stored on servers users don't own, 
+          it's hidden from them and they can't see what companies do with it.
+          Even if they are trustworthy and have been using data as mentioned on their policies, 
+          there are other issues to be dealt with such as attacks from hackers, data loss, etc.
+        </p>
+      </section>
 
-      <section className="py-32">
+      {/* <section className="py-32">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
           <div className="lg:py-8 relative inline-block">
-           <div className="w-full lg:w-[60vw] h-[22rem] md:h-[32rem] max-w-screen-lg rounded-2xl overflow-hidden lg:absolute md:right-8 lg:transform -translate-y-1/2 top-1/2 p-8">
+            <div className="w-full lg:w-[60vw] h-[22rem] md:h-[32rem] max-w-screen-lg rounded-2xl overflow-hidden lg:absolute md:right-8 lg:transform -translate-y-1/2 top-1/2 p-8">
               <img src="/bridge/gradient-2.png" className="absolute left-0 top-0 w-full h-full"/>
-              {/* <img src="/bridge/blockers-filters.png" className="absolute lg:right-[calc((425px*0.66666)+3vw)] top-[28%] h-full"/>
-              <img src="/bridge/blockers-blocked.png" className="absolute lg:right-8 top-[10%] h-full"/> */}
               <div className="inline-flex absolute space-x-4 right-8 w-full h-full justify-center lg:justify-end items-start">
                 <img src="/bridge/permissions-main.png" className="mt-[10%] h-full"/>
                 <img src="/bridge/permissions-revoke-short.png" className="h-full"/>
-              </div>"
+              </div>
             </div>
           </div>
           <div className="flex">
+            <div className="flex justify-center h-full items-center relative">
+              <div className="block">
+                <h4 className="font-semibold text-blue-500 mb-2 text-lg">Permissions</h4>
+                <h3 className="text-gray-800 text-4xl font-bold leading-snug mb-4">
+                  A content blocker at router level which requires no additional setup
+                </h3>
+                <p className="font-medium text-gray-500 text-xl mr-20">
+                  <strong className="text-gray-800 mr-0.5">Peace. </strong> 
+                  Blockers protect you from unwanted trackings and privacy-invasive elements while browsing on the internet or using applications.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section> */}
+
+      <section className="py-32" data-toc-title="Permissions" id="section-2">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <VisualWrapper bgUrl="/bridge/gradient-2.png" justify="end" right>
+            <img src="/bridge/permissions-main.png" className="mt-[10%] h-full"/>
+            <img src="/bridge/permissions-revoke-short.png" className="h-full"/>
+          </VisualWrapper>
+
+          <div className="flex order-2">
             <div className="flex justify-center h-full items-center relative">
               <div className="block">
                 <h4 className="font-semibold text-blue-500 mb-2 text-lg">Permissions</h4>
@@ -69,45 +140,40 @@ const bridge = () => {
             </div>
           </div>
           <div className="py-8">
-            <Mockup source="/bridge/permit-request.mov"/>
+            <Phone source="/bridge/permit-request.mov"/>
           </div>
         </div>
       </section>
 
-      <section className="py-32">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-          <div className="lg:py-8 relative inline-block">
-            <div className="w-full lg:w-[60vw] h-[22rem] md:h-[32rem] max-w-screen-lg rounded-2xl overflow-hidden lg:absolute md:right-8 lg:transform -translate-y-1/2 top-1/2 p-8">
-              <img src="/bridge/gradient-1.png" className="absolute left-0 top-0 w-full h-full"/>
-              {/* <img src="/bridge/blockers-filters.png" className="absolute lg:right-[calc((425px*0.66666)+3vw)] top-[28%] h-full"/>
-              <img src="/bridge/blockers-blocked.png" className="absolute lg:right-8 top-[10%] h-full"/> */}
-              <div className="inline-flex absolute space-x-4 right-8 w-full h-full justify-center lg:justify-end items-start">
-                <img src="/bridge/blockers-filters.png" className="mt-[10%] h-full"/>
-                <img src="/bridge/blockers-blocked.png" className="h-full"/>
-              </div>"
-            </div>
-          </div>
-          <div className="flex">
-            <div className="flex justify-center h-full items-center relative">
-              <div className="block">
-                <h4 className="font-semibold text-blue-500 mb-2 text-lg">Blockers</h4>
-                <h3 className="text-gray-800 text-4xl font-bold leading-snug mb-4">
-                  A content blocker at router level which requires no additional setup
-                </h3>
-                <p className="font-medium text-gray-500 text-xl mr-20">
-                  <strong className="text-gray-800 mr-0.5">Peace. </strong> 
-                  Blockers protect you from unwanted trackings and privacy-invasive elements while browsing on the internet or using applications.
-                </p>
+      <section className="py-32 full-bleed">
+        <Container>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            <VisualWrapper bgUrl="/bridge/gradient-1.png">
+              <img src="/bridge/blockers-filters.png" className="mt-[10%] h-full"/>
+              <img src="/bridge/blockers-blocked.png" className="h-full"/>
+            </VisualWrapper>
+            <div className="flex">
+              <div className="flex justify-center h-full items-center relative">
+                <div className="block">
+                  <h4 className="font-semibold text-blue-500 mb-2 text-lg">Blockers</h4>
+                  <h3 className="text-gray-800 text-4xl font-bold leading-snug mb-4">
+                    A content blocker at router level which requires no additional setup
+                  </h3>
+                  <p className="font-medium text-gray-500 text-xl mr-20">
+                    <strong className="text-gray-800 mr-0.5">Peace. </strong> 
+                    Blockers protect you from unwanted trackings and privacy-invasive elements while browsing on the internet or using applications.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
-        </div>
+        </Container>
       </section>
 
       <section className="my-32">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div className="py-8">
-            <Mockup source="/bridge/privacy-report.mov"/>
+            <Phone source="/bridge/privacy-report.mov"/>
           </div>
           <div className="flex">
             <div className="flex justify-center h-full items-center relative">
@@ -126,38 +192,35 @@ const bridge = () => {
         </div>
       </section>
 
-      <section className="py-32">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-          <div className="flex">
-            <div className="flex justify-center h-full items-center relative">
-              <div className="block">
-                <h4 className="font-semibold text-blue-500 mb-2 text-lg">Dashboard</h4>
-                <h3 className="text-gray-800 text-4xl font-bold leading-snug mb-4">
-                  Widgets to help protect privacy and server
-                </h3>
-                <p className="font-medium text-gray-500 text-xl mr-20">
-                  <strong className="text-gray-800 mr-0.5">Management. </strong> 
-                  Bridge can be more than just cloud storage service and an escrow. Widgets help users manage their data and Bridge with ease.
-                </p>
+      <section className="py-32 full-bleed">  
+        <Container>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            <div className="flex">
+              <div className="flex justify-center h-full items-center relative">
+                <div className="block">
+                  <h4 className="font-semibold text-blue-500 mb-2 text-lg">Dashboard</h4>
+                  <h3 className="text-gray-800 text-4xl font-bold leading-snug mb-4">
+                    Widgets to help protect privacy and server
+                  </h3>
+                  <p className="font-medium text-gray-500 text-xl mr-20">
+                    <strong className="text-gray-800 mr-0.5">Management. </strong> 
+                    Bridge can be more than just cloud storage service and an escrow. Widgets help users manage their data and Bridge with ease.
+                  </p>
+                </div>
               </div>
             </div>
-          </div>
 
-          <div className="lg:py-8 relative inline-block">
-            <div className="w-full lg:w-[60vw] h-[22rem] md:h-[32rem] max-w-screen-lg rounded-2xl overflow-hidden lg:absolute md:left-8 lg:transform -translate-y-1/2 top-1/2 p-8">
-              <img src="/bridge/gradient-3.png" className="absolute right-0 top-0 w-full h-full"/>
-              {/* <img src="/bridge/blockers-filters.png" className="absolute lg:right-[calc((425px*0.66666)+3vw)] top-[28%] h-full"/>
-              <img src="/bridge/blockers-blocked.png" className="absolute lg:right-8 top-[10%] h-full"/> */}
-              <div className="inline-flex absolute left-16 w-full h-full justify-center lg:justify-start items-start">
-                <img src="/bridge/desktop-files-dark.png" className="ml-[10vw] h-full"/>
-                <img src="/bridge/desktop-dashboard-light.png" className="absolute top-[20%] h-full"/>
-              </div>"
+            <div className="lg:py-8 relative inline-block">
+              <VisualWrapper bgUrl="/bridge/gradient-3.png">
+                <img src="/bridge/desktop-files-dark.png" className="max-w-none ml-[15vw] h-full"/>
+                <img src="/bridge/desktop-dashboard-light.png" className="max-w-none absolute top-[20%] h-full"/>
+              </VisualWrapper>
             </div>
           </div>
-        </div>
+        </Container>
       </section>
 
-      <section className="py-32">
+      <section className="flex justify-center flex-col py-32">
         <div className="flex mb-8">
           <div className="flex justify-center h-full items-center relative md:px-[10%]">
             <div className="flex flex-col justify-center">
@@ -171,32 +234,27 @@ const bridge = () => {
             </div>
           </div>
         </div>
-        <div className="grid grid-cols-1 gap-8">
-          <div className="lg:py-8 relative inline-block h-[38.5rem] w-full overflow-hidden rounded-2xl mb-8">
-            <div 
-              className="w-full h-[26rem] md:h-[40rem] rounded-2xl overflow-hidden p-8 bg-cover flex"
-              style={{backgroundImage: "url('/bridge/gradient-4.png')"}}
-            >
-              <div className="flex-1 w-full h-full overflow-hidden rounded-md"
-                dangerouslySetInnerHTML={{
-                  __html: `
-                    <video 
-                      webkit-playsinline 
-                      playsinline
-                      width="960"
-                      height="512"
-                      preload="auto"
-                      autoplay
-                      muted
-                      loop
-                      className="max-h-full rounded-md object-scale-down overflow-hidden flex-1"
-                    >
-                      <source src="/bridge/desktop-optimize.mov" type="video/mp4"></source>
-                    </video>`
-                  }}
-                />
-            </div>
-          </div>
+        <div className="lg:py-8 relative inline-flex justify-center overflow-hidden rounded-2xl mb-8">
+          <VisualWrapper bgUrl="/bridge/gradient-4.png">
+            <div className="flex-1 w-full h-full overflow-hidden webkit-fix-overflow rounded-md"
+              dangerouslySetInnerHTML={{
+                __html: `
+                  <video 
+                    webkit-playsinline 
+                    playsinline
+                    width="960"
+                    height="512"
+                    preload="auto"
+                    autoplay
+                    muted
+                    loop
+                    className="max-h-full rounded-md object-scale-down overflow-hidden flex-1"
+                  >
+                    <source src="/bridge/desktop-optimize.mov" type="video/mp4"></source>
+                  </video>`
+                }}
+              />
+          </VisualWrapper>
         </div>
       </section>
 
@@ -210,68 +268,28 @@ const bridge = () => {
               Guidelines provide clear communication with developers, stakeholders or with designers to ensure quality and to ship features fast.
               Consistency in interfaceshelps users be more familiarized with the product as well.
             </p>
-            <figure class="mb-2">
+            <figure className="mb-2">
               <Zoom>
-                <img src="/bridge/ds-spatial-system.jpg" className="max-h-[32rem] w-full object-cover"/>
+                <img src="/bridge/ds-spatial-system.jpg" className="w-full object-cover"/>
               </Zoom>
               <Zoom>
-                <img src="/bridge/ds-layout-system.jpg" className="max-h-[32rem] w-full object-cover"/>
+                <img src="/bridge/ds-layout-system.jpg" className="w-full object-cover"/>
               </Zoom>
               <Zoom>
-                <img src="/bridge/ds-typography.jpg" className="max-h-[32rem] w-full object-cover"/>
+                <img src="/bridge/ds-typography.jpg" className="w-full object-cover"/>
               </Zoom>
               <Zoom>
-                <img src="/bridge/ds-glyphs.jpg" className="max-h-[32rem] w-full object-cover"/>
+                <img src="/bridge/ds-glyphs.jpg" className="w-full object-cover"/>
               </Zoom>
               <Zoom>
-                <img src="/bridge/ds-components-light.jpg" className="max-h-[32rem] w-full object-cover"/>
+                <img src="/bridge/ds-components-light.jpg" className="w-full object-cover"/>
               </Zoom>
               <Zoom>
-                <img src="/bridge/ds-components-dark.jpg" className="max-h-[32rem] w-full object-cover"/>
+                <img src="/bridge/ds-components-dark.jpg" className="w-full object-cover"/>
               </Zoom>
             </figure>
           </div>
         </div>
-      </section>
-
-
-      <section className="flex flex-col my-32">
-        <h4 className="font-semibold text-blue-500 mb-2 text-lg">Why</h4>
-        <h3 className="text-gray-900 font-bold text-3xl md:text-4xl md:leading-normal mb-6">
-          "Majority of Americans feel as if they have little control over data collected about them by companies and the government”<br/>
-          <a 
-            className="text-gray-400 text-lg text-right font-medium underline"
-            href="https://www.pewresearch.org/internet/2019/11/15/americans-and-privacy-concerned-confused-and-feeling-lack-of-control-over-their-personal-information/"
-          >
-            Pew Research Center
-          </a>
-        </h3>
-        <p className="text-gray-700 text-xl mb-12">
-          Companies collect and use users' data. Since everything is stored on servers users don't own, it's hidden from them and they can't see what companies do with it.
-          Even if they are trustworthy and have been using data as mentioned on their policies, there are other issues to be dealt with such as attacks from hackers, data loss, etc.
-        </p>
-        {/* <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
-          <div className="block pr-4">
-            <p className="font-semibold text-gray-800 border-l-2 border-blue-500 pl-4 mb-2">Lack of trust</p>
-            <div className="pl-[1.125rem]">
-              <p className="text-gray-700 mb-4">
-                News articles sometimes reveal companies who failed to follow privacy laws and get penalized. 
-                This is just a tip of the iceberg. Nobody knows what companies are exactly doing with users' data until they are busted.
-              </p>
-            </div>
-          </div>
-
-          <div className="block pr-4">
-            <p className="font-semibold text-gray-800 border-l-2 border-blue-500 pl-4 mb-2">Lack of responsibilities from data holders</p>
-            <div className="pl-[1.125rem]">
-              <p className="text-gray-700 mb-4">
-                Companies have to deal with securities to keep numerous data about users. 
-                No servers are completely protected and even big companies are getting hacked by hackers and users' information gets leaked online.
-                Are the users really getting compensated from these attacks?
-              </p>
-            </div>
-          </div>
-        </div> */}
       </section>
 
       <section className="my-48">
@@ -303,7 +321,7 @@ const bridge = () => {
         </div>
         <h4 className="font-semibold text-gray-700 mb-2 text-lg">What people say</h4>
         <Scroller>
-          <div className="inline-flex flex-col w-[30rem] h-56 p-4 bg-white shadow-md rounded-xl">
+          <div className="inline-flex flex-col w-[30rem] h-56 p-6 bg-white shadow-md rounded-xl">
             <div className="flex items-start">
               <div className="rounded-full w-12 h-12 mr-3 self-start flex-shrink-0">
                 <img src="/bridge/avatar-michelle.jpg" className="w-full h-full"/>
@@ -318,7 +336,22 @@ const bridge = () => {
             </div>
           </div>
 
-          <div className="inline-flex flex-col w-[30rem] h-56 p-4 bg-white shadow-md rounded-xl">
+          <div className="inline-flex flex-col w-[30rem] h-56 p-6 bg-white shadow-md rounded-xl">
+            <div className="flex items-start">
+              <div className="rounded-full w-12 h-12 mr-3 self-start flex-shrink-0">
+                <img src="/bridge/avatar-jimmy.jpg" className="w-full h-full"/>
+              </div>
+              <div className="w-full">
+                <h3 className="text-gray-900 font-semibold text-lg">Jimmy Ong</h3>
+                <p className="text-gray-600 font-medium mb-4">Accountant</p>
+                <p className="w-full whitespace-normal text-gray-700 text-lg">
+                “I don’t use DNA insight services because the government<strong> can access my personal information without my consent</strong>”
+                </p>  
+              </div>
+            </div>
+          </div>
+
+          <div className="inline-flex flex-col w-[30rem] h-56 p-6 bg-white shadow-md rounded-xl">
             <div className="flex items-start">
               <div className="rounded-full w-12 h-12 mr-3 self-start flex-shrink-0">
                 <img src="/bridge/avatar-empty.jpg" className="w-full h-full"/>
@@ -334,7 +367,7 @@ const bridge = () => {
           </div>
           
           <Link href="https://arstechnica.com/gadgets/2021/05/96-of-us-users-opt-out-of-app-tracking-in-ios-14-5-analytics-find/">
-            <div className="inline-flex flex-col w-[30rem] h-56 p-4 bg-white shadow-md rounded-xl cursor-pointer">
+            <div className="inline-flex flex-col w-[30rem] h-56 p-6 bg-white shadow-md rounded-xl cursor-pointer">
               <div className="flex items-start">
                 <div className="rounded-full w-12 h-12 mr-3 self-start flex-shrink-0">
                   <img src="/bridge/arstechnica.webp" className="w-full h-full"/>
@@ -351,7 +384,7 @@ const bridge = () => {
               </div>
             </div>
           </Link>
-          <div className="inline-flex flex-col w-[30rem] h-56 p-4 bg-white shadow-md rounded-xl invisible">
+          <div className="inline-flex flex-col w-[30rem] h-56 p-6 bg-white shadow-md rounded-xl invisible">
               <div className="flex items-start">
                 <div className="rounded-full w-12 h-12 mr-3 self-start flex-shrink-0">
                   <img src="/bridge/arstechnica.webp" className="w-full h-full"/>
@@ -446,7 +479,7 @@ const bridge = () => {
       <section className="my-48">
         <h4 className="font-semibold text-blue-500 mb-2 text-lg">Secure Ownership</h4>
         <h3 className="text-gray-800 text-4xl font-bold leading-snug mb-8">
-          How can users be safely store their personal data and files?
+          How can users safely store and share their personal data and files?
         </h3>
         <p className="text-gray-700 text-xl mb-8">
           Since everything is stored in Bridge, there are no other services that users have to trust. It gives users transparencies on how the data lives on the server,

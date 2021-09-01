@@ -43,8 +43,8 @@ function Mockup({ source }) {
           preserveAspectRatio="xMinYMin meet"
         >
           <foreignObject 
-            x={isSafari ? 25 * containerSize.scaleFactor * 0.98 : 25} 
-            y={isSafari ? 21 * containerSize.scaleFactor * 0.98 : 22} 
+            x={isSafari ? 25 * containerSize.scaleFactor * 0.99 : 25} 
+            y={isSafari ? 21 * containerSize.scaleFactor * 0.99 : 22} 
             rx="30" 
             className="fixed flex left-0 top-0 z-0 overflow-hidden" 
             width="375" 

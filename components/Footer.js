@@ -7,7 +7,7 @@ const Footer = () => {
   return (
     <FullBleed className="bg-gray-50 mt-16">
       <Container>
-        <footer className="py-16 text-gray-800">
+        <footer className="py-16 text-gray-800 w-full">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             <Logo />
             <div className="leading-relaxed text-lg -mt-1">
@@ -15,6 +15,11 @@ const Footer = () => {
                 <li>
                   <Link href="https://github.com/mattiel">
                     <a>Github</a>
+                  </Link>
+                </li>
+                <li>
+                  <Link href="https://www.linkedin.com/in/jsmattly/">
+                    <a>LinkedIn</a>
                   </Link>
                 </li>
               </ul>

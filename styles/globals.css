@@ -21,25 +21,23 @@
     scroll-snap-type: var(--tw-scroll-snap-direction) var(--tw-scroll-snap-mandatory);
   }
 } */
-html {
-  height: 100%
-}
-
-body {
-  min-height: 100%;
-}
-
 html,
 body {
   padding: 0;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  overflow-y: auto
+  max-width: 100%;
+  width: 100%;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 #__next {
   position: relative;
+  max-width: 100%;
 }
 
 a {
@@ -83,32 +81,48 @@ a {
   display: inline-block;
   scroll-snap-type: x mandatory;
   scroll-snap-align: start;
-  height: 100%
+  height: 100%;
+  @apply mr-6
 }
 
 .scroller-item > * {
-  @apply mr-6 transform translate-x-4
+  @apply transform translate-x-4
 }
 
-/* @screen sm {
+@screen xl {
   .scroller-item > * {
-    transform: translateX(calc((100vw - 640px) / 2 + 1rem))
+    transform: translateX(calc((100vw - 80rem) / 2 + 1rem))
   }
 }
 
 @screen md {
-  .scroller-item > * {
-    transform: translateX(calc((100vw - 768px) / 2 + 1rem))
-  }
-} */
-
-@screen lg {
-  .scroller-item > * {
-    transform: translateX(calc((100vw - 1024px) / 2 + 1rem))
+  .scroller-item {
+    max-width: calc(100% - 2rem);
   }
 }
 
 .disable-body-scroll {
   max-height: 100%;
   overflow: hidden
+}
+
+.webkit-fix-overflow {
+  transform: translateZ(0)
+}
+
+.layout {
+  display: grid;
+  position: relative;
+  grid-template-columns: 1fr min(1280px, calc(100% - 2.5rem)) 1fr;
+  grid-column-gap: 1.25rem;
+}
+
+.layout > * {
+  grid-column: 2;
+}
+
+.full-bleed {
+  width: 100%;
+  grid-column: 1 / -1;
+  overflow: hidden;
 }

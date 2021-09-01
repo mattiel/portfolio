@@ -149,12 +149,12 @@ const Tomato = () => {
             <h3 className="text-gray-800 text-4xl font-bold leading-snug mb-4">
               Finding the sweetspot
             </h3>
-            <figure class="mb-2">
+            <figure className="mb-2">
               <Zoom>
                 <img src="/tomato/transition.jpg" className="max-h-[32rem] w-full object-cover"/>
               </Zoom>
             </figure>
-            <figcaption class="text-gray-500 italic text-sm mb-4 w-full text-center">
+            <figcaption className="text-gray-500 italic text-sm mb-4 w-full text-center">
               Comparison of existing ERP's Purchase slip registration
             </figcaption>
             <p className="text-gray-700 text-lg">
@@ -195,21 +195,21 @@ const Tomato = () => {
             <h3 className="text-gray-800 text-4xl font-bold leading-snug mb-4">
               Creating guidelines
             </h3>
-            <figure class="mb-2">
+            <figure className="mb-2">
               <Zoom>
                 <img src="/tomato/style-guide.jpg" className="max-h-[32rem] w-full object-cover"/>
               </Zoom>
             </figure>
-             <figcaption class="text-gray-500 italic text-sm mb-4 w-full text-center">
+             <figcaption className="text-gray-500 italic text-sm mb-4 w-full text-center">
               Experience and UI guideline for developers
             </figcaption>
 
-            <figure class="mb-2">
+            <figure className="mb-2">
               <Zoom>
                 <img src="/tomato/implementation-guide.jpg" className="max-h-[32rem] w-full object-cover"/>
               </Zoom>
             </figure>
-            <figcaption class="text-gray-500 italic text-sm mb-4 w-full text-center">
+            <figcaption className="text-gray-500 italic text-sm mb-4 w-full text-center">
               Implementation and HTML/CSS structure guideline for developers
             </figcaption>
           </div>
@@ -234,12 +234,12 @@ const Tomato = () => {
             <h3 className="text-gray-800 text-4xl font-bold leading-snug mb-4">
               Symbols for guidance
             </h3>
-            <figure class="mb-2">
+            <figure className="mb-2">
               <Zoom>
                 <img src="/tomato/icons.jpg" className="max-h-[32rem] w-full object-cover"/>
               </Zoom>
             </figure>
-             <figcaption class="text-gray-500 italic text-sm mb-4 w-full text-center">
+             <figcaption className="text-gray-500 italic text-sm mb-4 w-full text-center">
               Icons I've created for the project.
             </figcaption>
           </div>
