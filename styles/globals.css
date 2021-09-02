@@ -111,15 +111,17 @@ a {
   transform: translateZ(0)
 }
 
-.layout {
-  display: grid;
-  position: relative;
-  grid-template-columns: 1fr min(1280px, calc(100% - 2.5rem)) 1fr;
-  grid-column-gap: 1.25rem;
-}
-
-.layout > * {
-  grid-column: 2;
+@layer components {
+  .layout {
+    display: grid;
+    position: relative;
+    grid-template-columns: 1fr min(1280px, calc(100% - 2.5rem)) 1fr;
+    grid-column-gap: 1.25rem;
+  }
+  
+  .layout > * {
+    grid-column: 2;
+  }
 }
 
 .full-bleed {
