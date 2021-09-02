@@ -47,28 +47,211 @@ const bridge = () => {
     <Layout>
       <Hero />
       <TOC />
-      <section className="flex flex-col py-32" data-toc-title="Why" id="section-1">
-        <h4 className="font-semibold text-blue-500 mb-2 text-lg">Why</h4>
-        <p className="text-gray-900 font-bold text-3xl md:text-4xl mb-6">
-          <q className="leading-snug">
-            Majority of Americans feel as if they have little control over data collected about them by companies and the government
-          </q>
-          <br/>
-          <a 
-            className="text-gray-500 text-lg text-right font-medium underline"
-            href="https://www.pewresearch.org/internet/2019/11/15/americans-and-privacy-concerned-confused-and-feeling-lack-of-control-over-their-personal-information/"
-          >
-            Pew Research Center
-          </a>
-        </p>
-        <p className="text-gray-700 text-xl mb-12">
-          Companies collect and use users' data. Since everything is stored on servers users don't own, 
-          it's hidden from them and they can't see what companies do with it.
-          Even if they are trustworthy and have been using data as mentioned on their policies, 
-          there are other issues to be dealt with such as attacks from hackers, data loss, etc.
-        </p>
-      </section>
+      <section className="block" data-toc-title="Background" id="section-1">
+        <section className="my-48">
+          <h4 className="font-semibold text-blue-500 mb-2 text-lg">Why</h4>
+          <p className="text-gray-900 font-bold text-3xl md:text-4xl mb-6">
+            <q className="leading-snug">
+              Majority of Americans feel as if they have little control over data collected about them by companies and the government
+            </q>
+            <br/>
+            <a 
+              className="text-gray-500 text-lg text-right font-medium underline"
+              href="https://www.pewresearch.org/internet/2019/11/15/americans-and-privacy-concerned-confused-and-feeling-lack-of-control-over-their-personal-information/"
+            >
+              Pew Research Center
+            </a>
+          </p>
+          <p className="text-gray-700 text-xl mb-12">
+            Companies collect and use users' data. Since everything is stored on servers users don't own, 
+            it's hidden from them and they can't see what companies do with it.
+            Even if they are trustworthy and have been using data as mentioned on their policies, 
+            there are other issues to be dealt with such as attacks from hackers, data loss, etc.
+          </p>
+        </section>
+        
+        <section className="my-48">
+          <h4 className="font-semibold text-blue-500 mb-2 text-lg">Insights</h4>
+          <h3 className="text-gray-800 text-4xl font-bold leading-snug mb-8">
+            Americans want their privacy to be respected, but there aren't any transparent solutions out in the market to solve these problems.
+          </h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
+            <div className="block pr-4">
+              <p className="font-semibold text-gray-800 border-l-2 border-blue-500 pl-4 mb-2">Lack of trust</p>
+              <div className="pl-[1.125rem]">
+                <p className="text-gray-700 mb-4">
+                  News articles sometimes reveal companies who failed to follow privacy laws and get penalized. 
+                  This is just a tip of the iceberg. Nobody knows what companies are exactly doing with users' data until they are busted.
+                </p>
+              </div>
+            </div>
 
+            <div className="block pr-4">
+              <p className="font-semibold text-gray-800 border-l-2 border-blue-500 pl-4 mb-2">Lack of responsibilities from data holders</p>
+              <div className="pl-[1.125rem]">
+                <p className="text-gray-700 mb-4">
+                  Companies have to deal with securities to keep numerous data about users. 
+                  No servers are completely protected and even big companies are getting hacked by hackers and users' information gets leaked online.
+                  Are the users really getting compensated from these attacks?
+                </p>
+              </div>
+            </div>
+          </div>
+          <h4 className="font-semibold text-gray-700 mb-2 text-lg">What people say</h4>
+          <Scroller>
+            <div className="inline-flex flex-col max-w-full w-[30rem] h-56 p-6 bg-white shadow-md rounded-xl">
+              <div className="flex items-start">
+                <div className="rounded-full w-12 h-12 mr-3 self-start flex-shrink-0">
+                  <img src="/bridge/avatar-michelle.jpg" className="w-full h-full"/>
+                </div>
+                <div className="w-full">
+                  <h3 className="text-gray-900 font-semibold text-lg">Michelle Lee</h3>
+                  <p className="text-gray-600 font-medium mb-2">Graduate Student</p>
+                  <p className="w-full whitespace-normal text-gray-700 text-lg">
+                    “I don’t know how companies are using my data but <strong>it’s not something I can avoid because I have to use their services</strong>”
+                  </p>  
+                </div>
+              </div>
+            </div>
+
+            <div className="inline-flex flex-col max-w-full w-[30rem] min-h-56 p-6 bg-white shadow-md rounded-xl">
+              <div className="flex items-start">
+                <div className="rounded-full w-12 h-12 mr-3 self-start flex-shrink-0">
+                  <img src="/bridge/avatar-jimmy.jpg" className="w-full h-full"/>
+                </div>
+                <div className="w-full">
+                  <h3 className="text-gray-900 font-semibold text-lg">Jimmy Ong</h3>
+                  <p className="text-gray-600 font-medium mb-2">Accountant</p>
+                  <p className="w-full whitespace-normal text-gray-700 text-lg">
+                  “I don’t use DNA insight services because the government<strong> can access my personal information without my consent</strong>”
+                  </p>  
+                </div>
+              </div>
+            </div>
+
+            <div className="inline-flex flex-col max-w-full w-[30rem] min-h-56 p-6 bg-white shadow-md rounded-xl">
+              <div className="flex items-start">
+                <div className="rounded-full w-12 h-12 mr-3 self-start flex-shrink-0">
+                  <img src="/bridge/avatar-empty.jpg" className="w-full h-full"/>
+                </div>
+                <div className="w-full">
+                  <h3 className="text-gray-900 font-semibold text-lg">Anonymous</h3>
+                  <p className="text-gray-600 font-medium mb-2">Software Developer</p>
+                  <p className="w-full whitespace-normal text-gray-700 text-lg">
+                    “Although I got nothing to hide, <strong>I feel insecure about storing and sharing data because I never know what they exactly do with it.</strong>”
+                  </p>  
+                </div>
+              </div>
+            </div>
+            
+            <Link href="https://arstechnica.com/gadgets/2021/05/96-of-us-users-opt-out-of-app-tracking-in-ios-14-5-analytics-find/">
+              <div className="inline-flex flex-col max-w-full w-[30rem] min-h-56 p-6 bg-white shadow-md rounded-xl cursor-pointer">
+                <div className="flex items-start">
+                  <div className="rounded-full w-12 h-12 mr-3 self-start flex-shrink-0">
+                    <img src="/bridge/arstechnica.webp" className="w-full h-full"/>
+                  </div>
+                  <div className="w-full">
+                    <h3 className="text-gray-900 font-semibold text-lg">
+                      ArsTechnica
+                    </h3>
+                    <p className="text-gray-600 font-medium mb-2">c|net</p>
+                    <p className="w-full whitespace-normal text-gray-700 text-lg">
+                      “96% of US users opt out of app tracking in iOS 14.5, analytics find.”
+                    </p>  
+                  </div>
+                </div>
+              </div>
+            </Link>
+          </Scroller>
+        </section>
+
+        <section className="my-48">
+          <h4 className="font-semibold text-blue-500 mb-2 text-lg">Goals</h4>
+          <h3 className="text-gray-800 text-4xl font-bold leading-snug mb-8">
+            Have transparency over how data is collected by the requesting companies and give users sense of security by providing options to own their personal data.
+          </h3>
+        </section>
+      </section>
+      <section className="block" data-toc-title="Data Ownership" id="section-2">
+        <section className="my-48">
+          <h4 className="font-semibold text-blue-500 mb-2 text-lg">Secure sharing</h4>
+          <h3 className="text-gray-800 text-4xl font-bold leading-snug mb-8">
+            What if users take complete ownership of their data and only allow requestors to use when it's needed?
+          </h3>
+          <p className="text-gray-700 text-xl mb-8">
+            Personal data is stored on the Bridge instead of being stored at a third party server. 
+            This way, companies don't have to secure each and everyone's personal data and gives users sense of security of holding their data within a space they trust.
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
+            <div className="block pr-4">
+              <p className="font-semibold text-gray-800 border-l-2 border-blue-500 pl-4 mb-2">Permits</p>
+              <div className="pl-[1.125rem]">
+                <p className="text-gray-700 mb-4">
+                  Show users a list of permissions they have permitted and let them decide which ones they want to grant when the it's been requested.
+                </p>
+              </div>
+            </div>
+
+            <div className="block pr-4">
+              <p className="font-semibold text-gray-800 border-l-2 border-blue-500 pl-4 mb-2">End-to-end encrpytion</p>
+              <div className="pl-[1.125rem]">
+                <p className="text-gray-700 mb-4">
+                  What about when permits are handed off to the requestors? They still cannot access the data because of end-to-end encryption. 
+                  Many modern chat applications already use end-to-end encryption to ensure that the data is safe and secure because cannot be eavesdropped on.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="my-48">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="flex">
+              <div className="flex justify-center h-full items-center relative">
+                <div className="block">
+                  <h4 className="font-semibold text-blue-500 mb-2 text-lg">Permits</h4>
+                  <h3 className="text-gray-800 text-4xl font-bold leading-snug mb-4">
+                    Share personal data without storing in third-party servers
+                  </h3>
+                  <p className="font-medium text-gray-500 text-xl mr-20">
+                    <strong className="text-gray-800 mr-0.5">Checkout. </strong> 
+                    {/* Companies can use Bridge's API to recieve personal data without storing it in their servers. */}
+                    Users don't have to worry about how their data is stored and used by the requestors because it's end-to-end encrypted,
+                    and provides clear information of what's being shared.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="py-8">
+              <Phone source="/bridge/permit-request.mov"/>
+            </div>
+          </div>
+        </section>
+
+        <section className="my-48">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <div className="flex order-2">
+              <div className="flex justify-center h-full items-center relative">
+                <div className="block">
+                  <h4 className="font-semibold text-blue-500 mb-2 text-lg">Permissions</h4>
+                  <h3 className="text-gray-800 text-4xl font-bold leading-snug mb-4">
+                    Control grants given to requestors
+                  </h3>
+                  <p className="font-medium text-gray-500 text-xl mr-20">
+                    <strong className="text-gray-800 mr-0.5">Transparent. </strong> 
+                    After giving permits to requestors, permissions show exactly what data is being shared and how it's being used by the requestors.
+                    
+                  </p>
+                </div>
+              </div>
+            </div>
+            <VisualWrapper bgUrl="/bridge/gradient-2.png" justify="end" right>
+              <img src="/bridge/permissions-main.png" className="mt-[10%] h-full"/>
+              <img src="/bridge/permissions-revoke-short.png" className="h-full"/>
+            </VisualWrapper>
+          </div>
+        </section>
+      </section>
       {/* <section className="py-32">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
           <div className="lg:py-8 relative inline-block">
@@ -96,54 +279,6 @@ const bridge = () => {
           </div>
         </div>
       </section> */}
-
-      <section className="py-32" data-toc-title="Permissions" id="section-2">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          <VisualWrapper bgUrl="/bridge/gradient-2.png" justify="end" right>
-            <img src="/bridge/permissions-main.png" className="mt-[10%] h-full"/>
-            <img src="/bridge/permissions-revoke-short.png" className="h-full"/>
-          </VisualWrapper>
-
-          <div className="flex order-2">
-            <div className="flex justify-center h-full items-center relative">
-              <div className="block">
-                <h4 className="font-semibold text-blue-500 mb-2 text-lg">Permissions</h4>
-                <h3 className="text-gray-800 text-4xl font-bold leading-snug mb-4">
-                  A content blocker at router level which requires no additional setup
-                </h3>
-                <p className="font-medium text-gray-500 text-xl mr-20">
-                  <strong className="text-gray-800 mr-0.5">Peace. </strong> 
-                  Blockers protect you from unwanted trackings and privacy-invasive elements while browsing on the internet or using applications.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="my-32">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div className="flex">
-            <div className="flex justify-center h-full items-center relative">
-              <div className="block">
-                <h4 className="font-semibold text-blue-500 mb-2 text-lg">Permits</h4>
-                <h3 className="text-gray-800 text-4xl font-bold leading-snug mb-4">
-                  Share personal data without storing in third-party servers
-                </h3>
-                <p className="font-medium text-gray-500 text-xl mr-20">
-                  <strong className="text-gray-800 mr-0.5">Checkout. </strong> 
-                  {/* Companies can use Bridge's API to recieve personal data without storing it in their servers. */}
-                  Users don't have to worry about how their data is stored and used by the requestors because it's end-to-end encrypted,
-                  and provides clear information of what's being shared.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div className="py-8">
-            <Phone source="/bridge/permit-request.mov"/>
-          </div>
-        </div>
-      </section>
 
       <section className="py-32 full-bleed">
         <Container>
@@ -293,155 +428,6 @@ const bridge = () => {
       </section>
 
       <section className="my-48">
-        <h4 className="font-semibold text-blue-500 mb-2 text-lg">Insights</h4>
-        <h3 className="text-gray-800 text-4xl font-bold leading-snug mb-8">
-          Americans want their privacy to be respected, but there aren't any transparent solutions out in the market to solve these problems.
-        </h3>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
-          <div className="block pr-4">
-            <p className="font-semibold text-gray-800 border-l-2 border-blue-500 pl-4 mb-2">Lack of trust</p>
-            <div className="pl-[1.125rem]">
-              <p className="text-gray-700 mb-4">
-                News articles sometimes reveal companies who failed to follow privacy laws and get penalized. 
-                This is just a tip of the iceberg. Nobody knows what companies are exactly doing with users' data until they are busted.
-              </p>
-            </div>
-          </div>
-
-          <div className="block pr-4">
-            <p className="font-semibold text-gray-800 border-l-2 border-blue-500 pl-4 mb-2">Lack of responsibilities from data holders</p>
-            <div className="pl-[1.125rem]">
-              <p className="text-gray-700 mb-4">
-                Companies have to deal with securities to keep numerous data about users. 
-                No servers are completely protected and even big companies are getting hacked by hackers and users' information gets leaked online.
-                Are the users really getting compensated from these attacks?
-              </p>
-            </div>
-          </div>
-        </div>
-        <h4 className="font-semibold text-gray-700 mb-2 text-lg">What people say</h4>
-        <Scroller>
-          <div className="inline-flex flex-col w-[30rem] h-56 p-6 bg-white shadow-md rounded-xl">
-            <div className="flex items-start">
-              <div className="rounded-full w-12 h-12 mr-3 self-start flex-shrink-0">
-                <img src="/bridge/avatar-michelle.jpg" className="w-full h-full"/>
-              </div>
-              <div className="w-full">
-                <h3 className="text-gray-900 font-semibold text-lg">Michelle Lee</h3>
-                <p className="text-gray-600 font-medium mb-4">Graduate Student</p>
-                <p className="w-full whitespace-normal text-gray-700 text-lg">
-                  “I don’t know how companies are using my data but <strong>it’s not something I can avoid because I have to use their services</strong>”
-                </p>  
-              </div>
-            </div>
-          </div>
-
-          <div className="inline-flex flex-col w-[30rem] h-56 p-6 bg-white shadow-md rounded-xl">
-            <div className="flex items-start">
-              <div className="rounded-full w-12 h-12 mr-3 self-start flex-shrink-0">
-                <img src="/bridge/avatar-jimmy.jpg" className="w-full h-full"/>
-              </div>
-              <div className="w-full">
-                <h3 className="text-gray-900 font-semibold text-lg">Jimmy Ong</h3>
-                <p className="text-gray-600 font-medium mb-4">Accountant</p>
-                <p className="w-full whitespace-normal text-gray-700 text-lg">
-                “I don’t use DNA insight services because the government<strong> can access my personal information without my consent</strong>”
-                </p>  
-              </div>
-            </div>
-          </div>
-
-          <div className="inline-flex flex-col w-[30rem] h-56 p-6 bg-white shadow-md rounded-xl">
-            <div className="flex items-start">
-              <div className="rounded-full w-12 h-12 mr-3 self-start flex-shrink-0">
-                <img src="/bridge/avatar-empty.jpg" className="w-full h-full"/>
-              </div>
-              <div className="w-full">
-                <h3 className="text-gray-900 font-semibold text-lg">Anonymous</h3>
-                <p className="text-gray-600 font-medium mb-4">Software Developer</p>
-                <p className="w-full whitespace-normal text-gray-700 text-lg">
-                  “Although I got nothing to hide, <strong>I feel insecure about storing and sharing data because I never know what they exactly do with it.</strong>”
-                </p>  
-              </div>
-            </div>
-          </div>
-          
-          <Link href="https://arstechnica.com/gadgets/2021/05/96-of-us-users-opt-out-of-app-tracking-in-ios-14-5-analytics-find/">
-            <div className="inline-flex flex-col w-[30rem] h-56 p-6 bg-white shadow-md rounded-xl cursor-pointer">
-              <div className="flex items-start">
-                <div className="rounded-full w-12 h-12 mr-3 self-start flex-shrink-0">
-                  <img src="/bridge/arstechnica.webp" className="w-full h-full"/>
-                </div>
-                <div className="w-full">
-                  <h3 className="text-gray-900 font-semibold text-lg">
-                    ArsTechnica
-                  </h3>
-                  <p className="text-gray-600 font-medium mb-4">c|net</p>
-                  <p className="w-full whitespace-normal text-gray-700 text-lg">
-                    “96% of US users opt out of app tracking in iOS 14.5, analytics find.”
-                  </p>  
-                </div>
-              </div>
-            </div>
-          </Link>
-          <div className="inline-flex flex-col w-[30rem] h-56 p-6 bg-white shadow-md rounded-xl invisible">
-              <div className="flex items-start">
-                <div className="rounded-full w-12 h-12 mr-3 self-start flex-shrink-0">
-                  <img src="/bridge/arstechnica.webp" className="w-full h-full"/>
-                </div>
-                <div className="w-full">
-                  <h3 className="text-gray-900 font-semibold text-lg">
-                    ArsTechnica
-                  </h3>
-                  <p className="text-gray-600 font-medium mb-4">c|net</p>
-                  <p className="w-full whitespace-normal text-gray-700 text-lg">
-                    “96% of US users opt out of app tracking in iOS 14.5, analytics find.”
-                  </p>  
-                </div>
-              </div>
-            </div>
-        </Scroller>
-      </section>
-
-      <section className="my-48">
-        <h4 className="font-semibold text-blue-500 mb-2 text-lg">Goals</h4>
-        <h3 className="text-gray-800 text-4xl font-bold leading-snug mb-8">
-          Have transparency over how data is collected by the requesting companies and give users sense of security by providing options to own their personal data.
-        </h3>
-      </section>
-
-      <section className="my-48">
-        <h4 className="font-semibold text-blue-500 mb-2 text-lg">Secure sharing</h4>
-        <h3 className="text-gray-800 text-4xl font-bold leading-snug mb-8">
-          What if users take complete ownership of their data and only allow requestors to use when it's needed?
-        </h3>
-        <p className="text-gray-700 text-xl mb-8">
-          Personal data is stored on the Bridge instead of being stored at a third party server. 
-          This way, companies don't have to secure each and everyone's personal data and gives users sense of security of holding their data within a space they trust.
-        </p>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
-          <div className="block pr-4">
-            <p className="font-semibold text-gray-800 border-l-2 border-blue-500 pl-4 mb-2">Permits</p>
-            <div className="pl-[1.125rem]">
-              <p className="text-gray-700 mb-4">
-                Show users a list of permissions they have permitted and let them decide which ones they want to grant when the it's been requested.
-              </p>
-            </div>
-          </div>
-
-          <div className="block pr-4">
-            <p className="font-semibold text-gray-800 border-l-2 border-blue-500 pl-4 mb-2">End-to-end encrpytion</p>
-            <div className="pl-[1.125rem]">
-              <p className="text-gray-700 mb-4">
-                What about when permits are handed off to the requestors? They still cannot access the data because of end-to-end encryption. 
-                Many modern chat applications already use end-to-end encryption to ensure that the data is safe and secure because cannot be eavesdropped on.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="my-48">
         <h4 className="font-semibold text-blue-500 mb-2 text-lg">Blockers</h4>
         <h3 className="text-gray-800 text-4xl font-bold leading-snug mb-8">
           How can users be safe from companies trying to track what they do online?
@@ -468,7 +454,7 @@ const bridge = () => {
             <div className="pl-[1.125rem]">
               <p className="text-gray-700 mb-4">
                 Companies have to deal with securities to keep numerous data about users. 
-                No servers are completely protected and even big companies are getting hacked by hackers and users' information gets leaked online.
+                No servers are completely protected and even big companies are getting hacked and users' information gets leaked online.
                 Are the users really getting compensated from these attacks?
               </p>
             </div>
