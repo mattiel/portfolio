@@ -82,7 +82,8 @@ a {
   scroll-snap-type: x mandatory;
   scroll-snap-align: start;
   height: 100%;
-  @apply mr-6
+  max-width: calc(100% - 3rem);
+  @apply mr-5
 }
 
 .scroller-item > * {
@@ -125,4 +126,13 @@ a {
   width: 100%;
   grid-column: 1 / -1;
   overflow: hidden;
+}
+
+.full-bleed--brute {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
 }
