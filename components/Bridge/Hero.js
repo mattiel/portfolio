@@ -9,7 +9,7 @@ const Hero = () => {
           className="bg-no-repeat overflow-hidden pt-48 pb-12 z-10"
         >
           <Container>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {/* <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div className="mb-4 flex flex-col justify-center order-2 md:order-1">
                 <h2 className="font-bold text-gray-800 text-4xl mb-4 leading-tight">
                   A personal home server for complete personal data ownership.
@@ -31,8 +31,28 @@ const Hero = () => {
                   "
                 />
               </div>
+            </div> */}
+            <div className="grid grid-cols-1 gap-8 place-items-center mb-8">
+              <div className="flex flex-col justify-center text-center max-w-prose">
+                <h2 className="font-bold text-gray-800 text-4xl mb-4 leading-tight">
+                  A personal home server for complete personal data ownership.
+                </h2>
+                <p className="font-medium text-gray-500 text-xl">
+                  <strong className="text-gray-800 mr-0.5">Bridge. </strong> 
+                  A data escrow, Network Attached Storage (NAS), and a Wi-Fi router to 
+                  transparently share sensitive information, securely store data and 
+                  use the browse the web without privacy-invading elements.
+                </p>
+              </div>
             </div>
+            <img 
+              src="/bridge/router-living-room.jpg"
+              className="
+                object-cover rounded-xl mx-auto
+              "
+            />
           </Container>
+
         </div>
       </FullBleed>
     </>
