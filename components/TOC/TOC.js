@@ -16,7 +16,7 @@ const Item = ({ section, isTiny }) => {
     >
       <a 
         href={`#${section.id}`}
-        className="text-sm px-4 z-10"
+        className="text-sm pr-4 z-10"
       >
         {section.title}
       </a>
@@ -107,16 +107,18 @@ const TOC = () => {
   }, [])
 
   return (
-    <ul className="full-bleed sticky h-12 w-full bg-gray-100 shadow-sm border-b border-gray-200 top-14 left-0 z-10 flex transition-all overflow-hidden">
+    <nav className="w-full full-bleed sticky h-12 bg-gray-100 shadow-sm border-b border-gray-200 top-14 left-0 z-10 overflow-hidden">
       <div className="absolute top-0 left-0 h-full bg-gray-200" style={{ width: `${scroll.progress}%`}}></div>
-      <div className="container max-w-screen-xl mx-auto">
-        {sections.map((section, idx) => {
-          return(
-            <Item key={idx} section={section} isTiny={scroll.isTiny}/>
-          )
-        })}
+      <div className="layout h-full px-5">
+        <ul className="flex transition-all">
+          {sections.map((section, idx) => {
+            return(
+              <Item key={idx} section={section} isTiny={scroll.isTiny}/>
+            )
+          })}
+        </ul>
       </div>
-    </ul>
+    </nav>
   )
 }
 
