@@ -106,7 +106,7 @@ const Scroller = ({ elements, children }) => {
   }
   
   return (
-    <FullBleed className="bg-gray-100">
+    <FullBleed brute className="bg-gray-100">
       <div 
         className="relative"
         onMouseEnter={() => setScrollerState({...scrollerState, isNavHidden: false})}
