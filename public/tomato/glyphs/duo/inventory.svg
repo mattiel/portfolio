@@ -1,5 +1,1 @@
-<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect x="2" y="3" width="10" height="10" rx="1" fill="#1EE46E"/>
-<path fill-rule="evenodd" clip-rule="evenodd" d="M7 9C7 8.44772 7.44772 8 8 8H12V14L14 12L16 14V8H20C20.5523 8 21 8.44772 21 9V21C21 21.5523 20.5523 22 20 22H8C7.44772 22 7 21.5523 7 21V9ZM11 16C10.4477 16 10 16.4477 10 17V19C10 19.5523 10.4477 20 11 20H17C17.5523 20 18 19.5523 18 19V17C18 16.4477 17.5523 16 17 16H11Z" fill="#1380E5"/>
-<path fill-rule="evenodd" clip-rule="evenodd" d="M12 12V8H8C7.44772 8 7 8.44772 7 9V13H11C11.5523 13 12 12.5523 12 12Z" fill="#1A2CD4"/>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><rect width="10" height="10" x="2" y="3" fill="#1EE46E" rx="1"/><path fill="#1380E5" fill-rule="evenodd" d="M7 9C7 8.44772 7.44772 8 8 8H12V14L14 12L16 14V8H20C20.5523 8 21 8.44772 21 9V21C21 21.5523 20.5523 22 20 22H8C7.44772 22 7 21.5523 7 21V9ZM11 16C10.4477 16 10 16.4477 10 17V19C10 19.5523 10.4477 20 11 20H17C17.5523 20 18 19.5523 18 19V17C18 16.4477 17.5523 16 17 16H11Z" clip-rule="evenodd"/><path fill="#1A2CD4" fill-rule="evenodd" d="M12 12V8H8C7.44772 8 7 8.44772 7 9V13H11C11.5523 13 12 12.5523 12 12Z" clip-rule="evenodd"/></svg>
