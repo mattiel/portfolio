@@ -30,7 +30,7 @@ const Navbar = () => {
 
   return (
     // dark:bg-gray-900 text-gray-900 dark:text-gray-300
-    <nav className="layout w-full top-0 left-0 fixed z-30 bg-white">
+    <nav className="layout full-bleed w-full top-0 left-0 bg-white">
       {/* dark:hover:text-white */}
         <div className="flex justify-between items-center h-14">
           <Logo/>
