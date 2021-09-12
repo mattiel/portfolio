@@ -26,3 +26,5 @@ export function useIntersect({ root = null, rootMargin, threshold = 0}) {
 
   return { ref, entry }
 }
+
+export default useIntersect
