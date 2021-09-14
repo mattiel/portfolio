@@ -114,8 +114,8 @@ const TOC = () => {
   }
 
   const tocClassName = clsx(
-    'w-full full-bleed h-12 sticky top-0 left-0 z-10 overflow-visible opacity-0 transition-opacity',
-    scroll.isAtTop && 'opacity-100'
+    "w-full full-bleed h-12 sticky top-0 left-0 z-10 overflow-visible opacity-0 transition-opacity duration-500",
+    scroll.isAtTop && "opacity-100"
   )
 
   return (
@@ -123,7 +123,7 @@ const TOC = () => {
       className={tocClassName}
       ref={navRef}
     >
-      <div className="w-full h-full bg-gray-100 shadow-sm border-b border-gray-200 relative">
+      <div className="w-full h-full bg-gray-100 shadow-sm border-b bg-opacity-50 backdrop-blur-lg border-gray-200 relative">
         <ProgressBar progress={scroll.progress}/>
         <List 
           sections={sections}
