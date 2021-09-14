@@ -5,7 +5,7 @@ import Link from 'next/link'
 
 const Footer = () => {
   return (
-    <FullBleed className="full-bleed bg-gray-50 mt-16">
+    <FullBleed className="full-bleed bg-gray-100 mt-16">
       <Container>
         <footer className="py-16 text-gray-800 w-full">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
