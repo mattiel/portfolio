@@ -1,5 +1,6 @@
 import Scroller from '@/components/Scroller'
 import QuoteCard from '@/components/QuoteCard'
+import Section from '@/components/Section'
 import Link from 'next/link'
 
 import { 
@@ -11,18 +12,12 @@ import {
 
 const Background = () => {
   return (
-    <section className="layout full-bleed" data-toc-title="Background" id="section-1">
-      <section className="layout full-bleed pt-24 pb-12 bg-gray-100">
-        <span className="block font-semibold text-gray-500 mb-2 text-3xl">01</span>
-        <h2 className="font-bold text-5xl text-gray-900 mb-8">
-          <a href="#section-1">Background</a>
-        </h2>
-        <p className="text-2xl text-gray-700 max-w-prose mb-12">
-          Here's why I've started a project on designing <strong>Bridge</strong> to relieve concerns which might arise
-          when sharing sensitive information with the third parties, browsing the internet, and storing data in a trustworthy location.
-        </p>
-        <ArrowDownIcon className="w-12 h-12 text-gray-700" />
-      </section>
+    <Section options={{
+      id: 'section-1',
+      dataTitle: 'Background',
+      dataDesc: 'Here\'s why I\'ve started a project on designing Bridge to relieve concerns which might arise when sharing sensitive information with the third parties, browsing the internet, and storing data in a trustworthy location.',
+      number: '01',
+    }}>
       <section className="my-32">
         <h4 className="font-semibold text-blue-500 mb-2 text-lg">Quantatative data</h4>
         <blockquote className="text-gray-900 font-bold text-3xl md:text-4xl mb-6">
@@ -174,7 +169,7 @@ const Background = () => {
           Have transparency over how data is collected by the requesting companies and give users sense of security by providing options to own their personal data.
         </h3>
       </section>
-    </section>
+    </Section>
   );
 };
 
