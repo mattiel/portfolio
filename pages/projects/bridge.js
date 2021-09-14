@@ -8,12 +8,12 @@ import Hero from '@/components/Bridge/Hero'
 import TOC from '@/components/TOC'
 import Phone from '@/components/Phone'
 
+import Background from '@/components/Bridge/Background'
+import WorkInProgress from '@/components/WorkInProgress'
 
 import Link from 'next/link'
 import Zoom from 'react-medium-image-zoom'
 import 'react-medium-image-zoom/dist/styles.css'
-
-import { useState } from 'react'
 
 const VisualWrapper = ({ children, bgUrl, right, justify }) => {
   const getJustify = () => {
@@ -47,138 +47,15 @@ const bridge = () => {
     <Layout>
       <Hero />
       <TOC />
-      <section className="block" data-toc-title="Background" id="section-1">
-        <section className="my-48">
-          <h4 className="font-semibold text-blue-500 mb-2 text-lg">Why</h4>
-          <p className="text-gray-900 font-bold text-3xl md:text-4xl mb-6">
-            <q className="leading-snug">
-              Majority of Americans feel as if they have little control over data collected about them by companies and the government
-            </q>
-            <br/>
-            <a 
-              className="text-gray-500 text-lg text-right font-medium underline"
-              href="https://www.pewresearch.org/internet/2019/11/15/americans-and-privacy-concerned-confused-and-feeling-lack-of-control-over-their-personal-information/"
-            >
-              Pew Research Center
-            </a>
-          </p>
-          <p className="text-gray-700 text-xl mb-12">
-            Companies collect and use users' data. Since everything is stored on servers users don't own, 
-            it's hidden from them and they can't see what companies do with it.
-            Even if they are trustworthy and have been using data as mentioned on their policies, 
-            there are other issues to be dealt with such as attacks from hackers, data loss, etc.
-          </p>
-        </section>
-        
-        <section className="my-48">
-          <h4 className="font-semibold text-blue-500 mb-2 text-lg">Insights</h4>
-          <h3 className="text-gray-800 text-4xl font-bold leading-snug mb-8">
-            Americans want their privacy to be respected, but there aren't any transparent solutions out in the market to solve these problems.
-          </h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
-            <div className="block pr-4">
-              <p className="font-semibold text-gray-800 border-l-2 border-blue-500 pl-4 mb-2">Lack of trust</p>
-              <div className="pl-[1.125rem]">
-                <p className="text-gray-700 mb-4">
-                  News articles sometimes reveal companies who failed to follow privacy laws and get penalized. 
-                  This is just a tip of the iceberg. Nobody knows what companies are exactly doing with users' data until they are busted.
-                </p>
-              </div>
-            </div>
-
-            <div className="block pr-4">
-              <p className="font-semibold text-gray-800 border-l-2 border-blue-500 pl-4 mb-2">Lack of responsibilities from data holders</p>
-              <div className="pl-[1.125rem]">
-                <p className="text-gray-700 mb-4">
-                  Companies have to deal with securities to keep numerous data about users. 
-                  No servers are completely protected and even big companies are getting hacked by hackers and users' information gets leaked online.
-                  Are the users really getting compensated from these attacks?
-                </p>
-              </div>
-            </div>
-          </div>
-          <h4 className="font-semibold text-gray-700 mb-2 text-lg">What people say</h4>
-          <Scroller>
-            <div className="inline-flex flex-col max-w-full w-[30rem] h-56 p-6 bg-white shadow-md rounded-xl">
-              <div className="flex items-start">
-                <div className="rounded-full w-12 h-12 mr-3 self-start flex-shrink-0">
-                  <img src="/bridge/avatar-michelle.jpg" className="w-full h-full"/>
-                </div>
-                <div className="w-full">
-                  <h3 className="text-gray-900 font-semibold text-lg">Michelle Lee</h3>
-                  <p className="text-gray-600 font-medium mb-2">Graduate Student</p>
-                  <p className="w-full whitespace-normal text-gray-700 text-lg">
-                    “I don’t know how companies are using my data but <strong>it’s not something I can avoid because I have to use their services</strong>”
-                  </p>  
-                </div>
-              </div>
-            </div>
-
-            <div className="inline-flex flex-col max-w-full w-[30rem] min-h-56 p-6 bg-white shadow-md rounded-xl">
-              <div className="flex items-start">
-                <div className="rounded-full w-12 h-12 mr-3 self-start flex-shrink-0">
-                  <img src="/bridge/avatar-jimmy.jpg" className="w-full h-full"/>
-                </div>
-                <div className="w-full">
-                  <h3 className="text-gray-900 font-semibold text-lg">Jimmy Ong</h3>
-                  <p className="text-gray-600 font-medium mb-2">Accountant</p>
-                  <p className="w-full whitespace-normal text-gray-700 text-lg">
-                  “I don’t use DNA insight services because the government<strong> can access my personal information without my consent</strong>”
-                  </p>  
-                </div>
-              </div>
-            </div>
-
-            <div className="inline-flex flex-col max-w-full w-[30rem] min-h-56 p-6 bg-white shadow-md rounded-xl">
-              <div className="flex items-start">
-                <div className="rounded-full w-12 h-12 mr-3 self-start flex-shrink-0">
-                  <img src="/bridge/avatar-empty.jpg" className="w-full h-full"/>
-                </div>
-                <div className="w-full">
-                  <h3 className="text-gray-900 font-semibold text-lg">Anonymous</h3>
-                  <p className="text-gray-600 font-medium mb-2">Software Developer</p>
-                  <p className="w-full whitespace-normal text-gray-700 text-lg">
-                    “Although I got nothing to hide, <strong>I feel insecure about storing and sharing data because I never know what they exactly do with it.</strong>”
-                  </p>  
-                </div>
-              </div>
-            </div>
-            
-            <Link href="https://arstechnica.com/gadgets/2021/05/96-of-us-users-opt-out-of-app-tracking-in-ios-14-5-analytics-find/">
-              <div className="inline-flex flex-col max-w-full w-[30rem] min-h-56 p-6 bg-white shadow-md rounded-xl cursor-pointer">
-                <div className="flex items-start">
-                  <div className="rounded-full w-12 h-12 mr-3 self-start flex-shrink-0">
-                    <img src="/bridge/arstechnica.webp" className="w-full h-full"/>
-                  </div>
-                  <div className="w-full">
-                    <h3 className="text-gray-900 font-semibold text-lg">
-                      ArsTechnica
-                    </h3>
-                    <p className="text-gray-600 font-medium mb-2">c|net</p>
-                    <p className="w-full whitespace-normal text-gray-700 text-lg">
-                      “96% of US users opt out of app tracking in iOS 14.5, analytics find.”
-                    </p>  
-                  </div>
-                </div>
-              </div>
-            </Link>
-          </Scroller>
-        </section>
-
-        <section className="my-48">
-          <h4 className="font-semibold text-blue-500 mb-2 text-lg">Goals</h4>
-          <h3 className="text-gray-800 text-4xl font-bold leading-snug mb-8">
-            Have transparency over how data is collected by the requesting companies and give users sense of security by providing options to own their personal data.
-          </h3>
-        </section>
-      </section>
-      <section className="block" data-toc-title="Data Ownership" id="section-2">
-        <section className="my-48">
+      <Background />
+      <WorkInProgress />
+      <section className="layout full-bleed" data-toc-title="Data Ownership" id="section-2">
+        <section className="my-32">
           <h4 className="font-semibold text-blue-500 mb-2 text-lg">Secure sharing</h4>
           <h3 className="text-gray-800 text-4xl font-bold leading-snug mb-8">
             What if users take complete ownership of their data and only allow requestors to use when it's needed?
           </h3>
-          <p className="text-gray-700 text-xl mb-8">
+          <p className="text-gray-700 text-xl mb-8 max-w-prose">
             Personal data is stored on the Bridge instead of being stored at a third party server. 
             This way, companies don't have to secure each and everyone's personal data and gives users sense of security of holding their data within a space they trust.
           </p>
@@ -204,7 +81,7 @@ const bridge = () => {
           </div>
         </section>
 
-        <section className="my-48">
+        <section className="my-32">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="flex">
               <div className="flex justify-center h-full items-center relative">
@@ -222,15 +99,15 @@ const bridge = () => {
                 </div>
               </div>
             </div>
-            <div className="py-8">
+            <div className="py-8 flex justify-center">
               <Phone source="/bridge/permit-request.mov"/>
             </div>
           </div>
         </section>
 
-        <section className="my-48">
+        <section className="my-32">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            <div className="flex order-2">
+            <div className="flex lg:order-2">
               <div className="flex justify-center h-full items-center relative">
                 <div className="block">
                   <h4 className="font-semibold text-blue-500 mb-2 text-lg">Permissions</h4>
@@ -240,7 +117,6 @@ const bridge = () => {
                   <p className="font-medium text-gray-500 text-xl mr-20">
                     <strong className="text-gray-800 mr-0.5">Transparent. </strong> 
                     After giving permits to requestors, permissions show exactly what data is being shared and how it's being used by the requestors.
-                    
                   </p>
                 </div>
               </div>
@@ -280,6 +156,43 @@ const bridge = () => {
         </div>
       </section> */}
 
+      <section className="layout full-bleed" data-toc-title="Protection" id="section-3">
+        <section className="my-32">
+          <h4 className="font-semibold text-blue-500 mb-2 text-lg">Blockers</h4>
+          <h3 className="text-gray-800 text-4xl font-bold leading-snug mb-8">
+            How can users be safe from companies trying to track what they do online?
+          </h3>
+          <p className="text-gray-700 text-xl mb-8 max-w-prose">
+            Without having to install extra extensions and applications, blockers on a router level protect users from unwanted trackings, 
+            privacy-invasive elements, and even malicious webistes while browsing on the internet or using applications.
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
+            <div className="block pr-4">
+              <p className="font-semibold text-gray-800 border-l-2 border-blue-500 pl-4 mb-2">One time setup</p>
+              <div className="pl-[1.125rem]">
+                <p className="text-gray-700 mb-4">
+                  <a href="https://github.com/gorhill/uBlock" className="text-blue-600 underline font-medium">uBlock origin</a>, an ad blocker for browsers,
+                  have set of rules that block trackers, ads, and maleware sites. It needs to be installed via extensions from supported browsers. However, this means
+                  everytime a user gets a new device, they need to install the extension. Bridge solve this problem because it handles web requests and is handled on the router level as long
+                  as the device is connected, it's protected.
+                </p>
+              </div>
+            </div>
+
+            <div className="block pr-4">
+              <p className="font-semibold text-gray-800 border-l-2 border-blue-500 pl-4 mb-2">Lack of responsibilities from data holders</p>
+              <div className="pl-[1.125rem]">
+                <p className="text-gray-700 mb-4">
+                  Companies have to deal with securities to keep numerous data about users. 
+                  No servers are completely protected and even big companies are getting hacked and users' information gets leaked online.
+                  Are the users really getting compensated from these attacks?
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </section>
+
       <section className="py-32 full-bleed">
         <Container>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
@@ -307,7 +220,7 @@ const bridge = () => {
 
       <section className="my-32">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div className="py-8">
+          <div className="py-8 flex justify-center order-2 lg:order-1">
             <Phone source="/bridge/privacy-report.mov"/>
           </div>
           <div className="flex">
@@ -318,7 +231,7 @@ const bridge = () => {
                   Clear overview of how Bridge is protecting privacy
                 </h3>
                 <p className="font-medium text-gray-500 text-xl mr-20">
-                  <strong className="text-gray-800 mr-0.5">Checkout. </strong> 
+                  <strong className="text-gray-800 mr-0.5">Relief. </strong> 
                   A summary of blockers and permits provides brief overview of how Bridge is protecting your privacy.
                 </p>
               </div>
@@ -370,26 +283,37 @@ const bridge = () => {
           </div>
         </div>
         <div className="lg:py-8 relative inline-flex justify-center overflow-hidden rounded-2xl mb-8">
-          <VisualWrapper bgUrl="/bridge/gradient-4.png">
-            <div className="flex-1 w-full h-full overflow-hidden webkit-fix-overflow rounded-md"
-              dangerouslySetInnerHTML={{
-                __html: `
-                  <video 
-                    webkit-playsinline 
-                    playsinline
-                    width="960"
-                    height="512"
-                    preload="auto"
-                    autoplay
-                    muted
-                    loop
-                    className="max-h-full rounded-md object-scale-down overflow-hidden flex-1"
-                  >
-                    <source src="/bridge/desktop-optimize.mov" type="video/mp4"></source>
-                  </video>`
-                }}
-              />
-          </VisualWrapper>
+          <div className="inline-block relative order-1 h-[24rem] md:h-[38rem] min-w-0">
+            <div 
+              className={`
+                inline-block w-full max-w-screen-lg rounded-2xl overflow-hidden bg-cover bg-top-left p-8
+                md:right-8
+                lg:w-[60vw]
+              `}
+              style={{backgroundImage: `url('/bridge/gradient-4.png')`}}
+            >
+              <div className={`inline-flex space-x-4 w-full relative h-full items-start justify-center`}>
+                <div className="flex-1 w-full h-full overflow-hidden webkit-fix-overflow rounded-md"
+                dangerouslySetInnerHTML={{
+                  __html: `
+                    <video 
+                      webkit-playsinline 
+                      playsinline
+                      width="960"
+                      height="512"
+                      preload="auto"
+                      autoplay
+                      muted
+                      loop
+                      className="max-h-full rounded-md object-scale-down overflow-hidden flex-1"
+                    >
+                      <source src="/bridge/desktop-optimize.mov" type="video/mp4"></source>
+                    </video>`
+                  }}
+                />
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -427,47 +351,12 @@ const bridge = () => {
         </div>
       </section>
 
-      <section className="my-48">
-        <h4 className="font-semibold text-blue-500 mb-2 text-lg">Blockers</h4>
-        <h3 className="text-gray-800 text-4xl font-bold leading-snug mb-8">
-          How can users be safe from companies trying to track what they do online?
-        </h3>
-        <p className="text-gray-700 text-xl mb-8">
-          Without having to install extra extensions and applications, blockers on a router level protect users from unwanted trackings, 
-          privacy-invasive elements, and even malicious webistes while browsing on the internet or using applications.
-        </p>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
-          <div className="block pr-4">
-            <p className="font-semibold text-gray-800 border-l-2 border-blue-500 pl-4 mb-2">One time setup</p>
-            <div className="pl-[1.125rem]">
-              <p className="text-gray-700 mb-4">
-                <a href="https://github.com/gorhill/uBlock" className="text-blue-600 underline font-medium">uBlock origin</a>, an ad blocker for browsers,
-                have set of rules that block trackers, ads, and maleware sites. It needs to be installed via extensions from supported browsers. However, this means
-                everytime a user gets a new device, they need to install the extension. Bridge solve this problem because it handles web requests and is handled on the router level as long
-                as the device is connected, it's protected.
-              </p>
-            </div>
-          </div>
-
-          <div className="block pr-4">
-            <p className="font-semibold text-gray-800 border-l-2 border-blue-500 pl-4 mb-2">Lack of responsibilities from data holders</p>
-            <div className="pl-[1.125rem]">
-              <p className="text-gray-700 mb-4">
-                Companies have to deal with securities to keep numerous data about users. 
-                No servers are completely protected and even big companies are getting hacked and users' information gets leaked online.
-                Are the users really getting compensated from these attacks?
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="my-48">
+      <section className="my-32">
         <h4 className="font-semibold text-blue-500 mb-2 text-lg">Secure Ownership</h4>
         <h3 className="text-gray-800 text-4xl font-bold leading-snug mb-8">
           How can users safely store and share their personal data and files?
         </h3>
-        <p className="text-gray-700 text-xl mb-8">
+        <p className="text-gray-700 text-xl mb-8 max-w-prose">
           Since everything is stored in Bridge, there are no other services that users have to trust. It gives users transparencies on how the data lives on the server,
           what information is exactly being shared, and how it's being used.
         </p>
@@ -492,11 +381,11 @@ const bridge = () => {
         </div>
       </section>
 
-      <section className="my-48">
+      <section className="my-32">
         <h3 className="text-gray-800 text-4xl font-bold leading-snug mb-4">
           Next Steps
         </h3>
-        <p className="text-gray-700 text-xl mb-8">
+        <p className="text-gray-700 text-xl mb-8 max-w-prose">
           There are still many things that can be done to make Bridge better. 
           There should be ways for other developers to join in and ship extensions for the Bridge users.
           Exploring ways of authentication process without a confirmation email, or even without a password seems like a good start. 

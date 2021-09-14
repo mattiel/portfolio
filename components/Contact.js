@@ -1,7 +1,7 @@
 const Contact = () => {
   return (
     <div className="py-24">
-      <div className="border border-gray-200 bg-gray-50 rounded-xl p-8 md:p-12  grid grid-cols-1 md:grid-cols-2 gap-4 place-items-start">
+      <div className="border border-gray-200 bg-white rounded-xl p-8 md:p-12  grid grid-cols-1 md:grid-cols-2 gap-4 place-items-start">
         <div className="grid gap-2">
           <h3 className="text-4xl font-bold text-gray-900">
             Let's talk

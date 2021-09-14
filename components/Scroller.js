@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from 'react'
 import smoothscroll from 'smoothscroll-polyfill'
 import { Transition } from '@headlessui/react'
 
+import useIntersect from '@/utils/useIntersect'
 import FullBleed from '@/components/FullBleed'
 
 const Button = ({onClick, hidden, children}) => {
@@ -20,7 +21,8 @@ const Button = ({onClick, hidden, children}) => {
   return(
     <button
       type="button"
-      className={`left-4 w-12 h-12  bg-white shadow-lg rounded-full text-gray-600 hover:text-gray-900 hover:shadow-xl
+      className={`left-4 w-12 h-12 bg-black bg-opacity-40 shadow-lg rounded-full text-gray-200
+      transition-all hover:text-white hover:shadow-xl hover:bg-opacity-70
         ${hidden ? 'hidden' : 'grid place-items-center'}
       `}
       onClick={handleClick}
@@ -41,6 +43,8 @@ const Scroller = ({ elements, children }) => {
     isNextHidden: true,
   })
 
+  const intersect = useIntersect({ root: scrollerState.container, threshold: 0.75 })
+
   const scrollerContainerRef = useRef()
 
   useEffect(() => {
@@ -51,7 +55,7 @@ const Scroller = ({ elements, children }) => {
     setScrollerState({...scrollerState, container, itemElements, isNextHidden})
 
     container.addEventListener('resize', () => {
-
+      
     })
     return () => {
       container.removeEventListener('resize', () => {
@@ -59,6 +63,15 @@ const Scroller = ({ elements, children }) => {
       })
     }
   },[elements])
+
+  function handleIntersect(entries, elements) {
+    const entry = entries.find(e => e.isIntersecting)
+    let index = null
+    if(entry) {
+      index = elements.findIndex(e => e === entry.target)
+      setScrollerState({...scrollerState, currentIndex: index})
+    }
+  }  
 
   const handleNext = () => {
     const currentIndex = ++scrollerState.currentIndex
@@ -132,35 +145,33 @@ const Scroller = ({ elements, children }) => {
           leave="transition-opacity ease-linear duration-200"
           leaveFrom="opacity-100"
           leaveTo="opacity-0"
-          className="opacity-0"
+          className="absolute w-full flex-shrink-0 px-6 top-1/2 transform -translate-y-1/2 justify-between flex opacity-0"
         >
-          <nav className="hidden w-full px-6 absolute top-1/2 transform -translate-y-1/2 justify-between lg:flex">
-            <div className="">
-              <Button onClick={handlePrev} hidden={scrollerState.isPrevHidden}>
-                <svg 
-                  className="w-6 h-6" 
-                  fill="none" 
-                  stroke="currentColor" 
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-                </svg>
-              </Button>
-            </div>
+          <div className="">
+            <Button onClick={handlePrev} hidden={scrollerState.isPrevHidden}>
+              <svg 
+                className="w-6 h-6" 
+                fill="none" 
+                stroke="currentColor" 
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+              </svg>
+            </Button>
+          </div>
 
-            <div className="">
-              <Button onClick={handleNext} hidden={scrollerState.isNextHidden}>
-                <svg 
-                  className="w-6 h-6" 
-                  fill="none" 
-                  stroke="currentColor" 
-                  viewBox="0 0 24 24" 
-                  xmlns="http://www.w3.org/2000/svg">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-              </Button>
-            </div>
-          </nav>
+          <div className="">
+            <Button onClick={handleNext} hidden={scrollerState.isNextHidden}>
+              <svg 
+                className="w-6 h-6" 
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
+            </Button>
+          </div>
         </Transition>
       </div>
     </FullBleed>

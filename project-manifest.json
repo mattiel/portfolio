@@ -5,7 +5,8 @@
     "description": "The most powerful, Wi-Fi Router and Network Attached Storage (NAS) for personal data storage and management",
     "color": "#2563EB",
     "thumbnail": "bridge-thumbnail.png",
-    "hidden": false
+    "hidden": false,
+    "isWIP": true
   },
   {
     "title": "Tomato",
@@ -13,7 +14,8 @@
     "description": "A cloud-powered CRM and ERP for small to mid-sized supermarkets in South Korea",
     "color": "#1EE46E",
     "thumbnail": "tomato-thumbnail.png",
-    "hidden": false
+    "hidden": false,
+    "isWIP": false
   },
   {
     "title": "Birdfire",
@@ -21,7 +23,8 @@
     "description": "A cloud-powered CRM and ERP for small to mid-sized supermarkets in South Korea",
     "color": "#0066FF",
     "thumbnail": "birdfire-thumbnail.png",
-    "hidden": true
+    "hidden": true,
+    "isWIP": false
   },
   {
     "title": "Stay",
@@ -29,7 +32,8 @@
     "description": "Providing full, modernized hotel services and commodity for guests without a hassle.",
     "color": "#1369FF",
     "thumbnail": "stay-thumbnail.png",
-    "hidden": false
+    "hidden": false,
+    "isWIP": false
   },
   {
     "title": "Tribe",
@@ -37,7 +41,8 @@
     "description": "Adaptive jewelry for self-expression",
     "color": "#064E3B",
     "thumbnail": "tribe-thumbnail.png",
-    "hidden": false
+    "hidden": false,
+    "isWIP": false
   },
   {
     "title": "Achieve",
@@ -45,6 +50,7 @@
     "description": "An inspiration and encouragement platform for low-income individuals",
     "color": "#064E3B",
     "thumbnail": "achieve-thumbnail.png",
-    "hidden": false
+    "hidden": false,
+    "isWIP": false
   }
 ]

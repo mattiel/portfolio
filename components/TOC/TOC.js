@@ -5,6 +5,7 @@ import tailwindConfig from 'tailwind.config'
 import Menu from './Menu'
 import List from './List'
 import ProgressBar from './ProgressBar'
+import clsx from 'clsx'
 
 const twConfig = resolveConfig(tailwindConfig)
 
@@ -54,30 +55,37 @@ const TOC = () => {
 
     function handleProgress() {
       // @TODO: Fix progress calculation
-      // const progress = 
-      //   scroll.isTiny && scroll.max !== 0 
-      //   ? window.scrollY / scroll.max * 100 
-      //   : window.scrollY / window.scrollMaxY * 100
-
-      const progress = 0
-
-      setScroll(scroll => ({
-        ...scroll, progress}
-      ))
+      const progress = scroll.isTiny
+        ? window.scrollY / this.scroll.max * 100 
+        : window.scrollY / sections[sections.length - 1].endPosition * 100
+      console.log(window.scrollY, scroll.max)
+      if(progress < 100 && progress > 0)
+        setScroll(scroll => ({
+          ...scroll, progress}
+        ))
     }
   
     function handleScroll() {
-      let min = scroll.min
-      let max = scroll.max
+      if(scroll.min > 0 && scroll.max > 0) {
+        let min = scroll.min
+        let max = scroll.max
+        setScroll(scroll => ({
+          ...scroll, min, max
+        }))
+      }
+      
       const toChange = sections.slice()
-      const isAtTop = navRef.current?.getBoundingClientRect().top === 0
+      const isAtTop = navRef.current?.getBoundingClientRect().top < 2
       
       if(window.scrollY > scroll.max && window.scrollY < sections[sections.length - 1].endPosition) {
         toChange.forEach(section => {
           if(window.scrollY >= section.startPosition && window.scrollY <= section.endPosition) {
             section.isVisible = true
-            min = section.startPosition
-            max = section.endPosition
+            let min = section.startPosition
+            let max = section.endPosition
+            setScroll(scroll => ({
+              ...scroll, min, max
+            }))
           } else {
             section.isVisible = false
           }
@@ -86,8 +94,8 @@ const TOC = () => {
 
       setSections(toChange)
       setScroll(scroll => ({
-        ...scroll, min, max, isAtTop
-      })) 
+        ...scroll, isAtTop
+      }))
       handleProgress()
     }
     window.addEventListener('resize', handleResize)
@@ -105,9 +113,14 @@ const TOC = () => {
     setScroll({ ...scroll, isMenuOpen: !scroll.isMenuOpen })
   }
 
+  const tocClassName = clsx(
+    'w-full full-bleed h-12 sticky top-0 left-0 z-10 overflow-visible opacity-0 transition-opacity',
+    scroll.isAtTop && 'opacity-100'
+  )
+
   return (
     <nav 
-      className="w-full full-bleed h-12 sticky top-0 left-0 z-10 overflow-visible" 
+      className={tocClassName}
       ref={navRef}
     >
       <div className="w-full h-full bg-gray-100 shadow-sm border-b border-gray-200 relative">
