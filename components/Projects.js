@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import WorkInProgress from '@/components/WorkInProgress'
 
 const Projects = ({ manifest }) => {
   return (
@@ -13,7 +14,7 @@ const Projects = ({ manifest }) => {
                     className="cursor-pointer overflow-hidden flex flex-col"
                   >
                     <figure 
-                      className="w-full mb-4 overflow-hidden"
+                      className="w-full mb-4 overflow-hidden relative"
                       style={{ backgroundColor: `${value.color}` }}
                     > 
                       <div 
@@ -26,6 +27,9 @@ const Projects = ({ manifest }) => {
                         }}
                       >
                       </div>
+                      {value.isWIP && (
+                        <WorkInProgress isAbsolute/>
+                      )}
                     </figure>
                     <figcaption className="flex flex-col space-y-1 mb-6">
                       <h3 className="font-semibold text-gray-700">{value.title}</h3>

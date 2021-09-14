@@ -11,15 +11,15 @@ const Menu = ({e,  sections, isVisible, onClose }) => {
     <Transition
       show={isVisible}
       appear={true}
-      enter="transition-all ease-linear duration-300"
+      enter="transition-all ease-in duration-200"
       enterFrom="opacity-0 max-h-0 max-w-0"
       enterTo="opacity-100 max-h-full max-w-full"
-      leave="transition-all ease-linear duration-300"
+      leave="transition-all ease-out duration-200"
       leaveFrom="opacity-100 max-h-full max-w-full"
       leaveTo="opacity-0 max-h-0 max-w-0"
-      className="transition-all opacity-0 w-full max-h-0 max-w-0 absolute left-0 top-0 z-20"
+      className="opacity-0 w-full max-h-0 max-w-0 absolute left-0 top-0 z-20"
     >
-      <nav className="w-full relative">
+      <nav className="min-w-full relative">
         <ul className="w-full bg-purple-600 text-white text-sm font-semibold">
           { sections.map((section, idx) => {
             return(
@@ -29,7 +29,7 @@ const Menu = ({e,  sections, isVisible, onClose }) => {
                 onClick={handleClose}
               >
                 <a 
-                  className="w-full h-full py-3 px-4" 
+                  className="w-full h-full py-3 px-4 whitespace-nowrap" 
                   href={`#${section.id}`}
                   >
                   {section.title}

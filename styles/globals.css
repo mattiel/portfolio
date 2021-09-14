@@ -35,6 +35,10 @@ html {
   scroll-behavior: smooth;
 }
 
+body {
+  @apply bg-gray-50
+}
+
 #__next {
   position: relative;
   max-width: 100%;
@@ -67,7 +71,8 @@ a {
 .scroller {
   scroll-snap-type: x mandatory;
   scrollbar-width: none;
-  @apply w-full relative whitespace-nowrap overflow-x-scroll py-4
+  vertical-align: top;
+  @apply flex w-full relative whitespace-nowrap overflow-x-scroll py-4
 }
 
 .scroller::-webkit-scrollbar {
@@ -136,5 +141,27 @@ a {
     right: 50%;
     margin-left: -50vw;
     margin-right: -50vw;
+  }
+
+  .pulsing-blob {
+    animation: pulse-white 2s infinite;
+    @apply bg-white rounded-full w-2 h-2
+  }
+
+  @keyframes pulse-white {
+    0% {
+      transform: scale(0.95);
+      box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7);
+    }
+    
+    70% {
+      transform: scale(1);
+      box-shadow: 0 0 0 10px rgba(255, 255, 255, 0);
+    }
+    
+    100% {
+      transform: scale(0.95);
+      box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+    }
   }
 }
