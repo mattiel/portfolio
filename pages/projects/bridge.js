@@ -100,7 +100,7 @@ const bridge = () => {
               </div>
             </div>
             <div className="py-8 flex justify-center">
-              <Phone source="/bridge/permit-request.mov"/>
+              <Phone source="/bridge/permit-request.webm"/>
             </div>
           </div>
         </section>
@@ -221,7 +221,7 @@ const bridge = () => {
       <section className="my-32">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div className="py-8 flex justify-center order-2 lg:order-1">
-            <Phone source="/bridge/privacy-report.mov"/>
+            <Phone source="/bridge/privacy-report.webm"/>
           </div>
           <div className="flex">
             <div className="flex justify-center h-full items-center relative">
@@ -307,7 +307,7 @@ const bridge = () => {
                       loop
                       className="max-h-full rounded-md object-scale-down overflow-hidden flex-1"
                     >
-                      <source src="/bridge/desktop-optimize.mov" type="video/mp4"></source>
+                      <source src="/bridge/desktop-optimize.webm" type="video/webm"></source>
                     </video>`
                   }}
                 />

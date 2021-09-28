@@ -5,6 +5,8 @@ import { Transition } from '@headlessui/react'
 import useIntersect from '@/utils/useIntersect'
 import FullBleed from '@/components/FullBleed'
 
+import Fade from 'react-reveal/Fade'
+
 const Button = ({onClick, hidden, children}) => {
   const [isDisabled, setIsDisabled] = useState(false)
 
@@ -130,7 +132,9 @@ const Scroller = ({ elements, children }) => {
             React.Children?.map(children, child => {
               return (
                 <div className="scroller-item">
-                  {React.cloneElement(child)}
+                  <Fade bottom cascade>
+                    {React.cloneElement(child)}
+                  </Fade>
                 </div>
               )
             })
