@@ -1,8 +1,4 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document'
-import config from 'react-reveal/globals'
-
-config({ ssrFadeout: true })
-config({ duration: 500 });
 
 class MainDocument extends Document {
   static async getInitialProps(ctx) {

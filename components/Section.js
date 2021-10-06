@@ -1,6 +1,5 @@
 import clsx from "clsx";
 import { ArrowDownIcon } from "@heroicons/react/outline";
-import Fade from "react-reveal/fade";
 
 const TOCSectionIntro = ({
   options = {
@@ -14,26 +13,18 @@ const TOCSectionIntro = ({
     <section className="layout full-bleed pt-24 pb-12 bg-gray-100">
       {options.number && (
         <span className="block font-semibold text-gray-500 mb-2 text-3xl">
-          <Fade bottom text cascade>
-            {options.number}
-          </Fade>
+          {options.number}
         </span>
       )}
       <h2 className="font-bold text-5xl text-gray-900 mb-8">
         <a href={`#${options.id}`}>
-          <Fade bottom text cascade opposite>
-            {options.dataTitle}
-          </Fade>
+          {options.dataTitle}
         </a>
       </h2>
       <p className="text-2xl text-gray-700 max-w-prose mb-12">
-        <Fade bottom>
-          {options.dataDesc}
-        </Fade>
+        {options.dataDesc}
       </p>
-      <Fade bottom>
-        <ArrowDownIcon className="w-12 h-12 text-gray-700" />
-      </Fade>
+      <ArrowDownIcon className="w-12 h-12 text-gray-700" />
     </section>
   );
 };

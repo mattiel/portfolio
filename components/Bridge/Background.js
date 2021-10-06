@@ -2,7 +2,6 @@ import Scroller from "@/components/Scroller";
 import QuoteCard from "@/components/QuoteCard";
 import Section from "@/components/Section";
 import Link from "next/link";
-import Fade from "react-reveal/Fade";
 
 import {
   BanIcon,
@@ -22,114 +21,112 @@ const Background = () => {
         number: "01",
       }}
     >
-      <Fade bottom cascade>
-        <section className="my-32">
-          <h4 className="font-semibold text-blue-500 mb-2 text-lg">
-            Quantatative data
-          </h4>
-          <blockquote className="text-gray-900 font-bold text-3xl md:text-4xl mb-6">
-            <q className="leading-snug">
-              Majority of Americans feel as if they have little control over data
-              collected about them by companies and the government
-            </q>
-            <br />
-            <a
-              className="text-gray-500 text-lg text-right font-medium underline"
-              href="https://www.pewresearch.org/internet/2019/11/15/americans-and-privacy-concerned-confused-and-feeling-lack-of-control-over-their-personal-information/"
-            >
-              Pew Research Center
-            </a>
-          </blockquote>
-          <p className="text-gray-700 text-xl mb-12 max-w-prose">
-            Companies collect and use users' data. Since everything is stored on
-            servers users don't own, it's hidden from them and they can't see what
-            companies do with it. Even if they are trustworthy and have been using
-            data as mentioned on their policies, there are other issues to be
-            dealt with such as attacks from hackers, data loss, etc.
-          </p>
-          <h4 className="font-semibold text-lg text-gray-700 mb-4">
-            Responders of the survey by Pew Research Center say
-          </h4>
-          <Scroller>
-            <div className="inline-block max-w-full w-[26rem] p-8 bg-white shadow-md rounded-xl">
-              <div className="text-gray-900 mb-6 whitespace-normal">
-                <DotsCircleHorizontalIcon className="w-9 h-9 mb-4" />
-                <h5 className="font-semibold text-xl">
-                  Lack of understanding about data use
-                </h5>
-                <p className="text-gray-600">
-                  They have very little/no understanding about what ___ do/does
-                  with the data collected.
-                </p>
-              </div>
+      <section className="my-32">
+        <h4 className="font-semibold text-blue-500 mb-2 text-lg">
+          Quantatative data
+        </h4>
+        <blockquote className="text-gray-900 font-bold text-3xl md:text-4xl mb-6">
+          <q className="leading-snug">
+            Majority of Americans feel as if they have little control over data
+            collected about them by companies and the government
+          </q>
+          <br />
+          <a
+            className="text-gray-500 text-lg text-right font-medium underline"
+            href="https://www.pewresearch.org/internet/2019/11/15/americans-and-privacy-concerned-confused-and-feeling-lack-of-control-over-their-personal-information/"
+          >
+            Pew Research Center
+          </a>
+        </blockquote>
+        <p className="text-gray-700 text-xl mb-12 max-w-prose">
+          Companies collect and use users' data. Since everything is stored on
+          servers users don't own, it's hidden from them and they can't see what
+          companies do with it. Even if they are trustworthy and have been using
+          data as mentioned on their policies, there are other issues to be
+          dealt with such as attacks from hackers, data loss, etc.
+        </p>
+        <h4 className="font-semibold text-lg text-gray-700 mb-4">
+          Responders of the survey by Pew Research Center say
+        </h4>
+        <Scroller>
+          <div className="inline-block max-w-full w-[26rem] p-8 bg-white shadow-md rounded-xl">
+            <div className="text-gray-900 mb-6 whitespace-normal">
+              <DotsCircleHorizontalIcon className="w-9 h-9 mb-4" />
+              <h5 className="font-semibold text-xl">
+                Lack of understanding about data use
+              </h5>
+              <p className="text-gray-600">
+                They have very little/no understanding about what ___ do/does
+                with the data collected.
+              </p>
+            </div>
 
-              <div className="grid grid-cols-2 gap-6">
-                <div className="flex flex-col">
-                  <h6 className="text-gray-500">Companies</h6>
-                  <data className="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-pink-400 to-blue-700">
-                    59%
-                  </data>
-                </div>
-                <div className="flex flex-col">
-                  <h6 className="text-gray-500">Government</h6>
-                  <data className="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-pink-600 to-purple-800">
-                    78%
-                  </data>
-                </div>
+            <div className="grid grid-cols-2 gap-6">
+              <div className="flex flex-col">
+                <h6 className="text-gray-500">Companies</h6>
+                <data className="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-pink-400 to-blue-700">
+                  59%
+                </data>
+              </div>
+              <div className="flex flex-col">
+                <h6 className="text-gray-500">Government</h6>
+                <data className="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-pink-600 to-purple-800">
+                  78%
+                </data>
               </div>
             </div>
-            <div className="inline-block max-w-full w-[26rem] p-8 bg-white shadow-md rounded-xl">
-              <div className="text-gray-900 mb-6 whitespace-normal">
-                <BanIcon className="w-9 h-9 mb-4" />
-                <h5 className="font-semibold text-xl">Lack of control</h5>
-                <p className="text-gray-600">
-                  They have very little/no control over the data ____ collect(s)
-                </p>
-              </div>
+          </div>
+          <div className="inline-block max-w-full w-[26rem] p-8 bg-white shadow-md rounded-xl">
+            <div className="text-gray-900 mb-6 whitespace-normal">
+              <BanIcon className="w-9 h-9 mb-4" />
+              <h5 className="font-semibold text-xl">Lack of control</h5>
+              <p className="text-gray-600">
+                They have very little/no control over the data ____ collect(s)
+              </p>
+            </div>
 
-              <div className="grid grid-cols-2 gap-6">
-                <div className="flex flex-col">
-                  <h6 className="text-gray-500">Companies</h6>
-                  <data className="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-pink-600 to-purple-800">
-                    81%
-                  </data>
-                </div>
-                <div className="flex flex-col">
-                  <h6 className="text-gray-500">Government</h6>
-                  <data className="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-pink-600 to-purple-800">
-                    84%
-                  </data>
-                </div>
+            <div className="grid grid-cols-2 gap-6">
+              <div className="flex flex-col">
+                <h6 className="text-gray-500">Companies</h6>
+                <data className="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-pink-600 to-purple-800">
+                  81%
+                </data>
+              </div>
+              <div className="flex flex-col">
+                <h6 className="text-gray-500">Government</h6>
+                <data className="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-pink-600 to-purple-800">
+                  84%
+                </data>
               </div>
             </div>
-            <div className="inline-block max-w-full w-[26rem] p-8 bg-white shadow-md rounded-xl">
-              <div className="text-gray-900 mb-6 whitespace-normal">
-                <ExclamationCircleIcon className="w-9 h-9 mb-4" />
-                <h5 className="font-semibold text-xl">Concern over data use</h5>
-                <p className="text-gray-600">
-                  They are very/somewhat concerned about how ___ use(s) the data
-                  collected
-                </p>
-              </div>
+          </div>
+          <div className="inline-block max-w-full w-[26rem] p-8 bg-white shadow-md rounded-xl">
+            <div className="text-gray-900 mb-6 whitespace-normal">
+              <ExclamationCircleIcon className="w-9 h-9 mb-4" />
+              <h5 className="font-semibold text-xl">Concern over data use</h5>
+              <p className="text-gray-600">
+                They are very/somewhat concerned about how ___ use(s) the data
+                collected
+              </p>
+            </div>
 
-              <div className="grid grid-cols-2 gap-6">
-                <div className="flex flex-col">
-                  <h6 className="text-gray-500">Companies</h6>
-                  <data className="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-pink-600 to-purple-800">
-                    79%
-                  </data>
-                </div>
-                <div className="flex flex-col">
-                  <h6 className="text-gray-500">Government</h6>
-                  <data className="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-pink-600 to-purple-800">
-                    65%
-                  </data>
-                </div>
+            <div className="grid grid-cols-2 gap-6">
+              <div className="flex flex-col">
+                <h6 className="text-gray-500">Companies</h6>
+                <data className="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-pink-600 to-purple-800">
+                  79%
+                </data>
+              </div>
+              <div className="flex flex-col">
+                <h6 className="text-gray-500">Government</h6>
+                <data className="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-pink-600 to-purple-800">
+                  65%
+                </data>
               </div>
             </div>
-          </Scroller>
+          </div>
+        </Scroller>
       </section>
-      </Fade>
 
       <section className="my-32">
         <h4 className="font-semibold text-blue-500 mb-2 text-lg">Insights</h4>
