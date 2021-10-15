@@ -15,7 +15,7 @@ const WorkInProgress = ({ isAbsolute }) => {
       }}
     >
       <div className="grid place-items-center w-4 h-4 mr-2">
-        <div className="pulsing-blob"></div>]
+        <div className="pulsing-blob"></div>
       </div>
       Work In Progress
     </div>
