@@ -1,9 +1,9 @@
-import React, { useState } from 'react'
+import { useState, useEffect, useRef } from 'react'
 
 import Logo from '@/components/Logo'
 import Modal from '@/components/Modal'
 import Command from '@/components/Command'
-import Container from '@/components/Container'
+import clsx from 'clsx'
 
 const CommandIcon = (props) => {
   return (
@@ -25,20 +25,22 @@ const CommandIcon = (props) => {
   )
 }
 
-const Navbar = () => {
+const Navbar = ({ dark }) => {
   const [isCommandOpen, setIsCommandOpen] = useState(false)
+  const navRef = useRef(null)
+  const navClasses = clsx(
+    'layout absolute full-bleed w-full top-0 left-0',
+    dark && 'text-white'
+  )
 
   return (
     // dark:bg-gray-900 text-gray-900 dark:text-gray-300
-    <nav className="layout full-bleed w-full top-0 left-0 bg-white">
+    <nav className={navClasses} ref={navRef}>
       {/* dark:hover:text-white */}
-        <div className="flex justify-between items-center h-14">
+        <div className="flex justify-between items-center h-12">
           <Logo/>
           {/* dark:text-gray-300 */}
           <ul className="uppercase space-x-4 flex text-xs font-semibold text-gray-500 items-center">
-            {/* <li>About</li>
-            <li>Projects</li>
-            <li>Contact</li> */}
             <li 
               className="text-lg cursor-pointer"
               onClick={() => setIsCommandOpen(true)}
