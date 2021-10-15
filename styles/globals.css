@@ -91,13 +91,9 @@ a {
   @apply mr-5
 }
 
-.scroller-item > * {
-  @apply transform translate-x-4
-}
-
 @screen xl {
   .scroller-item > * {
-    transform: translateX(calc((100vw - 80rem) / 2 + 1rem))
+    transform: translateX(calc((100vw - 80rem) / 2))
   }
 }
 
@@ -146,6 +142,32 @@ a {
   .pulsing-blob {
     animation: pulse-white 2s infinite;
     @apply bg-white rounded-full w-2 h-2
+  }
+
+  .chat-container {
+    @apply h-96 w-full relative py-4 px-6 overflow-y-auto
+  }
+
+  .smooth-edge-b {
+    @apply relative
+  }
+
+  .smooth-edge-b::after {
+    content: '';
+    background: linear-gradient(to top, #fff 0%, rgba(255, 255, 255, 0) 100%);
+    @apply absolute left-0 bottom-0 w-full h-8
+  }
+
+  .bridge-hero-text {
+    background: radial-gradient(183.73% 98.84% at 34.67% 136.05%, #EC07D5 0%, rgba(255, 236, 254, 0) 100%),
+                radial-gradient(87.33% 493.89% at -36.67% 22.09%, #A207EC 0%, rgba(244, 187, 242, 0) 100%),
+                radial-gradient(31.98% 51.16% at 8.67% 30.23%, rgba(29, 25, 250, 0.95) 0%, rgba(13, 240, 255, 0) 100%, rgba(4, 44, 255, 0) 100%),
+                radial-gradient(28.67% 162.12% at 10% 46.51%, #F2A4EE 0%, rgba(244, 187, 242, 0) 100%),
+                radial-gradient(37.8% 60.47% at 28% -25.58%, #19ECFA 0%, rgba(13, 240, 255, 0) 100%, rgba(13, 240, 255, 0) 100%),
+                radial-gradient(44.67% 65.66% at 104.67% -3.49%, #FEE97C 0%, rgba(255, 232, 26, 0) 97.79%),
+                radial-gradient(63.33% 93.11% at 87.33% 127.91%, #FB9F33 0%, rgba(255, 122, 26, 0) 97.79%),
+                radial-gradient(67.15% 125.58% at 40.67% 3.49%, #8BBFFC 0%, rgba(255, 255, 255, 0) 55.43%),
+                linear-gradient(0deg, #FFFFFF, #FFFFFF);
   }
 
   @keyframes pulse-white {
