@@ -15,6 +15,11 @@ import Link from "next/link";
 import Zoom from "react-medium-image-zoom";
 import "react-medium-image-zoom/dist/styles.css";
 
+import {
+  GlobeIcon
+} from "@heroicons/react/outline"
+
+
 const VisualWrapper = ({ children, bgUrl, right, justify }) => {
   const getJustify = () => {
     if (justify === "start" || justify === "end") return justify;
@@ -81,13 +86,14 @@ const bridge = () => {
             />
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="rounded-3xl bg-gray-900 text-white w-full relative overflow-hidden">
+            <div className="rounded-3xl bg-gray-900 text-white w-full relative overflow-hidden shadow-inner">
               <div className="p-12">
+                <GlobeIcon className="h-6 w-6 mb-4" />
                 <h5 className="font-semibold text-xl">
-                  A router that protects your privacy
+                  Handling web requests at a router level
                 </h5>
                 <p className="text-gray-300">
-                  It creates secure local network. users of the network
+                  With
                 </p>
               </div>
             </div>
