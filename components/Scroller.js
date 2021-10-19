@@ -121,7 +121,7 @@ const Scroller = ({ elements, children }) => {
   return (
     <FullBleed brute>
       <div 
-        className="relative"
+        className="relative pr-4 pl-4 md:pl-0"
         onMouseEnter={() => setScrollerState({...scrollerState, isNavHidden: false})}
         onMouseLeave={() => setScrollerState({...scrollerState, isNavHidden: true})}
       >
