@@ -9,16 +9,12 @@ import TOC from "@/components/TOC";
 import Phone from "@/components/Phone";
 
 import Background from "@/components/Bridge/Background";
+import Why from "@/components/Bridge/Why";
 import WorkInProgress from "@/components/WorkInProgress";
 
 import Link from "next/link";
 import Zoom from "react-medium-image-zoom";
 import "react-medium-image-zoom/dist/styles.css";
-
-import {
-  GlobeIcon
-} from "@heroicons/react/outline"
-
 
 const VisualWrapper = ({ children, bgUrl, right, justify }) => {
   const getJustify = () => {
@@ -57,59 +53,7 @@ const bridge = () => {
       <Hero />
       <TOC />
       <Background />
-      <section
-        className="layout full-bleed bg-black"
-        data-toc-title="Why Bridge"
-        id="section-2"
-      >
-        <section className="py-32 relative">
-          <div className="mb-12">
-            <div className="flex flex-col items-center mb-8">
-              <h2 className="font-bold text-5xl max-w-4xl bg-clip-text text-center text-transparent bg-gradient-to-br from-blue-400 to-pink-600 mb-8">
-                Meet Bridge. A trustworthy personal server at home for privacy.
-              </h2>
-              <p className="mx-auto text-center font-medium text-gray-400 text-xl max-w-prose">
-                <strong className="text-white">
-                  Bridge lives at home and is a trusted personal server and
-                  a router that is designed to protect users' privacy. </strong>
-                Everything's transparent with Bridge. Data is completely owned
-                by the user, protects their privacy, and most importantly, it helps them feel secure on the internet.
-              </p>
-            </div>
-            <img
-              src="/bridge/router-living-room.jpg"
-              className="rounded-2xl mx-auto"
-              style={{
-                imageMask: 'linear-gradient(to right, black 0%, transparent 100%)',
-                WebkitMaskImage: 'linear-gradient(to bottom, black 0%, transparent 100%)'
-              }}
-            />
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="rounded-3xl bg-gray-900 text-white w-full relative overflow-hidden shadow-inner">
-              <div className="p-12">
-                <GlobeIcon className="h-6 w-6 mb-4" />
-                <h5 className="font-semibold text-xl">
-                  Handling web requests at a router level
-                </h5>
-                <p className="text-gray-300">
-                  With
-                </p>
-              </div>
-            </div>
-            <div className="rounded-3xl bg-gray-900 text-white w-full relative overflow-hidden col-span-2">
-              <div className="p-12">
-                <h5 className="font-semibold text-xl">
-                  A router that protects your privacy
-                </h5>
-                <p className="text-gray-300">
-                  Lorem ipsum
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-      </section>
+      <Why />
 
       <section
         className="layout full-bleed"
