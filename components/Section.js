@@ -52,7 +52,7 @@ const Section = ({
       data-toc-title={options.dataTitle}
       id={`#${options.id}`}
     >
-      {options.dataTitle && <TOCSectionIntro options={options} />}
+      {options.dataDesc && <TOCSectionIntro options={options} />}
       {children}
     </section>
   );
