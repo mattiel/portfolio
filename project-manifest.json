@@ -41,7 +41,7 @@
     "description": "Adaptive jewelry for self-expression",
     "color": "#064E3B",
     "thumbnail": "tribe-thumbnail.png",
-    "hidden": false,
+    "hidden": true,
     "isWIP": false
   },
   {
@@ -50,7 +50,7 @@
     "description": "An inspiration and encouragement platform for low-income individuals",
     "color": "#064E3B",
     "thumbnail": "achieve-thumbnail.png",
-    "hidden": false,
+    "hidden": true,
     "isWIP": false
   }
 ]
