@@ -12,7 +12,7 @@ import 'react-medium-image-zoom/dist/styles.css'
 
 const Tomato = () => {
   return (
-    <Layout>
+    <Layout dark>
       {/* <TOC /> */}
       <Hero />
       <Scroller>
