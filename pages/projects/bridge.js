@@ -1,7 +1,5 @@
 import React from "react";
 import Layout from "@/components/Layout";
-import Scroller from "@/components/Scroller";
-import Card from "@/components/Card";
 import Contact from "@/components/Contact";
 import Container from "@/components/Container";
 import Hero from "@/components/Bridge/Hero";
@@ -10,41 +8,15 @@ import Phone from "@/components/Phone";
 
 import Background from "@/components/Bridge/Background";
 import Why from "@/components/Bridge/Why";
+import Permits from "@/components/Bridge/Permits"
+import Blockers from "@/components/Bridge/Blockers";
+
 import WorkInProgress from "@/components/WorkInProgress";
+import VisualWrapper from "@/components/VisualWrapper";
 
 import Link from "next/link";
 import Zoom from "react-medium-image-zoom";
 import "react-medium-image-zoom/dist/styles.css";
-
-const VisualWrapper = ({ children, bgUrl, right, justify }) => {
-  const getJustify = () => {
-    if (justify === "start" || justify === "end") return justify;
-    return "center";
-  };
-
-  const alignment = getJustify();
-
-  return (
-    <div className="inline-block relative order-1 h-[24rem] md:h-[38rem] min-w-0">
-      <div
-        className={`
-          inline-block h-[22rem] w-full max-w-screen-lg rounded-2xl overflow-hidden bg-cover bg-top-left p-8 ${
-            right ? `absolute right-0` : ""
-          }
-          md:h-[38rem] md:right-8
-          lg:w-[60vw]
-        `}
-        style={{ backgroundImage: `url(${bgUrl})` }}
-      >
-        <div
-          className={`inline-flex space-x-4 w-full relative h-full items-start justify-center lg:justify-${alignment}`}
-        >
-          {children}
-        </div>
-      </div>
-    </div>
-  );
-};
 
 const bridge = () => {
   return (
@@ -54,181 +26,9 @@ const bridge = () => {
       <TOC />
       <Background />
       <Why />
+      <Permits />
+      <Blockers />
 
-      <section
-        className="layout full-bleed"
-        data-toc-title="Data Ownership"
-        id="section-3"
-      >
-        <section className="my-32">
-          <h4 className="font-semibold text-blue-500 mb-2 text-lg">
-            Secure sharing
-          </h4>
-          <h3 className="text-gray-800 text-4xl font-bold leading-snug mb-8">
-            What if users take complete ownership of their data and only allow
-            requestors to use when it's needed?
-          </h3>
-          <p className="text-gray-700 text-xl mb-8 max-w-prose">
-            Personal data is stored on the Bridge instead of being stored at a
-            third party server. This way, companies don't have to secure each
-            and everyone's personal data and gives users sense of security of
-            holding their data within a space they trust.
-          </p>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
-            <div className="block pr-4">
-              <p className="font-semibold text-gray-800 border-l-2 border-blue-500 pl-4 mb-2">
-                Permits
-              </p>
-              <div className="pl-[1.125rem]">
-                <p className="text-gray-700 mb-4">
-                  Show users a list of permissions they have permitted and let
-                  them decide which ones they want to grant when the it's been
-                  requested.
-                </p>
-              </div>
-            </div>
-
-            <div className="block pr-4">
-              <p className="font-semibold text-gray-800 border-l-2 border-blue-500 pl-4 mb-2">
-                End-to-end encrpytion
-              </p>
-              <div className="pl-[1.125rem]">
-                <p className="text-gray-700 mb-4">
-                  What about when permits are handed off to the requestors? They
-                  still cannot access the data because of end-to-end encryption.
-                  Many modern chat applications already use end-to-end
-                  encryption to ensure that the data is safe and secure because
-                  cannot be eavesdropped on.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section className="my-32">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="flex">
-              <div className="flex justify-center h-full items-center relative">
-                <div className="block">
-                  <h4 className="font-semibold text-blue-500 mb-2 text-lg">
-                    Permits
-                  </h4>
-                  <h3 className="text-gray-800 text-4xl font-bold leading-snug mb-4">
-                    Share personal data without storing in third-party servers
-                  </h3>
-                  <p className="font-medium text-gray-500 text-xl mr-20">
-                    <strong className="text-gray-800 mr-0.5">Checkout. </strong>
-                    {/* Companies can use Bridge's API to recieve personal data without storing it in their servers. */}
-                    Users don't have to worry about how their data is stored and
-                    used by the requestors because it's end-to-end encrypted,
-                    and provides clear information of what's being shared.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="py-8 flex justify-center">
-              <Phone isVideo source="/bridge/permit-request.webm" />
-            </div>
-          </div>
-        </section>
-
-        <section className="my-32">
-          <div className="bg-gradient-to-br flex flex-col-reverse from-green-400 to-blue-700 rounded-3xl md:flex-row">
-            <div className="px-16 my-16 w-full md:w-[28rem] flex flex-col justify-center">
-              <img
-                src="/bridge/section-icons/permit.svg"
-                width="48"
-                height="48"
-                alt="Permit Icon"
-                className="mb-4"
-              />
-              <h3 className="text-black text-opacity-70 text-4xl font-bold mb-4 leading-tight">
-                Share personal data without storing in third-party servers
-              </h3>
-              <p className="font-medium text-white text-opacity-80 text-xl">
-                <strong className="text-white mr-0.5">Checkout. </strong>
-                {/* Companies can use Bridge's API to recieve personal data without storing it in their servers. */}
-                Users don't have to worry about how their data is stored and
-                used by the requestors because it's end-to-end encrypted, and
-                provides clear information of what's being shared.
-              </p>
-            </div>
-            <div className="h-[48rem] flex-1 relative w-full flex justify-center items-center my-16">
-              <div className="inline-flex items-center justify-end">
-                <Phone
-                  isVideo
-                  source="/bridge/permit-request.webm"
-                  maxWidth="max-w-[18rem]"
-                  className="w-[20rem]"
-                />
-                <img
-                  src="/bridge/permissions-main.png"
-                  className="hidden md:inline-block mt-[10%] h-full max-w-[20rem] ml-6"
-                />
-              </div>
-            </div>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="flex">
-              <div className="flex justify-center h-full items-center relative">
-                <div className="block">
-                  <h4 className="font-semibold text-blue-500 mb-2 text-lg">
-                    Permits
-                  </h4>
-                  <h3 className="text-gray-800 text-4xl font-bold leading-snug mb-4">
-                    Share personal data without storing in third-party servers
-                  </h3>
-                  <p className="font-medium text-gray-500 text-xl mr-20">
-                    <strong className="text-gray-800 mr-0.5">Checkout. </strong>
-                    {/* Companies can use Bridge's API to recieve personal data without storing it in their servers. */}
-                    Users don't have to worry about how their data is stored and
-                    used by the requestors because it's end-to-end encrypted,
-                    and provides clear information of what's being shared.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="py-8 flex justify-center">
-              <Phone isVideo source="/bridge/permit-request.webm" />
-            </div>
-          </div>
-        </section>
-
-        <section className="my-32">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            <div className="flex lg:order-2">
-              <div className="flex justify-center h-full items-center relative">
-                <div className="block">
-                  <h4 className="font-semibold text-blue-500 mb-2 text-lg">
-                    Permissions
-                  </h4>
-                  <h3 className="text-gray-800 text-4xl font-bold leading-snug mb-4">
-                    Control grants given to requestors
-                  </h3>
-                  <p className="font-medium text-gray-500 text-xl mr-20">
-                    <strong className="text-gray-800 mr-0.5">
-                      Transparent.{" "}
-                    </strong>
-                    After giving permits to requestors, permissions show exactly
-                    what data is being shared and how it's being used by the
-                    requestors.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <VisualWrapper bgUrl="/bridge/gradient-2.png" justify="end" right>
-              <img
-                src="/bridge/permissions-main.png"
-                className="mt-[10%] h-full"
-              />
-              <img
-                src="/bridge/permissions-revoke-short.png"
-                className="h-full"
-              />
-            </VisualWrapper>
-          </div>
-        </section>
-      </section>
       {/* <section className="py-32">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
           <div className="lg:py-8 relative inline-block">
@@ -256,98 +56,6 @@ const bridge = () => {
           </div>
         </div>
       </section> */}
-
-      <section
-        className="layout full-bleed"
-        data-toc-title="Protection"
-        id="section-4"
-      >
-        <section className="my-32">
-          <h4 className="font-semibold text-blue-500 mb-2 text-lg">Blockers</h4>
-          <h3 className="text-gray-800 text-4xl font-bold leading-snug mb-8">
-            How can users be safe from companies trying to track what they do
-            online?
-          </h3>
-          <p className="text-gray-700 text-xl mb-8 max-w-prose">
-            Without having to install extra extensions and applications,
-            blockers on a router level protect users from unwanted trackings,
-            privacy-invasive elements, and even malicious webistes while
-            browsing on the internet or using applications.
-          </p>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
-            <div className="block pr-4">
-              <p className="font-semibold text-gray-800 border-l-2 border-blue-500 pl-4 mb-2">
-                One time setup
-              </p>
-              <div className="pl-[1.125rem]">
-                <p className="text-gray-700 mb-4">
-                  <a
-                    href="https://github.com/gorhill/uBlock"
-                    className="text-blue-600 underline font-medium"
-                  >
-                    uBlock origin
-                  </a>
-                  , an ad blocker for browsers, have set of rules that block
-                  trackers, ads, and maleware sites. It needs to be installed
-                  via extensions from supported browsers. However, this means
-                  everytime a user gets a new device, they need to install the
-                  extension. Bridge solve this problem because it handles web
-                  requests and is handled on the router level as long as the
-                  device is connected, it's protected.
-                </p>
-              </div>
-            </div>
-
-            <div className="block pr-4">
-              <p className="font-semibold text-gray-800 border-l-2 border-blue-500 pl-4 mb-2">
-                Lack of responsibilities from data holders
-              </p>
-              <div className="pl-[1.125rem]">
-                <p className="text-gray-700 mb-4">
-                  Companies have to deal with securities to keep numerous data
-                  about users. No servers are completely protected and even big
-                  companies are getting hacked and users' information gets
-                  leaked online. Are the users really getting compensated from
-                  these attacks?
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-      </section>
-
-      <section className="py-32 full-bleed">
-        <Container>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-            <VisualWrapper bgUrl="/bridge/gradient-1.png">
-              <img
-                src="/bridge/blockers-filters.png"
-                className="mt-[10%] h-full"
-              />
-              <img src="/bridge/blockers-blocked.png" className="h-full" />
-            </VisualWrapper>
-            <div className="flex">
-              <div className="flex justify-center h-full items-center relative">
-                <div className="block">
-                  <h4 className="font-semibold text-blue-500 mb-2 text-lg">
-                    Blockers
-                  </h4>
-                  <h3 className="text-gray-800 text-4xl font-bold leading-snug mb-4">
-                    A content blocker at router level which requires no
-                    additional setup
-                  </h3>
-                  <p className="font-medium text-gray-500 text-xl mr-20">
-                    <strong className="text-gray-800 mr-0.5">Peace. </strong>
-                    Blockers protect you from unwanted trackings and
-                    privacy-invasive elements while browsing on the internet or
-                    using applications.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </Container>
-      </section>
 
       <section className="my-32">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

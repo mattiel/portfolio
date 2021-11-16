@@ -70,8 +70,8 @@ const Why = () => {
               <p className="text-gray-300">
                 Third parties can request to use user's personal data which is
                 securely stored in Bridge. Bridge acts a host for
-                sensitve data. It is end-to-end encrypted and API only allows 
-                requestors to view the data is only accessible at the time of request with the
+                sensitive data. It is end-to-end encrypted and API only allows
+                requesters to view the data which is only accessible at the time of request with the
                 one-time key that is given by the protocol. Which means that the data is read-only,
                 and cannot be stored in third-party servers.
               </p>
@@ -79,7 +79,7 @@ const Why = () => {
             <img
               src="/bridge/intro-permits.webp"
               alt="Permit requests"
-              className="w-full mt-auto"
+              className="max-h-[329px] max-w-none object-cover object-left"
             />
           </div>
           <div className="rounded-3xl flex flex-col space-between bg-gray-900 text-white w-full relative overflow-hidden md:col-span-2">
@@ -100,14 +100,14 @@ const Why = () => {
             <img
               src="/bridge/intro-nas.webp"
               alt="NAS "
-              className="w-full mt-auto"
+              className="max-h-[329px] max-w-none object-cover object-left"
             />
           </div>
           <div className="rounded-3xl flex flex-col space-between bg-gray-900 text-white w-full relative overflow-hidden shadow-inner">
             <div className="px-12 pt-12">
               <ShieldCheckIcon className="h-12 w-12 mb-4 text-pink-600" />
               <h5 className="font-semibold text-xl mb-2 bg-clip-text text-transparent bg-gradient-to-br from-pink-300 to-purple-600">
-                Blocking at a router level
+                Blocking at a router levelx
               </h5>
               <p className="text-gray-300">
                 No additional installation of apps required. Any device that
