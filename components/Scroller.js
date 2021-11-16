@@ -1,12 +1,19 @@
 import React, { useState, useEffect, useRef } from 'react'
 import smoothscroll from 'smoothscroll-polyfill'
 import { Transition } from '@headlessui/react'
+import clsx from "clsx";
 
 import useIntersect from '@/utils/useIntersect'
 import FullBleed from '@/components/FullBleed'
 
+import {ChevronLeftIcon, ChevronRightIcon} from "@heroicons/react/outline";
+
 const Button = ({onClick, hidden, children}) => {
   const [isDisabled, setIsDisabled] = useState(false)
+  const buttonClass = clsx(
+    'left-4 w-12 h-12 bg-black bg-opacity-40 shadow-lg rounded-full text-gray-200 transition-all hover:text-white hover:shadow-xl hover:bg-opacity-70',
+    hidden ? 'hidden' : 'grid place-items-center'
+  )
 
   const handleClick = e => {
     if(!isDisabled) {
@@ -21,10 +28,7 @@ const Button = ({onClick, hidden, children}) => {
   return(
     <button
       type="button"
-      className={`left-4 w-12 h-12 bg-black bg-opacity-40 shadow-lg rounded-full text-gray-200
-      transition-all hover:text-white hover:shadow-xl hover:bg-opacity-70
-        ${hidden ? 'hidden' : 'grid place-items-center'}
-      `}
+      className={buttonClass}
       onClick={handleClick}
       disabled={isDisabled}
     >
@@ -50,17 +54,18 @@ const Scroller = ({ elements, children }) => {
   useEffect(() => {
     smoothscroll.polyfill()
     const container = scrollerContainerRef.current
-    const itemElements = scrollerContainerRef.current.childNodes
-    const isNextHidden = !scrollerContainerRef.current.scrollLeftMax > 0
-    setScrollerState({...scrollerState, container, itemElements, isNextHidden})
 
-    container.addEventListener('resize', () => {
-      
-    })
+    function initialize() {
+      const container = scrollerContainerRef.current
+      const scrollLeftMax = container.scrollWidth - container.clientWidth;
+      const itemElements = container.childNodes
+      const isNextHidden = !scrollLeftMax > 0
+      setScrollerState({...scrollerState, container, itemElements, isNextHidden})
+    }
+
+    container.addEventListener('resize', initialize())
     return () => {
-      container.removeEventListener('resize', () => {
-
-      })
+      container.removeEventListener('resize', initialize())
     }
   },[elements])
 
@@ -87,9 +92,10 @@ const Scroller = ({ elements, children }) => {
 
     const nextRemainingScrollLeft =
       scrollerState.container.scrollLeft + scrollerState.itemElements[scrollerState.currentIndex + 1]?.clientWidth
+    const scrollLeftMax = scrollerState.container.scrollWidth - scrollerState.container.clientWidth;
 
     if(scrollerState.currentIndex === scrollerState.itemElements.length - 1 
-      || nextRemainingScrollLeft >= scrollerState.container.scrollLeftMax) {
+      || nextRemainingScrollLeft >= scrollLeftMax) {
       isNextHidden = true;
     }
     setScrollerState({...scrollerState, currentIndex, isPrevHidden, isNextHidden})
@@ -121,7 +127,7 @@ const Scroller = ({ elements, children }) => {
   return (
     <FullBleed brute>
       <div 
-        className="relative pr-4 pl-4 md:pl-0"
+        className="relative"
         onMouseEnter={() => setScrollerState({...scrollerState, isNavHidden: false})}
         onMouseLeave={() => setScrollerState({...scrollerState, isNavHidden: true})}
       >
@@ -145,31 +151,16 @@ const Scroller = ({ elements, children }) => {
           leave="transition-opacity ease-linear duration-200"
           leaveFrom="opacity-100"
           leaveTo="opacity-0"
-          className="absolute w-full flex-shrink-0 px-6 top-1/2 transform -translate-y-1/2 justify-between flex opacity-0"
+          className="absolute w-full flex-shrink-0 px-6 top-1/2 transform -translate-y-1/2 justify-between flex opacity-0 h-12"
         >
-          <div className="">
+          <div>
             <Button onClick={handlePrev} hidden={scrollerState.isPrevHidden}>
-              <svg 
-                className="w-6 h-6" 
-                fill="none" 
-                stroke="currentColor" 
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-              </svg>
+              <ChevronLeftIcon className="w-6 h-6"/>
             </Button>
           </div>
-
-          <div className="">
+          <div>
             <Button onClick={handleNext} hidden={scrollerState.isNextHidden}>
-              <svg 
-                className="w-6 h-6" 
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-              </svg>
+              <ChevronRightIcon className="w-6 h-6"/>
             </Button>
           </div>
         </Transition>
