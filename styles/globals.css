@@ -88,7 +88,11 @@ a {
   scroll-snap-align: start;
   height: 100%;
   max-width: calc(100% - 3rem);
-  @apply mr-5
+  @apply pl-5
+}
+
+.scroller-item:last-child {
+  @apply pr-5
 }
 
 @screen xl {
