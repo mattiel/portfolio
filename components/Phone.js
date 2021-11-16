@@ -16,7 +16,7 @@ const Phone = ({ source, maxWidth, className, isVideo }) => {
     <div 
       className={outerClasses}
       style={{
-        borderWidth: "clamp(0.125rem, .5vw, 1.25rem)"
+        borderWidth: "clamp(0.125rem, .5vw, .35rem)"
       }}
     >
       <div 
