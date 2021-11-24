@@ -54,19 +54,19 @@ const Permits = () => {
       {/*  </div>*/}
       {/*</section>*/}
 
-      <section className="layout full-bleed">
-        <div className="md:mx-12 mb-16 mt-32">
+      <section className="layout pb-32 full-bleed">
+        <div className="md:mx-12 my-32">
           <h2 className="text-green-600 font-bold text-6xl max-w-4xl mb-8">
             Complete awareness and ownership of personal information
           </h2>
-          <p className="max-w-prose text-2xl text-gray-700 font-semibold">
+          <p className="max-w-4xl text-2xl text-gray-700 font-semibold">
             People want to take care of their sensitive data and want to be in control of it.
             Most people hate having to give out their information because it can be stolen and abused.
             What if requesters have to ask for permits whenever they need to access it and the users can revoke permits
             whenever they feel like it?
           </p>
         </div>
-        <div className="full-bleed layout bg-gradient-to-br from-green-500 to-teal-600 mb-6">
+        <div className="full-bleed layout bg-gradient-to-br from-green-500 to-teal-700 mb-6">
           <div className="flex flex-col-reverse md:flex-row">
             <div className="px-16 mb-16 md:mt-16 w-full md:w-[36rem] flex flex-col justify-center items-start flex-shrink-0">
               <img
@@ -119,7 +119,7 @@ const Permits = () => {
                 src="/bridge/data-permissions.webp"
                 alt="Permit requests"
                 height="329"
-                className="w-full max-h-[329px]"
+                className="w-full max-h-[329px] object-scale-down"
               />
             </div>
           </div>
@@ -186,66 +186,7 @@ const Permits = () => {
             </div>
           </div>
         </div>
-        {/*<div className="grid grid-cols-1 md:grid-cols-2 gap-6">*/}
-        {/*  <div className="flex">*/}
-        {/*    <div className="flex justify-center h-full items-center relative">*/}
-        {/*      <div className="block">*/}
-        {/*        <h4 className="font-semibold text-blue-500 mb-2 text-lg">*/}
-        {/*          Permits*/}
-        {/*        </h4>*/}
-        {/*        <h3 className="text-gray-800 text-4xl font-bold leading-snug mb-4">*/}
-        {/*          Share personal data without storing in third-party servers*/}
-        {/*        </h3>*/}
-        {/*        <p className="font-medium text-gray-500 text-xl mr-20">*/}
-        {/*          <strong className="text-gray-800 mr-0.5">Checkout. </strong>*/}
-        {/*          /!* Companies can use Bridge's API to recieve personal data without storing it in their servers. *!/*/}
-        {/*          Users don't have to worry about how their data is stored and*/}
-        {/*          used by the requestors because it's end-to-end encrypted,*/}
-        {/*          and provides clear information of what's being shared.*/}
-        {/*        </p>*/}
-        {/*      </div>*/}
-        {/*    </div>*/}
-        {/*  </div>*/}
-        {/*  <div className="py-8 flex justify-center">*/}
-        {/*    <Phone isVideo source="/bridge/permit-request.webm" />*/}
-        {/*  </div>*/}
-        {/*</div>*/}
       </section>
-
-      {/*<section className="my-32">*/}
-      {/*  <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">*/}
-      {/*    <div className="flex lg:order-2">*/}
-      {/*      <div className="flex justify-center h-full items-center relative">*/}
-      {/*        <div className="block">*/}
-      {/*          <h4 className="font-semibold text-blue-500 mb-2 text-lg">*/}
-      {/*            Permissions*/}
-      {/*          </h4>*/}
-      {/*          <h3 className="text-gray-800 text-4xl font-bold leading-snug mb-4">*/}
-      {/*            Control grants given to requesters*/}
-      {/*          </h3>*/}
-      {/*          <p className="font-medium text-gray-500 text-xl mr-20">*/}
-      {/*            <strong className="text-gray-800 mr-0.5">*/}
-      {/*              Transparent.*/}
-      {/*            </strong>*/}
-      {/*            After giving permits to requesters, permissions show exactly*/}
-      {/*            what data is being shared and how it's being used by the*/}
-      {/*            requesters.*/}
-      {/*          </p>*/}
-      {/*        </div>*/}
-      {/*      </div>*/}
-      {/*    </div>*/}
-      {/*    <VisualWrapper bgUrl="/bridge/gradient-2.png" justify="end" right>*/}
-      {/*      <img*/}
-      {/*        src="/bridge/permissions-main.png"*/}
-      {/*        className="mt-[10%] h-full"*/}
-      {/*      />*/}
-      {/*      <img*/}
-      {/*        src="/bridge/permissions-revoke-short.png"*/}
-      {/*        className="h-full"*/}
-      {/*      />*/}
-      {/*    </VisualWrapper>*/}
-      {/*  </div>*/}
-      {/*</section>*/}
     </section>
   );
 };

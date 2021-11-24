@@ -107,7 +107,7 @@ const Why = () => {
             <div className="px-12 pt-12">
               <ShieldCheckIcon className="h-12 w-12 mb-4 text-pink-600" />
               <h5 className="font-semibold text-xl mb-2 bg-clip-text text-transparent bg-gradient-to-br from-pink-300 to-purple-600">
-                Blocking at a router levelx
+                Blocking at a router level
               </h5>
               <p className="text-gray-300">
                 No additional installation of apps required. Any device that

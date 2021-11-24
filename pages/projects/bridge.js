@@ -10,6 +10,7 @@ import Background from "@/components/Bridge/Background";
 import Why from "@/components/Bridge/Why";
 import Permits from "@/components/Bridge/Permits"
 import Blockers from "@/components/Bridge/Blockers";
+import Report from "@/components/Bridge/Report";
 
 import WorkInProgress from "@/components/WorkInProgress";
 import VisualWrapper from "@/components/VisualWrapper";
@@ -28,6 +29,7 @@ const bridge = () => {
       <Why />
       <Permits />
       <Blockers />
+      <Report />
 
       {/* <section className="py-32">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
@@ -56,31 +58,6 @@ const bridge = () => {
           </div>
         </div>
       </section> */}
-
-      <section className="my-32">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div className="py-8 flex justify-center order-2 lg:order-1">
-            <Phone isVideo source="/bridge/privacy-report.webm" />
-          </div>
-          <div className="flex">
-            <div className="flex justify-center h-full items-center relative">
-              <div className="block">
-                <h4 className="font-semibold text-blue-500 mb-2 text-lg">
-                  Privacy Report
-                </h4>
-                <h3 className="text-gray-800 text-4xl font-bold leading-snug mb-4">
-                  Clear overview of how Bridge is protecting privacy
-                </h3>
-                <p className="font-medium text-gray-500 text-xl mr-20">
-                  <strong className="text-gray-800 mr-0.5">Relief. </strong>A
-                  summary of blockers and permits provides brief overview of how
-                  Bridge is protecting your privacy.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
       <section className="py-32 full-bleed">
         <Container>

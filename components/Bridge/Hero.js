@@ -10,7 +10,7 @@ const Hero = () => {
         <div className="grid grid-cols-1 gap-8 place-items-center mb-8">
           <div className="flex flex-col justify-center text-center max-w-prose">
             <img src="/bridge/logo.svg" width="146" height="40" className="mx-auto mb-4"/>
-            <h2 className="font-bold text-6xl mb-4 bridge-hero-text bg-clip-text text-transparent">
+            <h2 className="font-bold text-5xl mb-4 bridge-hero-text bg-clip-text text-transparent">
               A personal home server for transparent data ownership
             </h2>
             <p className="font-medium text-gray-300 text-xl">
