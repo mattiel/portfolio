@@ -54,19 +54,15 @@ const Scroller = ({ elements, children }) => {
   useEffect(() => {
     smoothscroll.polyfill()
     const container = scrollerContainerRef.current
+    const scrollLeftMax = container.scrollWidth - container.clientWidth;
+    const itemElements = container.childNodes
+    const isNextHidden = !scrollLeftMax > 0
+    setScrollerState({...scrollerState, container, itemElements, isNextHidden})
 
-    function initialize() {
-      const container = scrollerContainerRef.current
-      const scrollLeftMax = container.scrollWidth - container.clientWidth;
-      const itemElements = container.childNodes
-      const isNextHidden = !scrollLeftMax > 0
-      setScrollerState({...scrollerState, container, itemElements, isNextHidden})
-    }
-
-    container.addEventListener('resize', initialize())
-    return () => {
-      container.removeEventListener('resize', initialize())
-    }
+    // container.addEventListener('resize', initialize())
+    // return () => {
+    //   container.removeEventListener('resize', initialize())
+    // }
   },[elements])
 
   function handleIntersect(entries, elements) {
